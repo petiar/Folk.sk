@@ -1,0 +1,29 @@
+id: folk_term_node_mesto
+label: 'Akcia → Mesto (vocab 6) — custom migrácia bez d6_node_complete'
+migration_tags:
+  - Drupal 6
+  - Content
+  - folk
+source:
+  plugin: d6_term_node
+  vid: 6
+process:
+  nid:
+    - plugin: migration_lookup
+      migration: d6_node
+      no_stub: true
+      source: nid
+    - plugin: skip_on_empty
+      method: row
+  type: type
+  field_mesto:
+    plugin: migration_lookup
+    migration: d6_taxonomy_term
+    no_stub: true
+    source: tid
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required:
+    - d6_taxonomy_term
+    - d6_node

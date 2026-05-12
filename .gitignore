@@ -1,0 +1,9 @@
+# Lando
+.lando.local.yml
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store

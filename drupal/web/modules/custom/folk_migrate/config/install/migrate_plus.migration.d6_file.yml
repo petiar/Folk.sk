@@ -1,0 +1,27 @@
+id: d6_file
+label: 'Public files (metadata only, no file copy)'
+audit: true
+migration_tags:
+  - Drupal 6
+  - Content
+source:
+  plugin: d6_file
+  constants:
+    source_base_path: ''
+process:
+  filename: filename
+  destination_full_path:
+    plugin: file_uri
+    source:
+      - filepath
+      - file_directory_path
+      - temp_directory_path
+      - is_public
+  # Namiesto file_copy len nastavíme URI priamo — fyzické súbory prídu cez rsync pri go-live
+  uri: '@destination_full_path'
+  filemime: filemime
+  status: status
+  changed: timestamp
+  uid: uid
+destination:
+  plugin: entity:file
