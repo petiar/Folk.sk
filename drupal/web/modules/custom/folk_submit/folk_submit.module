@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file folk_submit.module
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function folk_submit_theme(): array {
+  return [
+    'folk_submit_block' => [
+      'variables' => [
+        'description' => NULL,
+        'url'         => NULL,
+        'event_url'   => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_mail().
+ */
+function folk_submit_mail(string $key, array &$message, array $params): void {
+  if ($key !== 'new_article') return;
+
+  $type  = ($params['type'] ?? '') === 'event' ? 'akciu' : 'článok';
+  $label = ($params['type'] ?? '') === 'event' ? 'Nová akcia' : 'Nový článok';
+
+  $message['subject'] = "[{$params['site_name']}] $label čaká na schválenie: {$params['node']->label()}";
+  $message['body'][]  = "Používateľ {$params['author']} odoslal novú $type, ktorá čaká na schválenie.\n";
+  $message['body'][]  = "Názov: {$params['node']->label()}\n";
+  $message['body'][]  = "Upraviť / schváliť: {$params['node_url']}\n";
+}

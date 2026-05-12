@@ -1,208 +1,246 @@
-// ─── Premenné ────────────────────────────────────────────────────────────────
+// ─── 1. Bootstrap premenné — overridy pred importom ─────────────────────────
 
-$red:       #c0392b;
-$black:     #111111;
-$gray-900:  #1a1a1a;
-$gray-700:  #444444;
-$gray-500:  #888888;
-$gray-200:  #e8e8e8;
-$gray-100:  #f4f4f4;
-$white:     #ffffff;
+$red:   #c0392b;
+$black: #111111;
 
-// Bootstrap overrides
-$primary:              $red;
-$secondary:            $gray-700;
-$body-color:           $gray-900;
-$body-bg:              $white;
-$link-color:           $red;
-$link-hover-color:     darken($red, 10%);
-$link-decoration:      none;
-$link-hover-decoration: underline;
+$primary:           $red;
+$secondary:         #444444;
+$success:           $black;
+$body-color:        $black;
+$body-bg:           #ffffff;
+$link-color:        $red;
+$link-hover-color:  #8b1a12;
+$link-decoration:   none;
 
-$font-family-serif:    'Playfair Display', Georgia, serif;
 $font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
-$font-family-base:     $font-family-sans-serif;
+$font-family-base:       $font-family-sans-serif;
+$font-size-base:         1.05rem;
+$line-height-base:       1.8;
 
-$headings-font-family: $font-family-serif;
-$headings-font-weight: 700;
-$headings-color:       $black;
+$headings-font-family:   'Playfair Display', Georgia, serif;
+$headings-font-weight:   700;
+$headings-color:         $black;
+$headings-line-height:   1.2;
 
-$border-color:         $gray-200;
-$border-radius:        0;
-$border-radius-lg:     0;
-$border-radius-sm:     0;
-$border-radius-pill:   0;
+$border-radius:    0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+$border-radius-pill: 0;
 
-$card-border-width:    0;
-$card-border-color:    transparent;
-$card-box-shadow:      none;
+// ─── 2. Import Bootstrap SCSS ────────────────────────────────────────────────
 
-$navbar-light-color:            $gray-700;
-$navbar-light-hover-color:      $black;
-$navbar-light-active-color:     $red;
-$navbar-light-toggler-border-color: $gray-200;
-
-$pagination-color:              $black;
-$pagination-active-bg:          $black;
-$pagination-active-border-color: $black;
-$pagination-hover-color:        $red;
-
-$spacer: 1rem;
-
-// ─── Bootstrap ───────────────────────────────────────────────────────────────
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// ─── Google Fonts import ─────────────────────────────────────────────────────
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap');
+// ─── 3. Vlastné štýly folk.sk ────────────────────────────────────────────────
 
-// ─── Základný layout ─────────────────────────────────────────────────────────
-
-body {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: $gray-900;
+// Bootstrap CSS custom properties override
+:root {
+  --bs-link-color:           #{$red};
+  --bs-link-color-rgb:       192, 57, 43;
+  --bs-link-hover-color:     #8b1a12;
 }
+
+// Sériové písmo pre čítanie
+body { font-family: 'Lora', Georgia, serif; }
+
+// Navigácia, formy = sans-serif
+.navbar, .nav, form, .btn, .breadcrumb,
+input, select, textarea, label, .badge,
+.block-title, .pager, .node__meta, .node__tags,
+.node-type-label, .node__readmore, .site-slogan {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+// Linky
+a { color: $red; &:hover { color: #8b1a12; } }
+.node__title a    { color: $black; &:hover { color: $red; } }
+.site-name a      { color: $black; &:hover { color: $red; } text-decoration: none; }
+.nav-link         { color: #444 !important; &:hover, &.active { color: $red !important; } }
+.navbar-brand     { color: $black !important; &:hover { color: $red !important; } }
 
 // ─── Header ──────────────────────────────────────────────────────────────────
 
 .site-header {
   border-bottom: 3px solid $black;
-  padding: 2.5rem 0 0;
+  padding: 2rem 0 0;
   text-align: center;
 
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__search {
+    position: absolute;
+    right: 0;
+    form { display: flex; margin: 0; }
+    input[type="search"], input[type="text"] {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      border: 1px solid #e8e8e8;
+      border-right: none;
+      padding: .35rem .75rem;
+      width: 180px;
+      border-radius: 0;
+      &:focus { border-color: $black; box-shadow: none; outline: none; }
+    }
+    button, input[type="submit"] {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      background: $black;
+      color: #fff;
+      border: 1px solid $black;
+      padding: .35rem .75rem;
+      border-radius: 0;
+      &:hover { background: $red; border-color: $red; }
+    }
+    label { display: none; }
+  }
+
   .site-name a {
-    font-family: $font-family-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 900;
-    color: $black;
-    text-decoration: none;
     letter-spacing: -2px;
     line-height: 1;
-
     span { color: $red; }
-
-    &:hover { color: $red; }
   }
 
   .site-slogan {
-    font-size: .875rem;
-    color: $gray-500;
-    letter-spacing: .08em;
+    font-size: .75rem;
+    color: #888;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    margin-top: .5rem;
+    margin-top: .4rem;
   }
 }
 
-// ─── Navigácia ───────────────────────────────────────────────────────────────
-
 .site-nav {
-  border-bottom: 1px solid $gray-200;
+  border-bottom: 1px solid #e8e8e8;
   margin-top: 1.5rem;
-
   .nav-link {
-    font-size: .8rem;
+    font-size: .78rem;
     font-weight: 600;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: $gray-700;
     padding: .6rem 1rem;
-
-    &:hover, &.is-active { color: $red; }
   }
 }
 
-// ─── Obsah ───────────────────────────────────────────────────────────────────
+// ─── Layout ──────────────────────────────────────────────────────────────────
 
 main { padding: 2.5rem 0; }
 
-// Separator medzi článkami
 .view-frontpage .views-row + .views-row {
-  border-top: 1px solid $gray-200;
+  border-top: 1px solid #e8e8e8;
   padding-top: 2rem;
   margin-top: 2rem;
+}
+
+// ─── Spoločné štýly pre tagy (teaser aj full node) ───────────────────────────
+
+.node__tags-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-bottom: .85rem;
+}
+
+.node__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.node__tag {
+  font-family: 'Inter', sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #444;
+  text-decoration: none;
+  border: 1px solid #e8e8e8;
+  padding: .15rem .5rem;
+  &:hover { border-color: $red; color: $red; }
 }
 
 // ─── Teaser ──────────────────────────────────────────────────────────────────
 
 .node--view-mode-teaser {
-  .node__content {}
-
   .node-type-label {
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 700;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: $red;
   }
-
   .node__title {
-    font-family: $font-family-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin: .3rem 0 .75rem;
-
-    a {
-      color: $black;
-      text-decoration: none;
-      &:hover { color: $red; }
-    }
+    margin: .3rem 0 .5rem;
   }
-
   .node__meta {
-    font-size: .8rem;
-    color: $gray-500;
-    margin-bottom: .75rem;
+    font-size: .78rem;
+    color: #888;
+    margin-bottom: .5rem;
+    .node__meta-sep { margin: 0 .3rem; }
+    .node__author   { color: #444; }
   }
 
   .field--name-body {
-    color: $gray-700;
+    color: #444;
     font-size: .95rem;
     line-height: 1.7;
-
-    // Skráť teaser text
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
-  .node__readmore {
+  .node__footer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
     margin-top: 1rem;
-
-    a {
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      color: $red;
-      text-decoration: none;
-      border-bottom: 1px solid $red;
-      padding-bottom: 1px;
-
-      &:hover { color: $black; border-color: $black; }
-    }
+  }
+  .node__readmore a {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: $red;
+    text-decoration: none;
+    border-bottom: 1px solid $red;
+    padding-bottom: 1px;
+    &:hover { color: $black; border-color: $black; }
+  }
+  .node__comments {
+    font-size: .78rem;
+    color: #888;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    &:hover { color: $red; }
   }
 }
 
 // ─── Sidebar ─────────────────────────────────────────────────────────────────
 
 .site-sidebar {
-  border-left: 1px solid $gray-200;
+  border-left: 1px solid #e8e8e8;
   padding-left: 2rem;
-
-  .block {
-    margin-bottom: 2.5rem;
-
-    &:last-child { margin-bottom: 0; }
-  }
-
-  .block-title {
-    font-family: $font-family-serif;
-    font-size: 1rem;
+  .block { margin-bottom: 2.5rem; }
+  .block-title, h2.block-title {
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: .06em;
     color: $black;
     border-bottom: 2px solid $black;
     padding-bottom: .4rem;
@@ -214,40 +252,78 @@ main { padding: 2.5rem 0; }
 
 .pager {
   margin-top: 2rem;
-
-  .pager__items {
-    display: flex;
-    gap: .25rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .pager__item a,
-  .pager__item.is-active a {
+  .pager__items { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0; }
+  .pager__item a {
     display: inline-block;
-    padding: .4rem .8rem;
-    font-size: .85rem;
+    padding: .35rem .75rem;
+    font-size: .82rem;
     font-weight: 600;
     color: $black;
-    border: 1px solid $gray-200;
+    border: 1px solid #e8e8e8;
     text-decoration: none;
+    &:hover { background: $black; color: #fff; border-color: $black; }
+  }
+  .pager__item.is-active a { background: $black; color: #fff; border-color: $black; }
+}
 
-    &:hover { background: $black; color: $white; border-color: $black; }
+// ─── Node full — článok ──────────────────────────────────────────────────────
+
+.node--type-clanok.node--view-mode-full {
+  .node__header {
+    margin-bottom: 1.5rem;
   }
 
-  .pager__item.is-active a {
-    background: $black;
-    color: $white;
-    border-color: $black;
+  .node__hero {
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  .node__content {
+    font-size: 1.05rem;
+    line-height: 1.85;
+
+    p { margin-bottom: 1.25rem; }
+
+    h2, h3, h4 {
+      margin-top: 2rem;
+      margin-bottom: .75rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    blockquote {
+      border-left: 3px solid $red;
+      padding-left: 1.25rem;
+      margin-left: 0;
+      color: #555;
+      font-style: italic;
+    }
   }
 }
 
-// ─── Drupal messages ─────────────────────────────────────────────────────────
+// ─── Formuláre — tlačidlá vedľa seba ─────────────────────────────────────────
 
-.messages--status  { @extend .alert; @extend .alert-success; }
-.messages--warning { @extend .alert; @extend .alert-warning; }
-.messages--error   { @extend .alert; @extend .alert-danger; }
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+
+  .btn,
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
 
 // ─── Päta ────────────────────────────────────────────────────────────────────
 
@@ -255,7 +331,8 @@ main { padding: 2.5rem 0; }
   border-top: 3px solid $black;
   padding: 2rem 0;
   margin-top: 3rem;
-  font-size: .8rem;
-  color: $gray-500;
+  font-family: 'Inter', sans-serif;
+  font-size: .78rem;
+  color: #888;
   text-align: center;
 }

@@ -1,0 +1,15 @@
+folk_submit.form:
+  path: '/pridat-clanok'
+  defaults:
+    _form: '\Drupal\folk_submit\Form\SubmitArticleForm'
+    _title: 'Pridať článok'
+  requirements:
+    _access: 'TRUE'
+
+folk_submit.event_form:
+  path: '/pridat-akciu'
+  defaults:
+    _form: '\Drupal\folk_submit\Form\SubmitEventForm'
+    _title: 'Pridať akciu'
+  requirements:
+    _access: 'TRUE'

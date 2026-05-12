@@ -1,0 +1,71 @@
+{{ attach_library('bootstrap/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {# Nadpis #}
+  <header class="node__header">
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+
+  {# Titulný obrázok — pod nadpisom, na stred #}
+  {% if content.field_titulny_obrazok|render|trim %}
+    <div class="node__hero text-center my-4">
+      {{ content.field_titulny_obrazok }}
+    </div>
+  {% endif %}
+
+  {# Text článku — bez obrázka, kategórií a komentárov #}
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without(
+      'field_titulny_obrazok',
+      'field_co_nam_pisete_',
+      'field_o_com_nam_pisete_',
+      'field_festival',
+      'field_muzikant',
+      'field_suvisiaci_clanok',
+      'comment'
+    ) }}
+  </div>
+
+  {# Meta + tagy — medzi článkom a komentármi #}
+  <footer class="node__footer-meta mt-4 pt-3 border-top">
+    <div class="node__meta mb-2">
+      <time datetime="{{ node.createdtime|date('Y-m-d') }}">{{ node.createdtime|format_date('medium') }}</time>
+      {% if author_name %}
+        <span class="node__meta-sep">—</span>
+        <span class="node__author">{{ author_name }}</span>
+      {% endif %}
+    </div>
+
+    {% if folksk_terms %}
+      <div class="node__tags">
+        {% for term in folksk_terms %}
+          <a href="{{ term.url }}" class="node__tag">{{ term.label }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+
+  {# Komentáre — úplne dole #}
+  {% if content.comment %}
+    <div class="node__comments mt-4" id="comments">
+      {{ content.comment }}
+    </div>
+  {% endif %}
+
+</article>

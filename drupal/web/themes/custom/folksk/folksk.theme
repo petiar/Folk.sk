@@ -12,3 +12,42 @@ function folksk_preprocess_page(&$variables) {
   $variables['site_slogan'] = $config->get('slogan');
   $variables['site_name']   = $config->get('name');
 }
+
+/**
+ * Preprocess pre node — pridá taxonomy termíny a počet komentárov.
+ */
+function folksk_preprocess_node(&$variables) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+
+  // ── Taxonomy termíny zo všetkých polí ──────────────────────────────────────
+  $terms = [];
+  foreach ($node->getFieldDefinitions() as $field_name => $definition) {
+    if ($definition->getType() !== 'entity_reference') continue;
+    if ($definition->getSetting('target_type') !== 'taxonomy_term') continue;
+
+    foreach ($node->get($field_name)->referencedEntities() as $term) {
+      $tid = $term->id();
+      if (isset($terms[$tid])) continue; // dedup
+      $terms[$tid] = [
+        'label' => $term->label(),
+        'url'   => $term->toUrl()->toString(),
+        'vid'   => $term->bundle(),
+      ];
+    }
+  }
+  $variables['folksk_terms'] = $terms;
+
+  // ── Počet komentárov ───────────────────────────────────────────────────────
+  $variables['folksk_comment_count'] = 0;
+  if ($node->hasField('comment') && \Drupal::moduleHandler()->moduleExists('comment')) {
+    $count = \Drupal::entityQuery('comment')
+      ->condition('entity_type', 'node')
+      ->condition('entity_id', $node->id())
+      ->condition('status', 1)
+      ->accessCheck(FALSE)
+      ->count()
+      ->execute();
+    $variables['folksk_comment_count'] = (int) $count;
+  }
+}

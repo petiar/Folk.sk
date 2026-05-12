@@ -1,0 +1,11 @@
+folk_submit.form:
+  title: 'Pridať článok'
+  route_name: folk_submit.form
+  menu_name: main
+  weight: 10
+
+folk_submit.event_form:
+  title: 'Pridať akciu'
+  route_name: folk_submit.event_form
+  menu_name: main
+  weight: 11

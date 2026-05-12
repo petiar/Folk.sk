@@ -1,0 +1,54 @@
+<article{{ attributes.addClass('node--view-mode-teaser') }}>
+  <div class="node__content">
+
+    {# Typ obsahu #}
+    <div class="node-type-label">{{ node.type.entity.label }}</div>
+
+    {# Názov #}
+    <h2 class="node__title">
+      <a href="{{ url }}">{{ label }}</a>
+    </h2>
+
+    {# Meta: dátum, autor #}
+    <div class="node__meta">
+      <time datetime="{{ node.createdtime|date('Y-m-d') }}">
+        {{ node.createdtime|format_date('medium') }}
+      </time>
+      {% if author_name %}
+        <span class="node__meta-sep">—</span>
+        <span class="node__author">{{ author_name }}</span>
+      {% endif %}
+    </div>
+
+    {# Tagy + počet komentárov vedľa seba #}
+    <div class="node__tags-row">
+      {% if folksk_terms %}
+        <div class="node__tags">
+          {% for term in folksk_terms %}
+            <a href="{{ term.url }}" class="node__tag">{{ term.label }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if folksk_comment_count > 0 %}
+        <a href="{{ url }}#comments" class="node__comments" title="{{ folksk_comment_count }} komentárov">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894z"/>
+          </svg>
+          {{ folksk_comment_count }}
+        </a>
+      {% endif %}
+    </div>
+
+    {# Zhrnutie / teaser text #}
+    {% if content.body %}
+      <div class="field--name-body">{{ content.body }}</div>
+    {% endif %}
+
+    {# Čítať viac #}
+    <div class="node__footer">
+      <a href="{{ url }}" class="node__readmore">Čítať ďalej →</a>
+    </div>
+
+  </div>
+</article>
