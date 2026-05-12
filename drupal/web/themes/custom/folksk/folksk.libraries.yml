@@ -4,7 +4,8 @@ global:
     theme:
       dist/css/style.css: {}
   js:
-    dist/js/theme.js: { minified: false }
+    dist/js/bootstrap.bundle.min.js: { minified: true }
+    dist/js/theme.js: {}
   dependencies:
     - core/drupal
     - core/once

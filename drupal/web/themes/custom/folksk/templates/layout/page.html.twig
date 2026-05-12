@@ -1,80 +1,47 @@
 {% if page.header or page.primary_menu %}
-<header class="navbar bg-primary text-primary-content shadow-lg sticky top-0 z-50">
-  <div class="container mx-auto px-4 flex items-center justify-between w-full">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+  <div class="container">
 
-    {# Logo / názov stránky #}
-    <div class="navbar-start">
-      <a href="{{ path('<front>') }}" class="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-        folk.sk
-      </a>
-    </div>
+    <a class="navbar-brand" href="{{ path('<front>') }}">folk.sk</a>
 
-    {# Hlavná navigácia #}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     {% if page.primary_menu %}
-      <nav class="navbar-center hidden lg:flex">
+      <div class="collapse navbar-collapse" id="mainNav">
         {{ page.primary_menu }}
-      </nav>
+      </div>
     {% endif %}
 
-    {# Mobile menu #}
-    <div class="navbar-end lg:hidden">
-      <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-base-content rounded-box w-52">
-          {{ page.primary_menu }}
-        </ul>
-      </div>
-    </div>
-
   </div>
-</header>
+</nav>
 {% endif %}
 
-{# Breadcrumb #}
 {% if page.breadcrumb %}
-  <div class="bg-base-200 border-b border-base-300">
-    <div class="container mx-auto px-4 py-2 text-sm">
-      {{ page.breadcrumb }}
-    </div>
+  <div class="bg-light border-bottom py-2">
+    <div class="container">{{ page.breadcrumb }}</div>
   </div>
 {% endif %}
 
-{# Highlighted #}
 {% if page.highlighted %}
-  <div class="container mx-auto px-4 mt-4">
-    {{ page.highlighted }}
-  </div>
+  <div class="container mt-3">{{ page.highlighted }}</div>
 {% endif %}
 
-{# Hlavný obsah #}
-<main class="container mx-auto px-4 py-8">
-  <div class="flex gap-8">
-
-    <div class="flex-1 min-w-0">
+<main class="container my-5">
+  <div class="row">
+    <div class="{{ page.sidebar ? 'col-lg-8' : 'col-12' }}">
       {{ page.content }}
     </div>
-
     {% if page.sidebar %}
-      <aside class="w-72 flex-shrink-0">
-        <div class="sticky top-24 space-y-6">
-          {{ page.sidebar }}
-        </div>
-      </aside>
+      <aside class="col-lg-4">{{ page.sidebar }}</aside>
     {% endif %}
-
   </div>
 </main>
 
-{# Päta #}
-<footer class="footer footer-center p-8 bg-neutral text-neutral-content mt-16">
-  <div class="container mx-auto">
-    {% if page.footer %}
-      {{ page.footer }}
-    {% endif %}
-    <p class="text-sm opacity-60">© {{ "now"|date("Y") }} folk.sk</p>
+<footer class="py-5 mt-5">
+  <div class="container text-center">
+    {% if page.footer %}{{ page.footer }}{% endif %}
+    <p class="mb-0 small opacity-50">© {{ "now"|date("Y") }} folk.sk</p>
   </div>
 </footer>

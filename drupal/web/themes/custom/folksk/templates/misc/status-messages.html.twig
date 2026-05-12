@@ -1,14 +1,11 @@
 {% for type, messages in message_list %}
-  {% set alert_class = {
-    'status':  'alert-success',
-    'warning': 'alert-warning',
-    'error':   'alert-error',
-  }[type] ?? 'alert-info' %}
-  <div role="alert" class="alert {{ alert_class }} mb-4">
-    <ul>
+  {% set bs_class = {'status': 'success', 'warning': 'warning', 'error': 'danger'}[type] ?? 'info' %}
+  <div class="alert alert-{{ bs_class }} alert-dismissible fade show" role="alert">
+    <ul class="mb-0">
       {% for message in messages %}
         <li>{{ message }}</li>
       {% endfor %}
     </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   </div>
 {% endfor %}
