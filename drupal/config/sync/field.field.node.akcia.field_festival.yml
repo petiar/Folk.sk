@@ -1,0 +1,25 @@
+uuid: 877fde7e-3b94-4da0-b8d1-51a4d3633ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_festival
+    - node.type.akcia
+    - taxonomy.vocabulary.festival
+id: node.akcia.field_festival
+field_name: field_festival
+entity_type: node
+bundle: akcia
+label: Festival
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      festival: festival
+    auto_create: true
+field_type: entity_reference

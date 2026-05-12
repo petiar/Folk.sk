@@ -1,0 +1,23 @@
+uuid: db60ce70-fc86-4fef-9fbd-47e9ee2e9e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vstupne
+    - node.type.akcia
+id: node.akcia.field_vstupne
+field_name: field_vstupne
+entity_type: node
+bundle: akcia
+label: Vstupné
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' €'
+field_type: decimal

@@ -1,0 +1,23 @@
+uuid: 839f6cb3-c1aa-4541-8cbb-02ed1a24c3c1
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.televizia
+  module:
+    - node
+id: node_televizia
+label: 'Node: televizia'
+type: 'canonical_entities:node'
+pattern: '/video/[node:title]'
+selection_criteria:
+  8269d15c-889c-4e64-a156-cb1434527b7c:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      televizia: televizia
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,13 @@
+uuid: d7c13f85-a608-4c3a-b4d0-586c8afddc87
+langcode: sk
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: KgGJDZFpMaz_8bTv6fN1bXS3Qi5LWmRJI9R53kEGsNQ
+id: node.teaser
+label: Upútavka
+description: ''
+targetEntityType: node
+cache: true

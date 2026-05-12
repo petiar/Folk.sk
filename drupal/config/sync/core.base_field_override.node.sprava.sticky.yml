@@ -1,0 +1,22 @@
+uuid: 8845d1a7-b147-4428-a4ba-e1d320d01300
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sprava
+id: node.sprava.sticky
+field_name: sticky
+entity_type: node
+bundle: sprava
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

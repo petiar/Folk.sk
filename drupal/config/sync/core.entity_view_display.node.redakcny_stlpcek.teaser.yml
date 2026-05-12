@@ -1,0 +1,35 @@
+uuid: 1d5e6c59-84c6-4013-9d86-153cfa27cf45
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.redakcny_stlpcek.body
+    - field.field.node.redakcny_stlpcek.comment
+    - field.field.node.redakcny_stlpcek.upload
+    - node.type.redakcny_stlpcek
+  module:
+    - text
+    - user
+id: node.redakcny_stlpcek.teaser
+targetEntityType: node
+bundle: redakcny_stlpcek
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  langcode: true
+  upload: true

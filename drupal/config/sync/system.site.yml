@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: sk
+uuid: 8bea8b6f-9cb9-43c1-8e7f-3c30e86f119a
+name: folk.sk
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /frontpage
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: sk
+mail_notification: null

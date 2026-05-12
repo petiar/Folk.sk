@@ -1,0 +1,41 @@
+uuid: 71ef1e24-21dc-40f6-99ed-6c4166f956cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pesnicka.body
+    - field.field.node.pesnicka.comment
+    - field.field.node.pesnicka.field_legal
+    - field.field.node.pesnicka.field_muzikant
+    - field.field.node.pesnicka.field_pesnicka
+    - field.field.node.pesnicka.upload
+    - node.type.pesnicka
+  module:
+    - text
+    - user
+id: node.pesnicka.teaser
+targetEntityType: node
+bundle: pesnicka
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  field_legal: true
+  field_muzikant: true
+  field_pesnicka: true
+  langcode: true
+  upload: true

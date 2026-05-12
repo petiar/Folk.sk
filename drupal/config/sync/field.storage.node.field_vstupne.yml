@@ -1,0 +1,20 @@
+uuid: 57fd1737-9052-440f-9fcb-9a71112ae908
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_vstupne
+field_name: field_vstupne
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

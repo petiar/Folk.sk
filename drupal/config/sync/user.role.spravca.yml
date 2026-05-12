@@ -1,0 +1,58 @@
+uuid: 64f76543-a79e-414e-a852-3f1678d8d841
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.neuplne_html
+    - filter.format.php_code
+    - filter.format.uplne_html
+    - node.type.page
+  module:
+    - block
+    - comment
+    - filter
+    - node
+    - path
+    - search
+    - system
+    - taxonomy
+    - views_ui
+id: spravca
+label: správca
+weight: 4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer actions'
+  - 'administer blocks'
+  - 'administer comments'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer search'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'change own username'
+  - 'create page content'
+  - 'create url aliases'
+  - 'delete any page content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'use text format neuplne_html'
+  - 'use text format php_code'
+  - 'use text format uplne_html'

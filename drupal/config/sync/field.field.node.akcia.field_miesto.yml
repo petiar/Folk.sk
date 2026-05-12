@@ -1,0 +1,19 @@
+uuid: 39f34252-8b30-49d1-87b6-6f0f561c4214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_miesto
+    - node.type.akcia
+id: node.akcia.field_miesto
+field_name: field_miesto
+entity_type: node
+bundle: akcia
+label: Miesto
+description: 'Špecifikujte bližšie miesto konania - zadajte ulicu, názov budovy, prípadne nejaký orientačný bod.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

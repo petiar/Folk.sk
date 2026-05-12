@@ -1,0 +1,11 @@
+uuid: 4fcd40c5-5ba2-43db-9355-04ae978abcfd
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 35CefWbnzaiytcg3acexxz_GTvuwIjYd_ZTcmmR-tXA
+id: zxx
+label: Neurčené
+direction: ltr
+weight: 3
+locked: true

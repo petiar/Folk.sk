@@ -1,0 +1,9 @@
+uuid: f5db4529-90ed-4065-a46c-9dca12c290cf
+langcode: en
+status: true
+dependencies: {  }
+name: Muzikant
+vid: muzikant
+description: 'Zoznam všetkých štítkov pre kapely a pesničkárov o ktorých píšeme na Folk.sk.'
+weight: 0
+new_revision: false

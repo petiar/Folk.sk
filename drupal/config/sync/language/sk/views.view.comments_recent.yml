@@ -1,0 +1,9 @@
+display:
+  default:
+    display_title: Predvolené
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'Žiadne komentáre nie sú dostupné.'
+  block_1:
+    display_title: Blok

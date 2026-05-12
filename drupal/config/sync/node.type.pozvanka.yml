@@ -1,0 +1,11 @@
+uuid: 7f20596d-2a3f-48b9-b8b4-4dc88d3cb453
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pozvánky, upútavky'
+type: pozvanka
+description: 'Pozvánka, alebo, ak chcete, upútavka na zaujimavý koncert, festival alebo inú akciu, ktorá by našich čitateľov mohla zaujať.'
+help: "Pretože nechceme aby sa nám z pozvánok stali krátke upútavky na koncerty (teda niečo medzi článkami a kalendárom akcií), <strong>je potrebné napísať minimálne 50 slov.</strong> Ak je akcia na ktorú pozývate naozaj zaujímavá, nemal by to byť problém. Len pre ilustráciu - tento textík má 45 slov.<br />\r\n<strong>Je zakázané používať v nadpise VEĽKÉ PÍSMENÁ a výkričníky!!!</strong>\r\nPo odoslaní váš textík skontrolujeme a budeme publikovať hneď ako to bude možné. Zvyčajne do stíhame do 24 hodín."
+new_revision: false
+preview_mode: 1
+display_submitted: false

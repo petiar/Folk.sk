@@ -1,0 +1,17 @@
+display:
+  default:
+    display_title: Predvolené
+    display_options:
+      fields:
+        changed:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Použiť
+          reset_button_label: Reset
+          exposed_sorts_label: 'Zoradiť podľa'
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
+      use_more_text: Viac
+  block_1:
+    display_title: Blok

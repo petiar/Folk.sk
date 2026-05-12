@@ -1,0 +1,89 @@
+uuid: 08f1fa81-e01d-495b-85c3-7b4620ee8e01
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.televizia.body
+    - field.field.node.televizia.comment
+    - field.field.node.televizia.field_co_nam_pisete_
+    - field.field.node.televizia.field_festival
+    - field.field.node.televizia.field_muzikant
+    - field.field.node.televizia.field_suvisiaci_clanok
+    - field.field.node.televizia.field_televizia_id
+    - field.field.node.televizia.upload
+    - node.type.televizia
+  module:
+    - comment
+    - file
+    - text
+    - user
+id: node.televizia.default
+targetEntityType: node
+bundle: televizia
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  comment:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_co_nam_pisete_:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_festival:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_muzikant:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  upload:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  field_televizia_id: true
+  langcode: true

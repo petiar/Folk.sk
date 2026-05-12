@@ -1,0 +1,19 @@
+uuid: 6e37ade8-8979-48ac-bb55-7dc819f004ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_miesto
+field_name: field_miesto
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,71 @@
+uuid: c41209ad-17d1-4e3f-879f-ae16c01893e0
+langcode: sk
+status: true
+dependencies: {  }
+id: d6_comment
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - Content
+migration_group: null
+label: 'Comments — všetky do jedného typu comment'
+source:
+  plugin: d6_comment
+  constants:
+    entity_type: node
+    comment_type: comment
+    field_name: comment
+process:
+  cid: cid
+  pid:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: pid
+    -
+      plugin: migration_lookup
+      migration: d6_comment
+  entity_id:
+    -
+      plugin: migration_lookup
+      migration:
+        - d6_node_complete
+        - d6_node
+      source: nid
+    -
+      plugin: node_complete_node_lookup
+    -
+      plugin: skip_on_empty
+      method: row
+  entity_type: constants/entity_type
+  comment_type: constants/comment_type
+  field_name: constants/field_name
+  langcode: language
+  subject: subject
+  uid: uid
+  name: name
+  mail: mail
+  homepage: homepage
+  hostname: hostname
+  created: timestamp
+  changed: timestamp
+  status: status
+  thread: thread
+  comment_body/value: comment
+  comment_body/format:
+    plugin: migration_lookup
+    migration: d6_filter_format
+    source: format
+destination:
+  plugin: 'entity:comment'
+idMap: {  }
+migration_dependencies:
+  required:
+    - d6_node
+    - d6_user
+    - d6_filter_format
+  optional:
+    - d6_node_complete
+include: null

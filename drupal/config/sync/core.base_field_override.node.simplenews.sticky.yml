@@ -1,0 +1,22 @@
+uuid: b18c9d49-0f1e-4d69-98c0-7d26a114bb7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews
+id: node.simplenews.sticky
+field_name: sticky
+entity_type: node
+bundle: simplenews
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

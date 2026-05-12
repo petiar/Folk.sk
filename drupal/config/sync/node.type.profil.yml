@@ -1,0 +1,11 @@
+uuid: 61958758-c944-40dc-b9c7-d33998ee4918
+langcode: en
+status: true
+dependencies: {  }
+name: Profil
+type: profil
+description: 'Profil skupiny alebo pesničkára'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

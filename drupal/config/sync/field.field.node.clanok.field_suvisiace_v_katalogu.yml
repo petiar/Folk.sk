@@ -1,0 +1,21 @@
+uuid: b23325fb-17c4-4af9-8bdc-2616c4832ace
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suvisiace_v_katalogu
+    - node.type.clanok
+id: node.clanok.field_suvisiace_v_katalogu
+field_name: field_suvisiace_v_katalogu
+entity_type: node
+bundle: clanok
+label: 'Súvisiace albumy v Katalógu'
+description: 'Vyberte (podľa názvu) albumy v našom katalógu, ktoré súvisia s týmto článkom. Stačí apísať prvých pár písmen a systém už sám čosi dohľadá.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

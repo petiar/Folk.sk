@@ -1,0 +1,22 @@
+uuid: 7f649a49-b979-4073-ad08-71e1158f4963
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_msn
+  module:
+    - text
+    - user
+id: user.user.profile_msn
+field_name: profile_msn
+entity_type: user
+bundle: user
+label: MSN
+description: 'Sem zadajte svoju MSN e-mailovú adresu, ak ju chcete zverejniť.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

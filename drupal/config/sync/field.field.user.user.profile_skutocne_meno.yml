@@ -1,0 +1,22 @@
+uuid: 0bc42142-2500-4d63-9b81-3adc9237e1be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_skutocne_meno
+  module:
+    - text
+    - user
+id: user.user.profile_skutocne_meno
+field_name: profile_skutocne_meno
+entity_type: user
+bundle: user
+label: 'Skutočné meno'
+description: 'Ak nechcete ostať v anonymite môžte sem vpísať svoje skutočné meno.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

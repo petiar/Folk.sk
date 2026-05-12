@@ -1,0 +1,20 @@
+uuid: 7f54fad1-a527-4bb3-9a79-82ace623c964
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - user
+id: user.profile_lastfm
+field_name: profile_lastfm
+entity_type: user
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

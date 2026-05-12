@@ -1,0 +1,9 @@
+uuid: 7bdb122a-00c6-435e-ac5c-1cf83da99cbd
+langcode: en
+status: true
+dependencies: {  }
+name: Festival
+vid: festival
+description: 'Štítky pre všetky festivaly o ktorých sa na našich stránkach píše.'
+weight: 0
+new_revision: false

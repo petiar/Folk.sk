@@ -1,0 +1,49 @@
+uuid: 7a8b311f-3d76-4c8c-8b4a-32adcd49b57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.pesnicka.body
+    - field.field.node.pesnicka.comment
+    - field.field.node.pesnicka.field_legal
+    - field.field.node.pesnicka.field_muzikant
+    - field.field.node.pesnicka.field_pesnicka
+    - field.field.node.pesnicka.upload
+    - node.type.pesnicka
+  module:
+    - file
+    - user
+id: node.pesnicka.rss
+targetEntityType: node
+bundle: pesnicka
+mode: rss
+content:
+  field_legal:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pesnicka:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_muzikant: true
+  langcode: true
+  upload: true

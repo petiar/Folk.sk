@@ -1,0 +1,14 @@
+uuid: 3195b6d4-ce61-445e-b001-9bfdcdeebac1
+langcode: sk
+status: true
+dependencies:
+  module:
+    - user
+id: user_default
+label: Používatelia
+type: 'canonical_entities:user'
+pattern: '/uzivatel/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: 00d88824-7709-4993-9122-3bf1538c9dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_moj_profil
+  module:
+    - text
+    - user
+id: user.user.profile_moj_profil
+field_name: profile_moj_profil
+entity_type: user
+bundle: user
+label: 'Môj profil'
+description: 'Napíšte pár slov o vás. Bude to informácia nielen pre nás ale i pre ostatných návštevníkov Folk.sk. <strong>Webové odkazy sú zakázané a budú odstránené administrátormi.</strong>. Použite príslušné polia profilu (Kde som na webe).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

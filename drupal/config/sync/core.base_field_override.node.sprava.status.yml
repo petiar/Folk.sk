@@ -1,0 +1,22 @@
+uuid: b9c2b81d-ad71-421f-9616-1ed729a0a8f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sprava
+id: node.sprava.status
+field_name: status
+entity_type: node
+bundle: sprava
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

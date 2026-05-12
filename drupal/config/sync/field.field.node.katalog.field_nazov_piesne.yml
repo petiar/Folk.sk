@@ -1,0 +1,19 @@
+uuid: 78acceba-6044-4f7b-ab58-aa8b989b7b64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nazov_piesne
+    - node.type.katalog
+id: node.katalog.field_nazov_piesne
+field_name: field_nazov_piesne
+entity_type: node
+bundle: katalog
+label: 'Názov piesne'
+description: 'Pomocou tlačidla <strong>Pridať ďalší záznam</strong> pridáte ďalšie polia.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

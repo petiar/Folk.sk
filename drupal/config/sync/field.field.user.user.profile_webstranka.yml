@@ -1,0 +1,23 @@
+uuid: 08789382-cfe8-4d3d-96a6-762a601653cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_webstranka
+  module:
+    - link
+    - user
+id: user.user.profile_webstranka
+field_name: profile_webstranka
+entity_type: user
+bundle: user
+label: 'Moja webstránka'
+description: 'Ak máte svoju vlastnú webstránku, dajte o nej vedieť! Pri písaní adresy nezabudnite na úvodné <strong>http://</strong>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

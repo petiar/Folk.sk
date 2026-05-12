@@ -1,0 +1,10 @@
+uuid: 39e2be3b-b180-419f-b48b-1f1496069b18
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_Bh81osDyUQ4wV0GgU_NdBNqkzM87sLxjaCdFj9mnw
+id: account
+label: 'Používateľské menu'
+description: 'Links related to the active user account'
+locked: true

@@ -1,0 +1,19 @@
+uuid: 5d94581f-45e7-4233-ae3b-bf4f866273b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_televizia_id
+    - node.type.televizia
+id: node.televizia.field_televizia_id
+field_name: field_televizia_id
+entity_type: node
+bundle: televizia
+label: 'ID videa na Vimeo.com'
+description: 'Sem treba dať ID videa na Vimeo.com, je to to číslo, ktoré sa nachádza v linku na dané video, http://www.vimeo.com/<strong>1314266</strong>.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

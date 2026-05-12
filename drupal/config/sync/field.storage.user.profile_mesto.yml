@@ -1,0 +1,8217 @@
+uuid: 2f1a029a-ff1f-4fda-8db5-ca8491e24321
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.profile_mesto
+field_name: profile_mesto
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Ábelová
+      label: Ábelová
+    -
+      value: Abovce
+      label: Abovce
+    -
+      value: Abrahám
+      label: Abrahám
+    -
+      value: Abrahámovce
+      label: Abrahámovce
+    -
+      value: Abramová
+      label: Abramová
+    -
+      value: Abranovce
+      label: Abranovce
+    -
+      value: Adidovce
+      label: Adidovce
+    -
+      value: Alekšince
+      label: Alekšince
+    -
+      value: Andovce
+      label: Andovce
+    -
+      value: Andrejová
+      label: Andrejová
+    -
+      value: Ardanovce
+      label: Ardanovce
+    -
+      value: Ardovo
+      label: Ardovo
+    -
+      value: Arnutovce
+      label: Arnutovce
+    -
+      value: Báb
+      label: Báb
+    -
+      value: Babie
+      label: Babie
+    -
+      value: Babín
+      label: Babín
+    -
+      value: Babiná
+      label: Babiná
+    -
+      value: Babindol
+      label: Babindol
+    -
+      value: Babinec
+      label: Babinec
+    -
+      value: Bacúch
+      label: Bacúch
+    -
+      value: Bacúrov
+      label: Bacúrov
+    -
+      value: Báč
+      label: Báč
+    -
+      value: Bačka
+      label: Bačka
+    -
+      value: Bačkov
+      label: Bačkov
+    -
+      value: Bačkovík
+      label: Bačkovík
+    -
+      value: Badín
+      label: Badín
+    -
+      value: Baďan
+      label: Baďan
+    -
+      value: Báhoň
+      label: Báhoň
+    -
+      value: Bajany
+      label: Bajany
+    -
+      value: Bajč
+      label: Bajč
+    -
+      value: Bajerov
+      label: Bajerov
+    -
+      value: Bajerovce
+      label: Bajerovce
+    -
+      value: Bajka
+      label: Bajka
+    -
+      value: Bajtava
+      label: Bajtava
+    -
+      value: Baka
+      label: Baka
+    -
+      value: Baláže
+      label: Baláže
+    -
+      value: Baldovce
+      label: Baldovce
+    -
+      value: 'Balog nad Ipľom'
+      label: 'Balog nad Ipľom'
+    -
+      value: Baloň
+      label: Baloň
+    -
+      value: Banka
+      label: Banka
+    -
+      value: Bánov
+      label: Bánov
+    -
+      value: 'Bánovce nad Bebravou'
+      label: 'Bánovce nad Bebravou'
+    -
+      value: 'Bánovce nad Ondavou'
+      label: 'Bánovce nad Ondavou'
+    -
+      value: 'Banská Belá'
+      label: 'Banská Belá'
+    -
+      value: 'Banská Štiavnica'
+      label: 'Banská Štiavnica'
+    -
+      value: 'Banská Bystrica'
+      label: 'Banská Bystrica'
+    -
+      value: Banské
+      label: Banské
+    -
+      value: 'Banský Studenec'
+      label: 'Banský Studenec'
+    -
+      value: Baňa
+      label: Baňa
+    -
+      value: Bara
+      label: Bara
+    -
+      value: Barca
+      label: Barca
+    -
+      value: Bartošovce
+      label: Bartošovce
+    -
+      value: Bardoňovo
+      label: Bardoňovo
+    -
+      value: 'Bartošova Lehôtka'
+      label: 'Bartošova Lehôtka'
+    -
+      value: Bardejov
+      label: Bardejov
+    -
+      value: Baška
+      label: Baška
+    -
+      value: Baškovce
+      label: Baškovce
+    -
+      value: Bašovce
+      label: Bašovce
+    -
+      value: Batizovce
+      label: Batizovce
+    -
+      value: Bátorová
+      label: Bátorová
+    -
+      value: Bátka
+      label: Bátka
+    -
+      value: 'Bátorove Kosihy'
+      label: 'Bátorove Kosihy'
+    -
+      value: Bátovce
+      label: Bátovce
+    -
+      value: Beharovce
+      label: Beharovce
+    -
+      value: Beckov
+      label: Beckov
+    -
+      value: Becherov
+      label: Becherov
+    -
+      value: Belá
+      label: Belá
+    -
+      value: 'Belá - Dulice'
+      label: 'Belá - Dulice'
+    -
+      value: 'Belá nad Cirochou'
+      label: 'Belá nad Cirochou'
+    -
+      value: Beladice
+      label: Beladice
+    -
+      value: Belejovce
+      label: Belejovce
+    -
+      value: Belín
+      label: Belín
+    -
+      value: Belina
+      label: Belina
+    -
+      value: Belince
+      label: Belince
+    -
+      value: 'Bellova Ves'
+      label: 'Bellova Ves'
+    -
+      value: Beloveža
+      label: Beloveža
+    -
+      value: Beluj
+      label: Beluj
+    -
+      value: Beluša
+      label: Beluša
+    -
+      value: Belža
+      label: Belža
+    -
+      value: Beniakovce
+      label: Beniakovce
+    -
+      value: Benice
+      label: Benice
+    -
+      value: Benkovce
+      label: Benkovce
+    -
+      value: Beňadiková
+      label: Beňadiková
+    -
+      value: Beňadikovce
+      label: Beňadikovce
+    -
+      value: Beňadovo
+      label: Beňadovo
+    -
+      value: Beňatina
+      label: Beňatina
+    -
+      value: Beňuš
+      label: Beňuš
+    -
+      value: Bernolákovo
+      label: Bernolákovo
+    -
+      value: Bertotovce
+      label: Bertotovce
+    -
+      value: Beša
+      label: Beša
+    -
+      value: Bešeňov
+      label: Bešeňov
+    -
+      value: Bešeňová
+      label: Bešeňová
+    -
+      value: Betlanovce
+      label: Betlanovce
+    -
+      value: Betliar
+      label: Betliar
+    -
+      value: Bežovce
+      label: Bežovce
+    -
+      value: Bidovce
+      label: Bidovce
+    -
+      value: Biel
+      label: Biel
+    -
+      value: Bielovce
+      label: Bielovce
+    -
+      value: 'Biely Kostol'
+      label: 'Biely Kostol'
+    -
+      value: Bijacovce
+      label: Bijacovce
+    -
+      value: 'Bílkove Humence'
+      label: 'Bílkove Humence'
+    -
+      value: Bíňa
+      label: Bíňa
+    -
+      value: Bíňovce
+      label: Bíňovce
+    -
+      value: Biskupice
+      label: Biskupice
+    -
+      value: Biskupová
+      label: Biskupová
+    -
+      value: Bitarová
+      label: Bitarová
+    -
+      value: Blahová
+      label: Blahová
+    -
+      value: 'Blatná na Ostrove'
+      label: 'Blatná na Ostrove'
+    -
+      value: 'Blatná Polianka'
+      label: 'Blatná Polianka'
+    -
+      value: Blatné
+      label: Blatné
+    -
+      value: 'Blatné Remety'
+      label: 'Blatné Remety'
+    -
+      value: 'Blatné Revištia'
+      label: 'Blatné Revištia'
+    -
+      value: Blatnica
+      label: Blatnica
+    -
+      value: Blažice
+      label: Blažice
+    -
+      value: Blažovce
+      label: Blažovce
+    -
+      value: Blesovce
+      label: Blesovce
+    -
+      value: Blhovce
+      label: Blhovce
+    -
+      value: Bobot
+      label: Bobot
+    -
+      value: Bobrov
+      label: Bobrov
+    -
+      value: Bobrovček
+      label: Bobrovček
+    -
+      value: Bobrovec
+      label: Bobrovec
+    -
+      value: Bobrovník
+      label: Bobrovník
+    -
+      value: Bočiar
+      label: Bočiar
+    -
+      value: Bodíky
+      label: Bodíky
+    -
+      value: Bodiná
+      label: Bodiná
+    -
+      value: Bodorová
+      label: Bodorová
+    -
+      value: Bodovce
+      label: Bodovce
+    -
+      value: Bodružal
+      label: Bodružal
+    -
+      value: Bodza
+      label: Bodza
+    -
+      value: 'Bodzianske Lúky'
+      label: 'Bodzianske Lúky'
+    -
+      value: Bogliarka
+      label: Bogliarka
+    -
+      value: Bohdanovce
+      label: Bohdanovce
+    -
+      value: 'Bohdanovce nad Trnavou'
+      label: 'Bohdanovce nad Trnavou'
+    -
+      value: Boheľov
+      label: Boheľov
+    -
+      value: Bohunice
+      label: Bohunice
+    -
+      value: Bohúňovo
+      label: Bohúňovo
+    -
+      value: Bojná
+      label: Bojná
+    -
+      value: Bojnice
+      label: Bojnice
+    -
+      value: Bojničky
+      label: Bojničky
+    -
+      value: Boldog
+      label: Boldog
+    -
+      value: Boleráz
+      label: Boleráz
+    -
+      value: Bolešov
+      label: Bolešov
+    -
+      value: Boliarov
+      label: Boliarov
+    -
+      value: Boľ
+      label: Boľ
+    -
+      value: Boľkovce
+      label: Boľkovce
+    -
+      value: Borcová
+      label: Borcová
+    -
+      value: Borčany
+      label: Borčany
+    -
+      value: Borčice
+      label: Borčice
+    -
+      value: Borinka
+      label: Borinka
+    -
+      value: Borová
+      label: Borová
+    -
+      value: Borovce
+      label: Borovce
+    -
+      value: 'Borský Mikuláš'
+      label: 'Borský Mikuláš'
+    -
+      value: 'Borský Svätý Jur'
+      label: 'Borský Svätý Jur'
+    -
+      value: Borša
+      label: Borša
+    -
+      value: Bory
+      label: Bory
+    -
+      value: Bošáca
+      label: Bošáca
+    -
+      value: Bošany
+      label: Bošany
+    -
+      value: Bottovo
+      label: Bottovo
+    -
+      value: Boťany
+      label: Boťany
+    -
+      value: Bôrka
+      label: Bôrka
+    -
+      value: Bracovce
+      label: Bracovce
+    -
+      value: Branč
+      label: Branč
+    -
+      value: Branovo
+      label: Branovo
+    -
+      value: Bratislava
+      label: Bratislava
+    -
+      value: Braväcovo
+      label: Braväcovo
+    -
+      value: Brdárka
+      label: Brdárka
+    -
+      value: Brehov
+      label: Brehov
+    -
+      value: Brehy
+      label: Brehy
+    -
+      value: Brekov
+      label: Brekov
+    -
+      value: Brestov
+      label: Brestov
+    -
+      value: 'Brestov nad Laborcom'
+      label: 'Brestov nad Laborcom'
+    -
+      value: Brestovany
+      label: Brestovany
+    -
+      value: Brestovec
+      label: Brestovec
+    -
+      value: Bretejovce
+      label: Bretejovce
+    -
+      value: Bretka
+      label: Bretka
+    -
+      value: Breza
+      label: Breza
+    -
+      value: Brezany
+      label: Brezany
+    -
+      value: Brezina
+      label: Brezina
+    -
+      value: Breziny
+      label: Breziny
+    -
+      value: Breznica
+      label: Breznica
+    -
+      value: Breznička
+      label: Breznička
+    -
+      value: Brezno
+      label: Brezno
+    -
+      value: Brezolupy
+      label: Brezolupy
+    -
+      value: Brezov
+      label: Brezov
+    -
+      value: 'Brezová pod Bradlom'
+      label: 'Brezová pod Bradlom'
+    -
+      value: Brezovec
+      label: Brezovec
+    -
+      value: Brezovica
+      label: Brezovica
+    -
+      value: Brezovička
+      label: Brezovička
+    -
+      value: Brezovka
+      label: Brezovka
+    -
+      value: Brežany
+      label: Brežany
+    -
+      value: Brhlovce
+      label: Brhlovce
+    -
+      value: Brieštie
+      label: Brieštie
+    -
+      value: Brodské
+      label: Brodské
+    -
+      value: Brodzany
+      label: Brodzany
+    -
+      value: Brunovce
+      label: Brunovce
+    -
+      value: Brusnica
+      label: Brusnica
+    -
+      value: Brusník
+      label: Brusník
+    -
+      value: Brusno
+      label: Brusno
+    -
+      value: Brutovce
+      label: Brutovce
+    -
+      value: Bruty
+      label: Bruty
+    -
+      value: Brvnište
+      label: Brvnište
+    -
+      value: Brzotín
+      label: Brzotín
+    -
+      value: Buclovany
+      label: Buclovany
+    -
+      value: Búč
+      label: Búč
+    -
+      value: Bučany
+      label: Bučany
+    -
+      value: Budča
+      label: Budča
+    -
+      value: Budikovany
+      label: Budikovany
+    -
+      value: Budimír
+      label: Budimír
+    -
+      value: Budiná
+      label: Budiná
+    -
+      value: Budince
+      label: Budince
+    -
+      value: Budiš
+      label: Budiš
+    -
+      value: Budkovce
+      label: Budkovce
+    -
+      value: Budmerice
+      label: Budmerice
+    -
+      value: Buglovce
+      label: Buglovce
+    -
+      value: Buková
+      label: Buková
+    -
+      value: Bukovce
+      label: Bukovce
+    -
+      value: Bukovec
+      label: Bukovec
+    -
+      value: Bukovina
+      label: Bukovina
+    -
+      value: Bulhary
+      label: Bulhary
+    -
+      value: Bunetice
+      label: Bunetice
+    -
+      value: Bunkovce
+      label: Bunkovce
+    -
+      value: Bušince
+      label: Bušince
+    -
+      value: Bušovce
+      label: Bušovce
+    -
+      value: Buzica
+      label: Buzica
+    -
+      value: Buzitka
+      label: Buzitka
+    -
+      value: Bystrá
+      label: Bystrá
+    -
+      value: Bystrany
+      label: Bystrany
+    -
+      value: Bystré
+      label: Bystré
+    -
+      value: Bystričany
+      label: Bystričany
+    -
+      value: Bystrička
+      label: Bystrička
+    -
+      value: Byšta
+      label: Byšta
+    -
+      value: Bytča
+      label: Bytča
+    -
+      value: Bzenica
+      label: Bzenica
+    -
+      value: Bzenov
+      label: Bzenov
+    -
+      value: 'Bzince pod Javorinou'
+      label: 'Bzince pod Javorinou'
+    -
+      value: Bziny
+      label: Bziny
+    -
+      value: Bzovík
+      label: Bzovík
+    -
+      value: 'Bzovská Lehôtka'
+      label: 'Bzovská Lehôtka'
+    -
+      value: Bžany
+      label: Bžany
+    -
+      value: 'Cabaj - Čápor'
+      label: 'Cabaj - Čápor'
+    -
+      value: Cabov
+      label: Cabov
+    -
+      value: Cakov
+      label: Cakov
+    -
+      value: Cejkov
+      label: Cejkov
+    -
+      value: Cernina
+      label: Cernina
+    -
+      value: Cerová
+      label: Cerová
+    -
+      value: Cerovo
+      label: Cerovo
+    -
+      value: Cestice
+      label: Cestice
+    -
+      value: Cífer
+      label: Cífer
+    -
+      value: Cigeľ
+      label: Cigeľ
+    -
+      value: Cigeľka
+      label: Cigeľka
+    -
+      value: Cigla
+      label: Cigla
+    -
+      value: Cimenná
+      label: Cimenná
+    -
+      value: Cinobaňa
+      label: Cinobaňa
+    -
+      value: Čabalovce
+      label: Čabalovce
+    -
+      value: Čabiny
+      label: Čabiny
+    -
+      value: 'Čabradský Vrbovok'
+      label: 'Čabradský Vrbovok'
+    -
+      value: Čadca
+      label: Čadca
+    -
+      value: Čachtice
+      label: Čachtice
+    -
+      value: Čajkov
+      label: Čajkov
+    -
+      value: Čaka
+      label: Čaka
+    -
+      value: Čakajovce
+      label: Čakajovce
+    -
+      value: Čakanovce
+      label: Čakanovce
+    -
+      value: Čakany
+      label: Čakany
+    -
+      value: Čaklov
+      label: Čaklov
+    -
+      value: Čalovec
+      label: Čalovec
+    -
+      value: Čamovce
+      label: Čamovce
+    -
+      value: Čaňa
+      label: Čaňa
+    -
+      value: Čaradice
+      label: Čaradice
+    -
+      value: Čáry
+      label: Čáry
+    -
+      value: Častá
+      label: Častá
+    -
+      value: Častkov
+      label: Častkov
+    -
+      value: Častkovce
+      label: Častkovce
+    -
+      value: Čata
+      label: Čata
+    -
+      value: Čataj
+      label: Čataj
+    -
+      value: Čavoj
+      label: Čavoj
+    -
+      value: Čebovce
+      label: Čebovce
+    -
+      value: Čečehov
+      label: Čečehov
+    -
+      value: Čečejovce
+      label: Čečejovce
+    -
+      value: Čechy
+      label: Čechy
+    -
+      value: Čechynce
+      label: Čechynce
+    -
+      value: Čekovce
+      label: Čekovce
+    -
+      value: Čeláre
+      label: Čeláre
+    -
+      value: 'Čelkova Lehota'
+      label: 'Čelkova Lehota'
+    -
+      value: Čelovce
+      label: Čelovce
+    -
+      value: Čeľadice
+      label: Čeľadice
+    -
+      value: Čeľadince
+      label: Čeľadince
+    -
+      value: Čeľovce
+      label: Čeľovce
+    -
+      value: Čenkovce
+      label: Čenkovce
+    -
+      value: Čerenčany
+      label: Čerenčany
+    -
+      value: Čereňany
+      label: Čereňany
+    -
+      value: Čerhov
+      label: Čerhov
+    -
+      value: Čerín
+      label: Čerín
+    -
+      value: Čermany
+      label: Čermany
+    -
+      value: Černík
+      label: Černík
+    -
+      value: Černina
+      label: Černina
+    -
+      value: Černochov
+      label: Černochov
+    -
+      value: Čertižné
+      label: Čertižné
+    -
+      value: 'Červená Voda'
+      label: 'Červená Voda'
+    -
+      value: Červenica
+      label: Červenica
+    -
+      value: 'Červenica pri Sabinove'
+      label: 'Červenica pri Sabinove'
+    -
+      value: Červeník
+      label: Červeník
+    -
+      value: 'Červený Hrádok'
+      label: 'Červený Hrádok'
+    -
+      value: 'Červený Kameň'
+      label: 'Červený Kameň'
+    -
+      value: 'Červený Kláštor'
+      label: 'Červený Kláštor'
+    -
+      value: Červeňany
+      label: Červeňany
+    -
+      value: 'České Brezovo'
+      label: 'České Brezovo'
+    -
+      value: Čičarovce
+      label: Čičarovce
+    -
+      value: Čičava
+      label: Čičava
+    -
+      value: Čičmany
+      label: Čičmany
+    -
+      value: Číčov
+      label: Číčov
+    -
+      value: Čierna
+      label: Čierna
+    -
+      value: 'Čierna Lehota'
+      label: 'Čierna Lehota'
+    -
+      value: 'Čierna nad Tisou'
+      label: 'Čierna nad Tisou'
+    -
+      value: 'Čierna Voda'
+      label: 'Čierna Voda'
+    -
+      value: Čierne
+      label: Čierne
+    -
+      value: 'Čierne Kľačany'
+      label: 'Čierne Kľačany'
+    -
+      value: 'Čierne nad Topľou'
+      label: 'Čierne nad Topľou'
+    -
+      value: 'Čierne Pole'
+      label: 'Čierne Pole'
+    -
+      value: 'Čierny Balog'
+      label: 'Čierny Balog'
+    -
+      value: 'Čierny Brod'
+      label: 'Čierny Brod'
+    -
+      value: 'Čierny Potok'
+      label: 'Čierny Potok'
+    -
+      value: Čifáre
+      label: Čifáre
+    -
+      value: 'Čiližská Radvaň'
+      label: 'Čiližská Radvaň'
+    -
+      value: Čimhová
+      label: Čimhová
+    -
+      value: Čirč
+      label: Čirč
+    -
+      value: Číž
+      label: Číž
+    -
+      value: Čižatice
+      label: Čižatice
+    -
+      value: Čoltovo
+      label: Čoltovo
+    -
+      value: Čremošné
+      label: Čremošné
+    -
+      value: Čučma
+      label: Čučma
+    -
+      value: Čukalovce
+      label: Čukalovce
+    -
+      value: 'Dačov Lom'
+      label: 'Dačov Lom'
+    -
+      value: Daletice
+      label: Daletice
+    -
+      value: Danišovce
+      label: Danišovce
+    -
+      value: Dargov
+      label: Dargov
+    -
+      value: Davidov
+      label: Davidov
+    -
+      value: Debraď
+      label: Debraď
+    -
+      value: Dedačov
+      label: Dedačov
+    -
+      value: 'Dedina Mládeže'
+      label: 'Dedina Mládeže'
+    -
+      value: Dedinka
+      label: Dedinka
+    -
+      value: Dedinky
+      label: Dedinky
+    -
+      value: Dechtice
+      label: Dechtice
+    -
+      value: Dekýš
+      label: Dekýš
+    -
+      value: Demandice
+      label: Demandice
+    -
+      value: 'Demänovská Dolina'
+      label: 'Demänovská Dolina'
+    -
+      value: Demjata
+      label: Demjata
+    -
+      value: Detrík
+      label: Detrík
+    -
+      value: Detva
+      label: Detva
+    -
+      value: 'Detvianska Huta'
+      label: 'Detvianska Huta'
+    -
+      value: Devičany
+      label: Devičany
+    -
+      value: Devičie
+      label: Devičie
+    -
+      value: Dežerice
+      label: Dežerice
+    -
+      value: Diaková
+      label: Diaková
+    -
+      value: Diakovce
+      label: Diakovce
+    -
+      value: 'Diviacka Nová Ves'
+      label: 'Diviacka Nová Ves'
+    -
+      value: 'Diviaky nad Nitricou'
+      label: 'Diviaky nad Nitricou'
+    -
+      value: Divín
+      label: Divín
+    -
+      value: Divina
+      label: Divina
+    -
+      value: Divinka
+      label: Divinka
+    -
+      value: Dlhá
+      label: Dlhá
+    -
+      value: 'Dlhá nad Kysucou'
+      label: 'Dlhá nad Kysucou'
+    -
+      value: 'Dlhá nad Oravou'
+      label: 'Dlhá nad Oravou'
+    -
+      value: 'Dlhá nad Váhom'
+      label: 'Dlhá nad Váhom'
+    -
+      value: 'Dlhá Ves'
+      label: 'Dlhá Ves'
+    -
+      value: 'Dlhé Klčovo'
+      label: 'Dlhé Klčovo'
+    -
+      value: 'Dlhé nad Cirochou'
+      label: 'Dlhé nad Cirochou'
+    -
+      value: 'Dlhé Pole'
+      label: 'Dlhé Pole'
+    -
+      value: 'Dlhé Stráže'
+      label: 'Dlhé Stráže'
+    -
+      value: Dlhoňa
+      label: Dlhoňa
+    -
+      value: Dlžín
+      label: Dlžín
+    -
+      value: Dobrá
+      label: Dobrá
+    -
+      value: 'Dobrá Niva'
+      label: 'Dobrá Niva'
+    -
+      value: 'Dobrá Voda'
+      label: 'Dobrá Voda'
+    -
+      value: Dobroč
+      label: Dobroč
+    -
+      value: Dobrohošť
+      label: Dobrohošť
+    -
+      value: Dobroslava
+      label: Dobroslava
+    -
+      value: Dobšiná
+      label: Dobšiná
+    -
+      value: Dohňany
+      label: Dohňany
+    -
+      value: Dojč
+      label: Dojč
+    -
+      value: Dolinka
+      label: Dolinka
+    -
+      value: 'Dolná Breznica'
+      label: 'Dolná Breznica'
+    -
+      value: 'Dolná Bzová'
+      label: 'Dolná Bzová'
+    -
+      value: 'Dolná Krupá'
+      label: 'Dolná Krupá'
+    -
+      value: 'Dolná Lehota'
+      label: 'Dolná Lehota'
+    -
+      value: 'Dolná Mariková'
+      label: 'Dolná Mariková'
+    -
+      value: 'Dolná Mičiná'
+      label: 'Dolná Mičiná'
+    -
+      value: 'Dolná Poruba'
+      label: 'Dolná Poruba'
+    -
+      value: 'Dolná Seč'
+      label: 'Dolná Seč'
+    -
+      value: 'Dolná Streda'
+      label: 'Dolná Streda'
+    -
+      value: 'Dolná Strehová'
+      label: 'Dolná Strehová'
+    -
+      value: 'Dolná Súča'
+      label: 'Dolná Súča'
+    -
+      value: 'Dolná Tižina'
+      label: 'Dolná Tižina'
+    -
+      value: 'Dolná Trnávka'
+      label: 'Dolná Trnávka'
+    -
+      value: 'Dolná Ves'
+      label: 'Dolná Ves'
+    -
+      value: 'Dolná Ždaňa'
+      label: 'Dolná Ždaňa'
+    -
+      value: 'Dolné Dubové'
+      label: 'Dolné Dubové'
+    -
+      value: 'Dolné Kočkovce'
+      label: 'Dolné Kočkovce'
+    -
+      value: 'Dolné Lefantovce'
+      label: 'Dolné Lefantovce'
+    -
+      value: 'Dolné Lovčice'
+      label: 'Dolné Lovčice'
+    -
+      value: 'Dolné Mladonice'
+      label: 'Dolné Mladonice'
+    -
+      value: 'Dolné Naštice'
+      label: 'Dolné Naštice'
+    -
+      value: 'Dolné Obdokovce'
+      label: 'Dolné Obdokovce'
+    -
+      value: 'Dolné Orešany'
+      label: 'Dolné Orešany'
+    -
+      value: 'Dolné Otrokovce'
+      label: 'Dolné Otrokovce'
+    -
+      value: 'Dolné Plachtince'
+      label: 'Dolné Plachtince'
+    -
+      value: 'Dolné Saliby'
+      label: 'Dolné Saliby'
+    -
+      value: 'Dolné Semerovce'
+      label: 'Dolné Semerovce'
+    -
+      value: 'Dolné Srnie'
+      label: 'Dolné Srnie'
+    -
+      value: 'Dolné Strháre'
+      label: 'Dolné Strháre'
+    -
+      value: 'Dolné Trhovište'
+      label: 'Dolné Trhovište'
+    -
+      value: 'Dolné Vestenice'
+      label: 'Dolné Vestenice'
+    -
+      value: 'Dolné Zahorany'
+      label: 'Dolné Zahorany'
+    -
+      value: 'Dolné Zelenice'
+      label: 'Dolné Zelenice'
+    -
+      value: 'Dolný Badín'
+      label: 'Dolný Badín'
+    -
+      value: 'Dolný Bar'
+      label: 'Dolný Bar'
+    -
+      value: 'Dolný Harmanec'
+      label: 'Dolný Harmanec'
+    -
+      value: 'Dolný Hričov'
+      label: 'Dolný Hričov'
+    -
+      value: 'Dolný Chotár'
+      label: 'Dolný Chotár'
+    -
+      value: 'Dolný Kalník'
+      label: 'Dolný Kalník'
+    -
+      value: 'Dolný Kubín'
+      label: 'Dolný Kubín'
+    -
+      value: 'Dolný Lieskov'
+      label: 'Dolný Lieskov'
+    -
+      value: 'Dolný Lopašov'
+      label: 'Dolný Lopašov'
+    -
+      value: 'Dolný Ohaj'
+      label: 'Dolný Ohaj'
+    -
+      value: 'Dolný Pial'
+      label: 'Dolný Pial'
+    -
+      value: 'Dolný Štál'
+      label: 'Dolný Štál'
+    -
+      value: 'Dolný Vadičov'
+      label: 'Dolný Vadičov'
+    -
+      value: Doľany
+      label: Doľany
+    -
+      value: Domadice
+      label: Domadice
+    -
+      value: Domaníky
+      label: Domaníky
+    -
+      value: Domaniža
+      label: Domaniža
+    -
+      value: Domaňovce
+      label: Domaňovce
+    -
+      value: Donovaly
+      label: Donovaly
+    -
+      value: Drábsko
+      label: Drábsko
+    -
+      value: Drahňov
+      label: Drahňov
+    -
+      value: Drahovce
+      label: Drahovce
+    -
+      value: Dravce
+      label: Dravce
+    -
+      value: Dražice
+      label: Dražice
+    -
+      value: Dražkovce
+      label: Dražkovce
+    -
+      value: Drážovce
+      label: Drážovce
+    -
+      value: Drienčany
+      label: Drienčany
+    -
+      value: Drienica
+      label: Drienica
+    -
+      value: Drienov
+      label: Drienov
+    -
+      value: Drienovec
+      label: Drienovec
+    -
+      value: Drienovo
+      label: Drienovo
+    -
+      value: 'Drienovská Nová Ves'
+      label: 'Drienovská Nová Ves'
+    -
+      value: Drietoma
+      label: Drietoma
+    -
+      value: Drnava
+      label: Drnava
+    -
+      value: Drňa
+      label: Drňa
+    -
+      value: 'Družstevná pri Hornáde'
+      label: 'Družstevná pri Hornáde'
+    -
+      value: Drženice
+      label: Drženice
+    -
+      value: Držkovce
+      label: Držkovce
+    -
+      value: Dubinné
+      label: Dubinné
+    -
+      value: 'Dubnica nad Váhom'
+      label: 'Dubnica nad Váhom'
+    -
+      value: Dubnička
+      label: Dubnička
+    -
+      value: Dubník
+      label: Dubník
+    -
+      value: Dubno
+      label: Dubno
+    -
+      value: Dubodiel
+      label: Dubodiel
+    -
+      value: Dubová
+      label: Dubová
+    -
+      value: Dubovany
+      label: Dubovany
+    -
+      value: Dubovce
+      label: Dubovce
+    -
+      value: Dubové
+      label: Dubové
+    -
+      value: Dubovec
+      label: Dubovec
+    -
+      value: Dubovica
+      label: Dubovica
+    -
+      value: Dúbrava
+      label: Dúbrava
+    -
+      value: Dúbravica
+      label: Dúbravica
+    -
+      value: Dúbravka
+      label: Dúbravka
+    -
+      value: Dúbravy
+      label: Dúbravy
+    -
+      value: Ducové
+      label: Ducové
+    -
+      value: Dudince
+      label: Dudince
+    -
+      value: Dukovce
+      label: Dukovce
+    -
+      value: Dulov
+      label: Dulov
+    -
+      value: 'Dulova Ves'
+      label: 'Dulova Ves'
+    -
+      value: Dulovce
+      label: Dulovce
+    -
+      value: Dulovo
+      label: Dulovo
+    -
+      value: 'Dunajská Lužná'
+      label: 'Dunajská Lužná'
+    -
+      value: Dunajov
+      label: Dunajov
+    -
+      value: 'Dunajská Streda'
+      label: 'Dunajská Streda'
+    -
+      value: 'Dunajský Klátov'
+      label: 'Dunajský Klátov'
+    -
+      value: Duplín
+      label: Duplín
+    -
+      value: 'Dvorany nad Nitrou'
+      label: 'Dvorany nad Nitrou'
+    -
+      value: Dvorec
+      label: Dvorec
+    -
+      value: Dvorianky
+      label: Dvorianky
+    -
+      value: Dvorníky
+      label: Dvorníky
+    -
+      value: 'Dvorníky - Včeláre'
+      label: 'Dvorníky - Včeláre'
+    -
+      value: 'Dvory nad Žitavou'
+      label: 'Dvory nad Žitavou'
+    -
+      value: Ďačov
+      label: Ďačov
+    -
+      value: Ďanová
+      label: Ďanová
+    -
+      value: Ďapalovce
+      label: Ďapalovce
+    -
+      value: Ďubákovo
+      label: Ďubákovo
+    -
+      value: Ďurčiná
+      label: Ďurčiná
+    -
+      value: Ďurďoš
+      label: Ďurďoš
+    -
+      value: Ďurďošík
+      label: Ďurďošík
+    -
+      value: Ďurďové
+      label: Ďurďové
+    -
+      value: Ďurkov
+      label: Ďurkov
+    -
+      value: Ďurková
+      label: Ďurková
+    -
+      value: Ďurkovce
+      label: Ďurkovce
+    -
+      value: Egreš
+      label: Egreš
+    -
+      value: Fačkov
+      label: Fačkov
+    -
+      value: Falkušovce
+      label: Falkušovce
+    -
+      value: Farná
+      label: Farná
+    -
+      value: Fekišovce
+      label: Fekišovce
+    -
+      value: Figa
+      label: Figa
+    -
+      value: Fijaš
+      label: Fijaš
+    -
+      value: Fiľakovo
+      label: Fiľakovo
+    -
+      value: 'Fiľakovské Kováče'
+      label: 'Fiľakovské Kováče'
+    -
+      value: Fintice
+      label: Fintice
+    -
+      value: Folkušová
+      label: Folkušová
+    -
+      value: Forbasy
+      label: Forbasy
+    -
+      value: Frička
+      label: Frička
+    -
+      value: Fričkovce
+      label: Fričkovce
+    -
+      value: Fričovce
+      label: Fričovce
+    -
+      value: Fulianka
+      label: Fulianka
+    -
+      value: Gabčíkovo
+      label: Gabčíkovo
+    -
+      value: Gaboltov
+      label: Gaboltov
+    -
+      value: Gajary
+      label: Gajary
+    -
+      value: Galanta
+      label: Galanta
+    -
+      value: Galovany
+      label: Galovany
+    -
+      value: Gánovce
+      label: Gánovce
+    -
+      value: Gáň
+      label: Gáň
+    -
+      value: Gbelce
+      label: Gbelce
+    -
+      value: Gbely
+      label: Gbely
+    -
+      value: Gbeľany
+      label: Gbeľany
+    -
+      value: Geča
+      label: Geča
+    -
+      value: Gelnica
+      label: Gelnica
+    -
+      value: Gemer
+      label: Gemer
+    -
+      value: Gemerček
+      label: Gemerček
+    -
+      value: 'Gemerská Hôrka'
+      label: 'Gemerská Hôrka'
+    -
+      value: 'Gemerská Panica'
+      label: 'Gemerská Panica'
+    -
+      value: 'Gemerská Poloma'
+      label: 'Gemerská Poloma'
+    -
+      value: 'Gemerská Ves'
+      label: 'Gemerská Ves'
+    -
+      value: 'Gemerské Dechtáre'
+      label: 'Gemerské Dechtáre'
+    -
+      value: 'Gemerské Michalovce'
+      label: 'Gemerské Michalovce'
+    -
+      value: 'Gemerské Teplice'
+      label: 'Gemerské Teplice'
+    -
+      value: 'Gemerský Jablonec'
+      label: 'Gemerský Jablonec'
+    -
+      value: 'Gemerský Sad'
+      label: 'Gemerský Sad'
+    -
+      value: Geraltov
+      label: Geraltov
+    -
+      value: Gerlachov
+      label: Gerlachov
+    -
+      value: Giglovce
+      label: Giglovce
+    -
+      value: Giraltovce
+      label: Giraltovce
+    -
+      value: Girovce
+      label: Girovce
+    -
+      value: Glabušovce
+      label: Glabušovce
+    -
+      value: Gočaltovo
+      label: Gočaltovo
+    -
+      value: Gočovo
+      label: Gočovo
+    -
+      value: Golianovo
+      label: Golianovo
+    -
+      value: Gortva
+      label: Gortva
+    -
+      value: Gôtovany
+      label: Gôtovany
+    -
+      value: 'Granč - Petrovce'
+      label: 'Granč - Petrovce'
+    -
+      value: 'Gregorova Vieska'
+      label: 'Gregorova Vieska'
+    -
+      value: Gregorovce
+      label: Gregorovce
+    -
+      value: Gribov
+      label: Gribov
+    -
+      value: Gruzovce
+      label: Gruzovce
+    -
+      value: Gyňov
+      label: Gyňov
+    -
+      value: Habovka
+      label: Habovka
+    -
+      value: Habura
+      label: Habura
+    -
+      value: Hačava
+      label: Hačava
+    -
+      value: Háj
+      label: Háj
+    -
+      value: 'Hajná Nová Ves'
+      label: 'Hajná Nová Ves'
+    -
+      value: Hajnáčka
+      label: Hajnáčka
+    -
+      value: Hájske
+      label: Hájske
+    -
+      value: Hajtovka
+      label: Hajtovka
+    -
+      value: Haláčovce
+      label: Haláčovce
+    -
+      value: Halič
+      label: Halič
+    -
+      value: Haligovce
+      label: Haligovce
+    -
+      value: Haluzice
+      label: Haluzice
+    -
+      value: Hamuliakovo
+      label: Hamuliakovo
+    -
+      value: Handlová
+      label: Handlová
+    -
+      value: Hanigovce
+      label: Hanigovce
+    -
+      value: Haniska
+      label: Haniska
+    -
+      value: Hanková
+      label: Hanková
+    -
+      value: Hankovce
+      label: Hankovce
+    -
+      value: 'Hanušovce nad Topľou'
+      label: 'Hanušovce nad Topľou'
+    -
+      value: Harakovce
+      label: Harakovce
+    -
+      value: Harhaj
+      label: Harhaj
+    -
+      value: Harichovce
+      label: Harichovce
+    -
+      value: Harmanec
+      label: Harmanec
+    -
+      value: Hatalov
+      label: Hatalov
+    -
+      value: Hatné
+      label: Hatné
+    -
+      value: Havaj
+      label: Havaj
+    -
+      value: Havka
+      label: Havka
+    -
+      value: Havranec
+      label: Havranec
+    -
+      value: Hažín
+      label: Hažín
+    -
+      value: 'Hažín nad Cirochou'
+      label: 'Hažín nad Cirochou'
+    -
+      value: Hažlín
+      label: Hažlín
+    -
+      value: Helcmanovce
+      label: Helcmanovce
+    -
+      value: Heľpa
+      label: Heľpa
+    -
+      value: Henckovce
+      label: Henckovce
+    -
+      value: Henclová
+      label: Henclová
+    -
+      value: Hencovce
+      label: Hencovce
+    -
+      value: Hendrichovce
+      label: Hendrichovce
+    -
+      value: Herľany
+      label: Herľany
+    -
+      value: Hermanovce
+      label: Hermanovce
+    -
+      value: 'Hermanovce nad Topľou'
+      label: 'Hermanovce nad Topľou'
+    -
+      value: Hertník
+      label: Hertník
+    -
+      value: Hervartov
+      label: Hervartov
+    -
+      value: Hiadeľ
+      label: Hiadeľ
+    -
+      value: Hincovce
+      label: Hincovce
+    -
+      value: Hladovka
+      label: Hladovka
+    -
+      value: Hlboké
+      label: Hlboké
+    -
+      value: 'Hliník nad Hronom'
+      label: 'Hliník nad Hronom'
+    -
+      value: Hlinné
+      label: Hlinné
+    -
+      value: Hlivištia
+      label: Hlivištia
+    -
+      value: Hlohovec
+      label: Hlohovec
+    -
+      value: Hniezdne
+      label: Hniezdne
+    -
+      value: Hnilčík
+      label: Hnilčík
+    -
+      value: Hnilec
+      label: Hnilec
+    -
+      value: Hnojné
+      label: Hnojné
+    -
+      value: Hnúšťa
+      label: Hnúšťa
+    -
+      value: Hodejov
+      label: Hodejov
+    -
+      value: Hodejovec
+      label: Hodejovec
+    -
+      value: Hodkovce
+      label: Hodkovce
+    -
+      value: 'Hodruša - Hámre'
+      label: 'Hodruša - Hámre'
+    -
+      value: Hokovce
+      label: Hokovce
+    -
+      value: Holčíkovce
+      label: Holčíkovce
+    -
+      value: Holiare
+      label: Holiare
+    -
+      value: Holice
+      label: Holice
+    -
+      value: Holíč
+      label: Holíč
+    -
+      value: Holiša
+      label: Holiša
+    -
+      value: Holumnica
+      label: Holumnica
+    -
+      value: Honce
+      label: Honce
+    -
+      value: 'Hontianska Vrbica'
+      label: 'Hontianska Vrbica'
+    -
+      value: 'Hontianske Moravce'
+      label: 'Hontianske Moravce'
+    -
+      value: 'Hontianske Nemce'
+      label: 'Hontianske Nemce'
+    -
+      value: 'Hontianske Tesáre'
+      label: 'Hontianske Tesáre'
+    -
+      value: 'Hontianske Trsťany'
+      label: 'Hontianske Trsťany'
+    -
+      value: 'Horná Breznica'
+      label: 'Horná Breznica'
+    -
+      value: 'Horná Bzová'
+      label: 'Horná Bzová'
+    -
+      value: 'Horná Kráľová'
+      label: 'Horná Kráľová'
+    -
+      value: 'Horná Krupá'
+      label: 'Horná Krupá'
+    -
+      value: 'Horná Lehota'
+      label: 'Horná Lehota'
+    -
+      value: 'Horná Mariková'
+      label: 'Horná Mariková'
+    -
+      value: 'Horná Mičiná'
+      label: 'Horná Mičiná'
+    -
+      value: 'Horná Poruba'
+      label: 'Horná Poruba'
+    -
+      value: 'Horná Potôň'
+      label: 'Horná Potôň'
+    -
+      value: 'Horná Seč'
+      label: 'Horná Seč'
+    -
+      value: 'Horná Streda'
+      label: 'Horná Streda'
+    -
+      value: 'Horná Strehová'
+      label: 'Horná Strehová'
+    -
+      value: 'Horná Súča'
+      label: 'Horná Súča'
+    -
+      value: 'Horná Štubňa'
+      label: 'Horná Štubňa'
+    -
+      value: 'Horná Ves'
+      label: 'Horná Ves'
+    -
+      value: 'Horná Ždaňa'
+      label: 'Horná Ždaňa'
+    -
+      value: 'Horné Dubové'
+      label: 'Horné Dubové'
+    -
+      value: 'Horné Hámre'
+      label: 'Horné Hámre'
+    -
+      value: 'Horné Chlebany'
+      label: 'Horné Chlebany'
+    -
+      value: 'Horné Lefantovce'
+      label: 'Horné Lefantovce'
+    -
+      value: 'Horné Mladonice'
+      label: 'Horné Mladonice'
+    -
+      value: 'Horné Mýto'
+      label: 'Horné Mýto'
+    -
+      value: 'Horné Naštice'
+      label: 'Horné Naštice'
+    -
+      value: 'Horné Obdokovce'
+      label: 'Horné Obdokovce'
+    -
+      value: 'Horné Orešany'
+      label: 'Horné Orešany'
+    -
+      value: 'Horné Otrokovce'
+      label: 'Horné Otrokovce'
+    -
+      value: 'Horné Plachtince'
+      label: 'Horné Plachtince'
+    -
+      value: 'Horné Pršany'
+      label: 'Horné Pršany'
+    -
+      value: 'Horné Saliby'
+      label: 'Horné Saliby'
+    -
+      value: 'Horné Semerovce'
+      label: 'Horné Semerovce'
+    -
+      value: 'Horné Srnie'
+      label: 'Horné Srnie'
+    -
+      value: 'Horné Strháre'
+      label: 'Horné Strháre'
+    -
+      value: 'Horné Štitáre'
+      label: 'Horné Štitáre'
+    -
+      value: 'Horné Trhovište'
+      label: 'Horné Trhovište'
+    -
+      value: 'Horné Turovce'
+      label: 'Horné Turovce'
+    -
+      value: 'Horné Vestenice'
+      label: 'Horné Vestenice'
+    -
+      value: 'Horné Zahorany'
+      label: 'Horné Zahorany'
+    -
+      value: 'Horné Zelenice'
+      label: 'Horné Zelenice'
+    -
+      value: 'Horný Badín'
+      label: 'Horný Badín'
+    -
+      value: 'Horný Bar'
+      label: 'Horný Bar'
+    -
+      value: 'Horný Hričov'
+      label: 'Horný Hričov'
+    -
+      value: 'Horný Kalník'
+      label: 'Horný Kalník'
+    -
+      value: 'Horný Lieskov'
+      label: 'Horný Lieskov'
+    -
+      value: 'Horný Pial'
+      label: 'Horný Pial'
+    -
+      value: 'Horný Tisovník'
+      label: 'Horný Tisovník'
+    -
+      value: 'Horný Vadičov'
+      label: 'Horný Vadičov'
+    -
+      value: Horňa
+      label: Horňa
+    -
+      value: Horňany
+      label: Horňany
+    -
+      value: Horovce
+      label: Horovce
+    -
+      value: Hoste
+      label: Hoste
+    -
+      value: Hostice
+      label: Hostice
+    -
+      value: Hostie
+      label: Hostie
+    -
+      value: Hostišovce
+      label: Hostišovce
+    -
+      value: Hostovice
+      label: Hostovice
+    -
+      value: Hosťová
+      label: Hosťová
+    -
+      value: Hosťovce
+      label: Hosťovce
+    -
+      value: Hozelec
+      label: Hozelec
+    -
+      value: Hôrka
+      label: Hôrka
+    -
+      value: 'Hôrka nad Váhom'
+      label: 'Hôrka nad Váhom'
+    -
+      value: Hôrky
+      label: Hôrky
+    -
+      value: Hrabičov
+      label: Hrabičov
+    -
+      value: Hrabkov
+      label: Hrabkov
+    -
+      value: 'Hrabová Roztoka'
+      label: 'Hrabová Roztoka'
+    -
+      value: Hrabovčík
+      label: Hrabovčík
+    -
+      value: Hrabovec
+      label: Hrabovec
+    -
+      value: 'Hrabovec nad Laborcom'
+      label: 'Hrabovec nad Laborcom'
+    -
+      value: Hrabské
+      label: Hrabské
+    -
+      value: Hrabušice
+      label: Hrabušice
+    -
+      value: Hradisko
+      label: Hradisko
+    -
+      value: Hradište
+      label: Hradište
+    -
+      value: 'Hradište pod Vrátnom'
+      label: 'Hradište pod Vrátnom'
+    -
+      value: Hrádok
+      label: Hrádok
+    -
+      value: Hrachovište
+      label: Hrachovište
+    -
+      value: Hrachovo
+      label: Hrachovo
+    -
+      value: Hraničné
+      label: Hraničné
+    -
+      value: Hranovnica
+      label: Hranovnica
+    -
+      value: Hraň
+      label: Hraň
+    -
+      value: Hrašné
+      label: Hrašné
+    -
+      value: Hrašovík
+      label: Hrašovík
+    -
+      value: Hrčeľ
+      label: Hrčeľ
+    -
+      value: Hrhov
+      label: Hrhov
+    -
+      value: Hriadky
+      label: Hriadky
+    -
+      value: 'Hričovské Podhradie'
+      label: 'Hričovské Podhradie'
+    -
+      value: Hriňová
+      label: Hriňová
+    -
+      value: Hrišovce
+      label: Hrišovce
+    -
+      value: Hrkovce
+      label: Hrkovce
+    -
+      value: Hrlica
+      label: Hrlica
+    -
+      value: 'Hrnčiarovce nad Parnou'
+      label: 'Hrnčiarovce nad Parnou'
+    -
+      value: 'Hrnčiarska Ves'
+      label: 'Hrnčiarska Ves'
+    -
+      value: 'Hrnčiarske Zalužany'
+      label: 'Hrnčiarske Zalužany'
+    -
+      value: Hrochoť
+      label: Hrochoť
+    -
+      value: Hromoš
+      label: Hromoš
+    -
+      value: Hronec
+      label: Hronec
+    -
+      value: Hronovce
+      label: Hronovce
+    -
+      value: Hronsek
+      label: Hronsek
+    -
+      value: 'Hronská Breznica'
+      label: 'Hronská Breznica'
+    -
+      value: 'Hronská Dúbrava'
+      label: 'Hronská Dúbrava'
+    -
+      value: 'Hronské Kľačany'
+      label: 'Hronské Kľačany'
+    -
+      value: 'Hronské Kosihy'
+      label: 'Hronské Kosihy'
+    -
+      value: 'Hronský Beňadik'
+      label: 'Hronský Beňadik'
+    -
+      value: 'Hrubá Borša'
+      label: 'Hrubá Borša'
+    -
+      value: Hruboňovo
+      label: Hruboňovo
+    -
+      value: Hrubov
+      label: Hrubov
+    -
+      value: 'Hrubý Šúr'
+      label: 'Hrubý Šúr'
+    -
+      value: Hrušov
+      label: Hrušov
+    -
+      value: Hrušovany
+      label: Hrušovany
+    -
+      value: Hrušovo
+      label: Hrušovo
+    -
+      value: Hruštín
+      label: Hruštín
+    -
+      value: Hubice
+      label: Hubice
+    -
+      value: Hubina
+      label: Hubina
+    -
+      value: Hubošovce
+      label: Hubošovce
+    -
+      value: Hubová
+      label: Hubová
+    -
+      value: Hubovo
+      label: Hubovo
+    -
+      value: Hucín
+      label: Hucín
+    -
+      value: Hudcovce
+      label: Hudcovce
+    -
+      value: Hul
+      label: Hul
+    -
+      value: Humenné
+      label: Humenné
+    -
+      value: Huncovce
+      label: Huncovce
+    -
+      value: Hunkovce
+      label: Hunkovce
+    -
+      value: 'Hurbanova Ves'
+      label: 'Hurbanova Ves'
+    -
+      value: Hurbanovo
+      label: Hurbanovo
+    -
+      value: Husák
+      label: Husák
+    -
+      value: Husiná
+      label: Husiná
+    -
+      value: Hutka
+      label: Hutka
+    -
+      value: Huty
+      label: Huty
+    -
+      value: Hviezdoslavov
+      label: Hviezdoslavov
+    -
+      value: Hvozdnica
+      label: Hvozdnica
+    -
+      value: Hybe
+      label: Hybe
+    -
+      value: Hýľov
+      label: Hýľov
+    -
+      value: Chanava
+      label: Chanava
+    -
+      value: Chlebnice
+      label: Chlebnice
+    -
+      value: Chlmec
+      label: Chlmec
+    -
+      value: Chľaba
+      label: Chľaba
+    -
+      value: Chmeľnica
+      label: Chmeľnica
+    -
+      value: Chmeľov
+      label: Chmeľov
+    -
+      value: Chmeľová
+      label: Chmeľová
+    -
+      value: Chmeľovec
+      label: Chmeľovec
+    -
+      value: 'Chminianska Nová Ves'
+      label: 'Chminianska Nová Ves'
+    -
+      value: 'Chminianske Jakubovany'
+      label: 'Chminianske Jakubovany'
+    -
+      value: Chmiňany
+      label: Chmiňany
+    -
+      value: Choča
+      label: Choča
+    -
+      value: 'Chocholná - Velčice'
+      label: 'Chocholná - Velčice'
+    -
+      value: Choňkovce
+      label: Choňkovce
+    -
+      value: 'Chorvátsky Grob'
+      label: 'Chorvátsky Grob'
+    -
+      value: Chorváty
+      label: Chorváty
+    -
+      value: Chotča
+      label: Chotča
+    -
+      value: Chotín
+      label: Chotín
+    -
+      value: Chrabrany
+      label: Chrabrany
+    -
+      value: Chrámec
+      label: Chrámec
+    -
+      value: Chrastince
+      label: Chrastince
+    -
+      value: Chrastné
+      label: Chrastné
+    -
+      value: 'Chrasť nad Hornádom'
+      label: 'Chrasť nad Hornádom'
+    -
+      value: 'Chrenovec - Brusno'
+      label: 'Chrenovec - Brusno'
+    -
+      value: Chropov
+      label: Chropov
+    -
+      value: Chrťany
+      label: Chrťany
+    -
+      value: Chtelnica
+      label: Chtelnica
+    -
+      value: 'Chudá Lehota'
+      label: 'Chudá Lehota'
+    -
+      value: Chvalová
+      label: Chvalová
+    -
+      value: Chvojnica
+      label: Chvojnica
+    -
+      value: Chynorany
+      label: Chynorany
+    -
+      value: Chyžné
+      label: Chyžné
+    -
+      value: Igram
+      label: Igram
+    -
+      value: Ihľany
+      label: Ihľany
+    -
+      value: Ihráč
+      label: Ihráč
+    -
+      value: Ilava
+      label: Ilava
+    -
+      value: Iliašovce
+      label: Iliašovce
+    -
+      value: Ilija
+      label: Ilija
+    -
+      value: Imeľ
+      label: Imeľ
+    -
+      value: Inovce
+      label: Inovce
+    -
+      value: Iňa
+      label: Iňa
+    -
+      value: Iňačovce
+      label: Iňačovce
+    -
+      value: 'Ipeľské Predmostie'
+      label: 'Ipeľské Predmostie'
+    -
+      value: 'Ipeľské Úľany'
+      label: 'Ipeľské Úľany'
+    -
+      value: 'Ipeľský Sokolec'
+      label: 'Ipeľský Sokolec'
+    -
+      value: Istebné
+      label: Istebné
+    -
+      value: Ivachnová
+      label: Ivachnová
+    -
+      value: Ivančiná
+      label: Ivančiná
+    -
+      value: Ivanice
+      label: Ivanice
+    -
+      value: 'Ivanka pri Dunaji'
+      label: 'Ivanka pri Dunaji'
+    -
+      value: 'Ivanka pri Nitre'
+      label: 'Ivanka pri Nitre'
+    -
+      value: Ivanovce
+      label: Ivanovce
+    -
+      value: Iža
+      label: Iža
+    -
+      value: Ižipovce
+      label: Ižipovce
+    -
+      value: Ižkovce
+      label: Ižkovce
+    -
+      value: Jablonec
+      label: Jablonec
+    -
+      value: Jablonica
+      label: Jablonica
+    -
+      value: Jablonka
+      label: Jablonka
+    -
+      value: Jablonov
+      label: Jablonov
+    -
+      value: 'Jablonov nad Turňou'
+      label: 'Jablonov nad Turňou'
+    -
+      value: Jablonové
+      label: Jablonové
+    -
+      value: Jabloň
+      label: Jabloň
+    -
+      value: Jabloňovce
+      label: Jabloňovce
+    -
+      value: Jacovce
+      label: Jacovce
+    -
+      value: Jahodná
+      label: Jahodná
+    -
+      value: Jaklovce
+      label: Jaklovce
+    -
+      value: Jakovany
+      label: Jakovany
+    -
+      value: Jakubany
+      label: Jakubany
+    -
+      value: Jakubov
+      label: Jakubov
+    -
+      value: 'Jakubova Voľa'
+      label: 'Jakubova Voľa'
+    -
+      value: Jakubovany
+      label: Jakubovany
+    -
+      value: Jakušovce
+      label: Jakušovce
+    -
+      value: Jalová
+      label: Jalová
+    -
+      value: Jalovec
+      label: Jalovec
+    -
+      value: Jalšové
+      label: Jalšové
+    -
+      value: Jalšovík
+      label: Jalšovík
+    -
+      value: Jamník
+      label: Jamník
+    -
+      value: Janice
+      label: Janice
+    -
+      value: Janík
+      label: Janík
+    -
+      value: Janíky
+      label: Janíky
+    -
+      value: Jankovce
+      label: Jankovce
+    -
+      value: Janov
+      label: Janov
+    -
+      value: 'Janova Lehota'
+      label: 'Janova Lehota'
+    -
+      value: Janovce
+      label: Janovce
+    -
+      value: Jánovce
+      label: Jánovce
+    -
+      value: Janovík
+      label: Janovík
+    -
+      value: Jarabá
+      label: Jarabá
+    -
+      value: Jarabina
+      label: Jarabina
+    -
+      value: Jarok
+      label: Jarok
+    -
+      value: Jarovnice
+      label: Jarovnice
+    -
+      value: Jasenica
+      label: Jasenica
+    -
+      value: Jasenie
+      label: Jasenie
+    -
+      value: Jasenov
+      label: Jasenov
+    -
+      value: Jasenová
+      label: Jasenová
+    -
+      value: Jasenovce
+      label: Jasenovce
+    -
+      value: Jasenové
+      label: Jasenové
+    -
+      value: Jasenovo
+      label: Jasenovo
+    -
+      value: 'Jaslovské Bohunice'
+      label: 'Jaslovské Bohunice'
+    -
+      value: Jasov
+      label: Jasov
+    -
+      value: Jasová
+      label: Jasová
+    -
+      value: Jastrabá
+      label: Jastrabá
+    -
+      value: 'Jastrabie nad Topľou'
+      label: 'Jastrabie nad Topľou'
+    -
+      value: 'Jastrabie pri Michalovciach'
+      label: 'Jastrabie pri Michalovciach'
+    -
+      value: Jatov
+      label: Jatov
+    -
+      value: 'Javorina (vojenský obvod)'
+      label: 'Javorina (vojenský obvod)'
+    -
+      value: Jazernica
+      label: Jazernica
+    -
+      value: Jedlinka
+      label: Jedlinka
+    -
+      value: 'Jedľové Kostoľany'
+      label: 'Jedľové Kostoľany'
+    -
+      value: Jelenec
+      label: Jelenec
+    -
+      value: Jelka
+      label: Jelka
+    -
+      value: Jelšava
+      label: Jelšava
+    -
+      value: Jelšovce
+      label: Jelšovce
+    -
+      value: Jelšovec
+      label: Jelšovec
+    -
+      value: Jenkovce
+      label: Jenkovce
+    -
+      value: Jesenské
+      label: Jesenské
+    -
+      value: Jestice
+      label: Jestice
+    -
+      value: 'Ješkova Ves'
+      label: 'Ješkova Ves'
+    -
+      value: Jezersko
+      label: Jezersko
+    -
+      value: Jovice
+      label: Jovice
+    -
+      value: Jovsa
+      label: Jovsa
+    -
+      value: 'Jur nad Hronom'
+      label: 'Jur nad Hronom'
+    -
+      value: 'Jurkova Voľa'
+      label: 'Jurkova Voľa'
+    -
+      value: Jurová
+      label: Jurová
+    -
+      value: Jurské
+      label: Jurské
+    -
+      value: 'Juskova Voľa'
+      label: 'Juskova Voľa'
+    -
+      value: Kačanov
+      label: Kačanov
+    -
+      value: Kajal
+      label: Kajal
+    -
+      value: Kalameny
+      label: Kalameny
+    -
+      value: Kalinkovo
+      label: Kalinkovo
+    -
+      value: Kalinov
+      label: Kalinov
+    -
+      value: Kalinovo
+      label: Kalinovo
+    -
+      value: 'Kalná nad Hronom'
+      label: 'Kalná nad Hronom'
+    -
+      value: 'Kalná Roztoka'
+      label: 'Kalná Roztoka'
+    -
+      value: Kálnica
+      label: Kálnica
+    -
+      value: Kalnište
+      label: Kalnište
+    -
+      value: Kalonda
+      label: Kalonda
+    -
+      value: Kalša
+      label: Kalša
+    -
+      value: Kaloša
+      label: Kaloša
+    -
+      value: Kaluža
+      label: Kaluža
+    -
+      value: Kaľamenová
+      label: Kaľamenová
+    -
+      value: Kaľava
+      label: Kaľava
+    -
+      value: Kamanová
+      label: Kamanová
+    -
+      value: 'Kamenec pod Vtáčnikom'
+      label: 'Kamenec pod Vtáčnikom'
+    -
+      value: Kamenica
+      label: Kamenica
+    -
+      value: 'Kamenica nad Cirochou'
+      label: 'Kamenica nad Cirochou'
+    -
+      value: 'Kamenica nad Hronom'
+      label: 'Kamenica nad Hronom'
+    -
+      value: Kameničany
+      label: Kameničany
+    -
+      value: Kameničná
+      label: Kameničná
+    -
+      value: Kamenín
+      label: Kamenín
+    -
+      value: 'Kamenná Poruba'
+      label: 'Kamenná Poruba'
+    -
+      value: 'Kamenné Kosihy'
+      label: 'Kamenné Kosihy'
+    -
+      value: 'Kamenný Most'
+      label: 'Kamenný Most'
+    -
+      value: Kameňany
+      label: Kameňany
+    -
+      value: Kamienka
+      label: Kamienka
+    -
+      value: Kanianka
+      label: Kanianka
+    -
+      value: Kapišová
+      label: Kapišová
+    -
+      value: Kaplna
+      label: Kaplna
+    -
+      value: Kapušany
+      label: Kapušany
+    -
+      value: 'Kapušianske Kľačany'
+      label: 'Kapušianske Kľačany'
+    -
+      value: Karlová
+      label: Karlová
+    -
+      value: Karná
+      label: Karná
+    -
+      value: Kašov
+      label: Kašov
+    -
+      value: Kátlovce
+      label: Kátlovce
+    -
+      value: Kátov
+      label: Kátov
+    -
+      value: Kazimír
+      label: Kazimír
+    -
+      value: Kecerovce
+      label: Kecerovce
+    -
+      value: 'Kecerovský Lipovec'
+      label: 'Kecerovský Lipovec'
+    -
+      value: Kečkovce
+      label: Kečkovce
+    -
+      value: Kečovo
+      label: Kečovo
+    -
+      value: Kechnec
+      label: Kechnec
+    -
+      value: Kendice
+      label: Kendice
+    -
+      value: Kesovce
+      label: Kesovce
+    -
+      value: Keť
+      label: Keť
+    -
+      value: Kežmarok
+      label: Kežmarok
+    -
+      value: Kiarov
+      label: Kiarov
+    -
+      value: Kladzany
+      label: Kladzany
+    -
+      value: Klasov
+      label: Klasov
+    -
+      value: 'Kláštor pod Znievom'
+      label: 'Kláštor pod Znievom'
+    -
+      value: 'Klátova Nová Ves'
+      label: 'Klátova Nová Ves'
+    -
+      value: Klčov
+      label: Klčov
+    -
+      value: Klenov
+      label: Klenov
+    -
+      value: Klenová
+      label: Klenová
+    -
+      value: Klenovec
+      label: Klenovec
+    -
+      value: Kleňany
+      label: Kleňany
+    -
+      value: Klieština
+      label: Klieština
+    -
+      value: Klin
+      label: Klin
+    -
+      value: 'Klin nad Bodrogom'
+      label: 'Klin nad Bodrogom'
+    -
+      value: 'Klížska Nemá'
+      label: 'Klížska Nemá'
+    -
+      value: Klokoč
+      label: Klokoč
+    -
+      value: Klokočov
+      label: Klokočov
+    -
+      value: Klubina
+      label: Klubina
+    -
+      value: Kluknava
+      label: Kluknava
+    -
+      value: Kľačany
+      label: Kľačany
+    -
+      value: Kľače
+      label: Kľače
+    -
+      value: Kľačno
+      label: Kľačno
+    -
+      value: Kľak
+      label: Kľak
+    -
+      value: Kľúčovec
+      label: Kľúčovec
+    -
+      value: Kľušov
+      label: Kľušov
+    -
+      value: Kmeťovo
+      label: Kmeťovo
+    -
+      value: Kobeliarovo
+      label: Kobeliarovo
+    -
+      value: Kobylnice
+      label: Kobylnice
+    -
+      value: Kobyly
+      label: Kobyly
+    -
+      value: Koceľovce
+      label: Koceľovce
+    -
+      value: Kociha
+      label: Kociha
+    -
+      value: Kocurany
+      label: Kocurany
+    -
+      value: 'Kočín - Lančár'
+      label: 'Kočín - Lančár'
+    -
+      value: Kočovce
+      label: Kočovce
+    -
+      value: Kochanovce
+      label: Kochanovce
+    -
+      value: Kojatice
+      label: Kojatice
+    -
+      value: Kojšov
+      label: Kojšov
+    -
+      value: 'Kokava nad Rimavicou'
+      label: 'Kokava nad Rimavicou'
+    -
+      value: Kokošovce
+      label: Kokošovce
+    -
+      value: 'Kokšov - Bakša'
+      label: 'Kokšov - Bakša'
+    -
+      value: Kolačkov
+      label: Kolačkov
+    -
+      value: Kolačno
+      label: Kolačno
+    -
+      value: Koláre
+      label: Koláre
+    -
+      value: Kolárovice
+      label: Kolárovice
+    -
+      value: Kolárovo
+      label: Kolárovo
+    -
+      value: Kolbasov
+      label: Kolbasov
+    -
+      value: Kolbovce
+      label: Kolbovce
+    -
+      value: Kolibabovce
+      label: Kolibabovce
+    -
+      value: Kolinovce
+      label: Kolinovce
+    -
+      value: Kolíňany
+      label: Kolíňany
+    -
+      value: Kolonica
+      label: Kolonica
+    -
+      value: Kolta
+      label: Kolta
+    -
+      value: Komárany
+      label: Komárany
+    -
+      value: Komárno
+      label: Komárno
+    -
+      value: Komárov
+      label: Komárov
+    -
+      value: Komárovce
+      label: Komárovce
+    -
+      value: Komjatice
+      label: Komjatice
+    -
+      value: Komjatná
+      label: Komjatná
+    -
+      value: Komoča
+      label: Komoča
+    -
+      value: Koniarovce
+      label: Koniarovce
+    -
+      value: Konrádovce
+      label: Konrádovce
+    -
+      value: Konská
+      label: Konská
+    -
+      value: Koňuš
+      label: Koňuš
+    -
+      value: Kopčany
+      label: Kopčany
+    -
+      value: Kopernica
+      label: Kopernica
+    -
+      value: Koplotovce
+      label: Koplotovce
+    -
+      value: Koprivnica
+      label: Koprivnica
+    -
+      value: Kordíky
+      label: Kordíky
+    -
+      value: Korejovce
+      label: Korejovce
+    -
+      value: Korňa
+      label: Korňa
+    -
+      value: Koromľa
+      label: Koromľa
+    -
+      value: Korunková
+      label: Korunková
+    -
+      value: Korytárky
+      label: Korytárky
+    -
+      value: Korytné
+      label: Korytné
+    -
+      value: Kosihovce
+      label: Kosihovce
+    -
+      value: 'Kosihy nad Ipľom'
+      label: 'Kosihy nad Ipľom'
+    -
+      value: Kosorín
+      label: Kosorín
+    -
+      value: Kostolec
+      label: Kostolec
+    -
+      value: Kostolište
+      label: Kostolište
+    -
+      value: 'Kostolná pri Dunaji'
+      label: 'Kostolná pri Dunaji'
+    -
+      value: 'Kostolná Ves'
+      label: 'Kostolná Ves'
+    -
+      value: 'Kostolná - Záriečie'
+      label: 'Kostolná - Záriečie'
+    -
+      value: Kostolné
+      label: Kostolné
+    -
+      value: 'Kostolné Kračany'
+      label: 'Kostolné Kračany'
+    -
+      value: 'Kostoľany pod Tribečom'
+      label: 'Kostoľany pod Tribečom'
+    -
+      value: Koš
+      label: Koš
+    -
+      value: Košariská
+      label: Košariská
+    -
+      value: Košarovce
+      label: Košarovce
+    -
+      value: Košeca
+      label: Košeca
+    -
+      value: 'Košecké Podhradie'
+      label: 'Košecké Podhradie'
+    -
+      value: Košice
+      label: Košice
+    -
+      value: 'Okres Košice II'
+      label: 'Okres Košice II'
+    -
+      value: 'Okres Košice III'
+      label: 'Okres Košice III'
+    -
+      value: 'Okres Košice IV'
+      label: 'Okres Košice IV'
+    -
+      value: 'Košická Belá'
+      label: 'Košická Belá'
+    -
+      value: 'Košická Polianka'
+      label: 'Košická Polianka'
+    -
+      value: 'Košické Oľšany'
+      label: 'Košické Oľšany'
+    -
+      value: 'Košický Klečenov'
+      label: 'Košický Klečenov'
+    -
+      value: Koškovce
+      label: Koškovce
+    -
+      value: Košolná
+      label: Košolná
+    -
+      value: Košúty
+      label: Košúty
+    -
+      value: 'Košťany nad Turcom'
+      label: 'Košťany nad Turcom'
+    -
+      value: Kotešová
+      label: Kotešová
+    -
+      value: Kotmanová
+      label: Kotmanová
+    -
+      value: 'Kotrčiná Lúčka'
+      label: 'Kotrčiná Lúčka'
+    -
+      value: Kováčová
+      label: Kováčová
+    -
+      value: Kováčovce
+      label: Kováčovce
+    -
+      value: Koválov
+      label: Koválov
+    -
+      value: Koválovec
+      label: Koválovec
+    -
+      value: Kovarce
+      label: Kovarce
+    -
+      value: Kozárovce
+      label: Kozárovce
+    -
+      value: Kozelník
+      label: Kozelník
+    -
+      value: 'Kozí Vrbovok'
+      label: 'Kozí Vrbovok'
+    -
+      value: Kožany
+      label: Kožany
+    -
+      value: Kožuchov
+      label: Kožuchov
+    -
+      value: Kožuchovce
+      label: Kožuchovce
+    -
+      value: Kračúnovce
+      label: Kračúnovce
+    -
+      value: Krahule
+      label: Krahule
+    -
+      value: 'Krajná Bystrá'
+      label: 'Krajná Bystrá'
+    -
+      value: 'Krajná Poľana'
+      label: 'Krajná Poľana'
+    -
+      value: 'Krajná Porúbka'
+      label: 'Krajná Porúbka'
+    -
+      value: Krajné
+      label: Krajné
+    -
+      value: 'Krajné Čierno'
+      label: 'Krajné Čierno'
+    -
+      value: Krakovany
+      label: Krakovany
+    -
+      value: Králiky
+      label: Králiky
+    -
+      value: Kráľ
+      label: Kráľ
+    -
+      value: 'Kráľov Brod'
+      label: 'Kráľov Brod'
+    -
+      value: 'Kráľova Lehota'
+      label: 'Kráľova Lehota'
+    -
+      value: 'Kráľová nad Váhom'
+      label: 'Kráľová nad Váhom'
+    -
+      value: 'Kráľová pri Senci'
+      label: 'Kráľová pri Senci'
+    -
+      value: Kraľovany
+      label: Kraľovany
+    -
+      value: Kráľovce
+      label: Kráľovce
+    -
+      value: 'Kráľovce - Krnišov'
+      label: 'Kráľovce - Krnišov'
+    -
+      value: 'Kráľovičove Kračany'
+      label: 'Kráľovičove Kračany'
+    -
+      value: 'Kráľovský Chlmec'
+      label: 'Kráľovský Chlmec'
+    -
+      value: Kraskovo
+      label: Kraskovo
+    -
+      value: 'Krásna Lúka'
+      label: 'Krásna Lúka'
+    -
+      value: 'Krásna Ves'
+      label: 'Krásna Ves'
+    -
+      value: Krásno
+      label: Krásno
+    -
+      value: 'Krásno nad Kysucou'
+      label: 'Krásno nad Kysucou'
+    -
+      value: 'Krásnohorská Dlhá Lúka'
+      label: 'Krásnohorská Dlhá Lúka'
+    -
+      value: 'Krásnohorské Podhradie'
+      label: 'Krásnohorské Podhradie'
+    -
+      value: Krásnovce
+      label: Krásnovce
+    -
+      value: 'Krásny Brod'
+      label: 'Krásny Brod'
+    -
+      value: Krasňany
+      label: Krasňany
+    -
+      value: Kravany
+      label: Kravany
+    -
+      value: 'Kravany nad Dunajom'
+      label: 'Kravany nad Dunajom'
+    -
+      value: Krčava
+      label: Krčava
+    -
+      value: Kremná
+      label: Kremná
+    -
+      value: Kremnica
+      label: Kremnica
+    -
+      value: 'Kremnické Bane'
+      label: 'Kremnické Bane'
+    -
+      value: Kristy
+      label: Kristy
+    -
+      value: Krišľovce
+      label: Krišľovce
+    -
+      value: 'Krišovská Liesková'
+      label: 'Krišovská Liesková'
+    -
+      value: Krivá
+      label: Krivá
+    -
+      value: Krivany
+      label: Krivany
+    -
+      value: Kriváň
+      label: Kriváň
+    -
+      value: Krivé
+      label: Krivé
+    -
+      value: Krivoklát
+      label: Krivoklát
+    -
+      value: 'Krivosúd - Bodovka'
+      label: 'Krivosúd - Bodovka'
+    -
+      value: Kríže
+      label: Kríže
+    -
+      value: 'Krížová Ves'
+      label: 'Krížová Ves'
+    -
+      value: Krížovany
+      label: Krížovany
+    -
+      value: 'Križovany nad Dudváhom'
+      label: 'Križovany nad Dudváhom'
+    -
+      value: Krná
+      label: Krná
+    -
+      value: Krnča
+      label: Krnča
+    -
+      value: Krokava
+      label: Krokava
+    -
+      value: Krompachy
+      label: Krompachy
+    -
+      value: Krpeľany
+      label: Krpeľany
+    -
+      value: Krškany
+      label: Krškany
+    -
+      value: Krtovce
+      label: Krtovce
+    -
+      value: Kručov
+      label: Kručov
+    -
+      value: Krupina
+      label: Krupina
+    -
+      value: Krušetnica
+      label: Krušetnica
+    -
+      value: Krušinec
+      label: Krušinec
+    -
+      value: Krušovce
+      label: Krušovce
+    -
+      value: Kružlov
+      label: Kružlov
+    -
+      value: Kružlová
+      label: Kružlová
+    -
+      value: Kružná
+      label: Kružná
+    -
+      value: Kružno
+      label: Kružno
+    -
+      value: Kšinná
+      label: Kšinná
+    -
+      value: Kubáňovo
+      label: Kubáňovo
+    -
+      value: Kučín
+      label: Kučín
+    -
+      value: Kuchyňa
+      label: Kuchyňa
+    -
+      value: Kuklov
+      label: Kuklov
+    -
+      value: Kuková
+      label: Kuková
+    -
+      value: Kukučínov
+      label: Kukučínov
+    -
+      value: Kunerad
+      label: Kunerad
+    -
+      value: Kunešov
+      label: Kunešov
+    -
+      value: 'Kunova Teplica'
+      label: 'Kunova Teplica'
+    -
+      value: Kuraľany
+      label: Kuraľany
+    -
+      value: Kurima
+      label: Kurima
+    -
+      value: Kurimany
+      label: Kurimany
+    -
+      value: Kurimka
+      label: Kurimka
+    -
+      value: Kurov
+      label: Kurov
+    -
+      value: Kusín
+      label: Kusín
+    -
+      value: Kútniky
+      label: Kútniky
+    -
+      value: Kúty
+      label: Kúty
+    -
+      value: Kuzmice
+      label: Kuzmice
+    -
+      value: Kvačany
+      label: Kvačany
+    -
+      value: Kvakovce
+      label: Kvakovce
+    -
+      value: Kvašov
+      label: Kvašov
+    -
+      value: Kvetoslavov
+      label: Kvetoslavov
+    -
+      value: Kyjatice
+      label: Kyjatice
+    -
+      value: Kyjov
+      label: Kyjov
+    -
+      value: Kynceľová
+      label: Kynceľová
+    -
+      value: Kysak
+      label: Kysak
+    -
+      value: Kyselica
+      label: Kyselica
+    -
+      value: Kysta
+      label: Kysta
+    -
+      value: 'Kysucké Nové Mesto'
+      label: 'Kysucké Nové Mesto'
+    -
+      value: 'Kysucký Lieskovec'
+      label: 'Kysucký Lieskovec'
+    -
+      value: Láb
+      label: Láb
+    -
+      value: Lackov
+      label: Lackov
+    -
+      value: Lacková
+      label: Lacková
+    -
+      value: Lada
+      label: Lada
+    -
+      value: Ladce
+      label: Ladce
+    -
+      value: Ladice
+      label: Ladice
+    -
+      value: Ladmovce
+      label: Ladmovce
+    -
+      value: 'Ladomerská Vieska'
+      label: 'Ladomerská Vieska'
+    -
+      value: Ladomirov
+      label: Ladomirov
+    -
+      value: Ladomirová
+      label: Ladomirová
+    -
+      value: Ladzany
+      label: Ladzany
+    -
+      value: 'Lakšárska Nová Ves'
+      label: 'Lakšárska Nová Ves'
+    -
+      value: Lascov
+      label: Lascov
+    -
+      value: Laskár
+      label: Laskár
+    -
+      value: Lastomír
+      label: Lastomír
+    -
+      value: Lastovce
+      label: Lastovce
+    -
+      value: Laškovce
+      label: Laškovce
+    -
+      value: Látky
+      label: Látky
+    -
+      value: Lazany
+      label: Lazany
+    -
+      value: Lazisko
+      label: Lazisko
+    -
+      value: 'Lazy pod Makytou'
+      label: 'Lazy pod Makytou'
+    -
+      value: Lažany
+      label: Lažany
+    -
+      value: Lednica
+      label: Lednica
+    -
+      value: 'Lednické Rovne'
+      label: 'Lednické Rovne'
+    -
+      value: Legnava
+      label: Legnava
+    -
+      value: Lehnice
+      label: Lehnice
+    -
+      value: Lehota
+      label: Lehota
+    -
+      value: 'Lehota nad Rimavicou'
+      label: 'Lehota nad Rimavicou'
+    -
+      value: 'Lehota pod Vtáčnikom'
+      label: 'Lehota pod Vtáčnikom'
+    -
+      value: Lehôtka
+      label: Lehôtka
+    -
+      value: 'Lehôtka pod Brehmi'
+      label: 'Lehôtka pod Brehmi'
+    -
+      value: Lechnica
+      label: Lechnica
+    -
+      value: Lekárovce
+      label: Lekárovce
+    -
+      value: Leles
+      label: Leles
+    -
+      value: Leľa
+      label: Leľa
+    -
+      value: Lemešany
+      label: Lemešany
+    -
+      value: Lenartov
+      label: Lenartov
+    -
+      value: Lenartovce
+      label: Lenartovce
+    -
+      value: Lendak
+      label: Lendak
+    -
+      value: Lenka
+      label: Lenka
+    -
+      value: Lentvora
+      label: Lentvora
+    -
+      value: Leopoldov
+      label: Leopoldov
+    -
+      value: Lesenice
+      label: Lesenice
+    -
+      value: Lesíček
+      label: Lesíček
+    -
+      value: Lesné
+      label: Lesné
+    -
+      value: Lesnica
+      label: Lesnica
+    -
+      value: Leštiny
+      label: Leštiny
+    -
+      value: 'Lešť (vojenský obvod)'
+      label: 'Lešť (vojenský obvod)'
+    -
+      value: Letanovce
+      label: Letanovce
+    -
+      value: Letničie
+      label: Letničie
+    -
+      value: Leváre
+      label: Leváre
+    -
+      value: Levice
+      label: Levice
+    -
+      value: Levkuška
+      label: Levkuška
+    -
+      value: Levoča
+      label: Levoča
+    -
+      value: Ležiachov
+      label: Ležiachov
+    -
+      value: Libichava
+      label: Libichava
+    -
+      value: Licince
+      label: Licince
+    -
+      value: Ličartovce
+      label: Ličartovce
+    -
+      value: Liesek
+      label: Liesek
+    -
+      value: Lieskovany
+      label: Lieskovany
+    -
+      value: Lieskovec
+      label: Lieskovec
+    -
+      value: Liešno
+      label: Liešno
+    -
+      value: Liešťany
+      label: Liešťany
+    -
+      value: Lietava
+      label: Lietava
+    -
+      value: 'Lietavská Lúčka'
+      label: 'Lietavská Lúčka'
+    -
+      value: 'Lietavská Svinná - Babkov'
+      label: 'Lietavská Svinná - Babkov'
+    -
+      value: Likavka
+      label: Likavka
+    -
+      value: Limbach
+      label: Limbach
+    -
+      value: Lipany
+      label: Lipany
+    -
+      value: Lipník
+      label: Lipník
+    -
+      value: Lipníky
+      label: Lipníky
+    -
+      value: Lipová
+      label: Lipová
+    -
+      value: Lipovany
+      label: Lipovany
+    -
+      value: Lipovce
+      label: Lipovce
+    -
+      value: Lipové
+      label: Lipové
+    -
+      value: Lipovec
+      label: Lipovec
+    -
+      value: Lipovník
+      label: Lipovník
+    -
+      value: 'Liptovská Anna'
+      label: 'Liptovská Anna'
+    -
+      value: 'Liptovská Kokava'
+      label: 'Liptovská Kokava'
+    -
+      value: 'Liptovská Lúžna'
+      label: 'Liptovská Lúžna'
+    -
+      value: 'Liptovská Osada'
+      label: 'Liptovská Osada'
+    -
+      value: 'Liptovská Porúbka'
+      label: 'Liptovská Porúbka'
+    -
+      value: 'Liptovská Sielnica'
+      label: 'Liptovská Sielnica'
+    -
+      value: 'Liptovská Štiavnica'
+      label: 'Liptovská Štiavnica'
+    -
+      value: 'Liptovská Teplá'
+      label: 'Liptovská Teplá'
+    -
+      value: 'Liptovská Teplička'
+      label: 'Liptovská Teplička'
+    -
+      value: 'Liptovské Beharovce'
+      label: 'Liptovské Beharovce'
+    -
+      value: 'Liptovské Kľačany'
+      label: 'Liptovské Kľačany'
+    -
+      value: 'Liptovské Matiašovce'
+      label: 'Liptovské Matiašovce'
+    -
+      value: 'Liptovské Revúce'
+      label: 'Liptovské Revúce'
+    -
+      value: 'Liptovské Sliače'
+      label: 'Liptovské Sliače'
+    -
+      value: 'Liptovský Hrádok'
+      label: 'Liptovský Hrádok'
+    -
+      value: 'Liptovský Ján'
+      label: 'Liptovský Ján'
+    -
+      value: 'Liptovský Michal'
+      label: 'Liptovský Michal'
+    -
+      value: 'Liptovský Mikuláš'
+      label: 'Liptovský Mikuláš'
+    -
+      value: 'Liptovský Ondrej'
+      label: 'Liptovský Ondrej'
+    -
+      value: 'Liptovský Peter'
+      label: 'Liptovský Peter'
+    -
+      value: 'Liptovský Trnovec'
+      label: 'Liptovský Trnovec'
+    -
+      value: Lisková
+      label: Lisková
+    -
+      value: Lišov
+      label: Lišov
+    -
+      value: Litava
+      label: Litava
+    -
+      value: Litmanová
+      label: Litmanová
+    -
+      value: Livina
+      label: Livina
+    -
+      value: 'Livinské Opatovce'
+      label: 'Livinské Opatovce'
+    -
+      value: Livov
+      label: Livov
+    -
+      value: 'Livovská Huta'
+      label: 'Livovská Huta'
+    -
+      value: Lodno
+      label: Lodno
+    -
+      value: Lok
+      label: Lok
+    -
+      value: Lokca
+      label: Lokca
+    -
+      value: 'Lom nad Rimavicou'
+      label: 'Lom nad Rimavicou'
+    -
+      value: Lomná
+      label: Lomná
+    -
+      value: Lomné
+      label: Lomné
+    -
+      value: Lomnička
+      label: Lomnička
+    -
+      value: Lontov
+      label: Lontov
+    -
+      value: Lopašov
+      label: Lopašov
+    -
+      value: Lopúchov
+      label: Lopúchov
+    -
+      value: 'Lopušné Pažite'
+      label: 'Lopušné Pažite'
+    -
+      value: Lošonec
+      label: Lošonec
+    -
+      value: Lovce
+      label: Lovce
+    -
+      value: Lovča
+      label: Lovča
+    -
+      value: 'Lovčica - Trubín'
+      label: 'Lovčica - Trubín'
+    -
+      value: Lovinobaňa
+      label: Lovinobaňa
+    -
+      value: Lozorno
+      label: Lozorno
+    -
+      value: Ložín
+      label: Ložín
+    -
+      value: Lubeník
+      label: Lubeník
+    -
+      value: Lubina
+      label: Lubina
+    -
+      value: 'Lúč na Ostrove'
+      label: 'Lúč na Ostrove'
+    -
+      value: Lučatín
+      label: Lučatín
+    -
+      value: Lučenec
+      label: Lučenec
+    -
+      value: Lúčina
+      label: Lúčina
+    -
+      value: Lučivná
+      label: Lučivná
+    -
+      value: Lúčka
+      label: Lúčka
+    -
+      value: Lúčky
+      label: Lúčky
+    -
+      value: 'Lúčnica nad Žitavou'
+      label: 'Lúčnica nad Žitavou'
+    -
+      value: Ludanice
+      label: Ludanice
+    -
+      value: Ludrová
+      label: Ludrová
+    -
+      value: Luhyňa
+      label: Luhyňa
+    -
+      value: Lúka
+      label: Lúka
+    -
+      value: Lukačovce
+      label: Lukačovce
+    -
+      value: Lukáčovce
+      label: Lukáčovce
+    -
+      value: Lukavica
+      label: Lukavica
+    -
+      value: Lukov
+      label: Lukov
+    -
+      value: Lukovištia
+      label: Lukovištia
+    -
+      value: Lúky
+      label: Lúky
+    -
+      value: Lula
+      label: Lula
+    -
+      value: Lupoč
+      label: Lupoč
+    -
+      value: Lutila
+      label: Lutila
+    -
+      value: Lutiše
+      label: Lutiše
+    -
+      value: Lužany
+      label: Lužany
+    -
+      value: 'Lužany pri Topli'
+      label: 'Lužany pri Topli'
+    -
+      value: Lužianky
+      label: Lužianky
+    -
+      value: 'Lysá pod Makytou'
+      label: 'Lysá pod Makytou'
+    -
+      value: Lysica
+      label: Lysica
+    -
+      value: Ľubá
+      label: Ľubá
+    -
+      value: Ľubela
+      label: Ľubela
+    -
+      value: Ľubica
+      label: Ľubica
+    -
+      value: Ľubietová
+      label: Ľubietová
+    -
+      value: Ľubiša
+      label: Ľubiša
+    -
+      value: Ľubochňa
+      label: Ľubochňa
+    -
+      value: Ľuboreč
+      label: Ľuboreč
+    -
+      value: Ľuboriečka
+      label: Ľuboriečka
+    -
+      value: Ľubotice
+      label: Ľubotice
+    -
+      value: Ľubotín
+      label: Ľubotín
+    -
+      value: Ľubovec
+      label: Ľubovec
+    -
+      value: Ľudovítová
+      label: Ľudovítová
+    -
+      value: Ľutina
+      label: Ľutina
+    -
+      value: Ľutov
+      label: Ľutov
+    -
+      value: Macov
+      label: Macov
+    -
+      value: Mad
+      label: Mad
+    -
+      value: Madunice
+      label: Madunice
+    -
+      value: Magnezitovce
+      label: Magnezitovce
+    -
+      value: Machulince
+      label: Machulince
+    -
+      value: Majcichov
+      label: Majcichov
+    -
+      value: Majere
+      label: Majere
+    -
+      value: Majerovce
+      label: Majerovce
+    -
+      value: Makov
+      label: Makov
+    -
+      value: Makovce
+      label: Makovce
+    -
+      value: Malacky
+      label: Malacky
+    -
+      value: Malachov
+      label: Malachov
+    -
+      value: 'Malá Čalomija'
+      label: 'Malá Čalomija'
+    -
+      value: 'Malá Čausa'
+      label: 'Malá Čausa'
+    -
+      value: 'Malá Čierna'
+      label: 'Malá Čierna'
+    -
+      value: 'Malá Domaša'
+      label: 'Malá Domaša'
+    -
+      value: 'Malá Franková'
+      label: 'Malá Franková'
+    -
+      value: 'Malá Hradná'
+      label: 'Malá Hradná'
+    -
+      value: 'Malá Ida'
+      label: 'Malá Ida'
+    -
+      value: 'Malá Lehota'
+      label: 'Malá Lehota'
+    -
+      value: 'Malá Lodina'
+      label: 'Malá Lodina'
+    -
+      value: 'Malá nad Hronom'
+      label: 'Malá nad Hronom'
+    -
+      value: 'Malá Poľana'
+      label: 'Malá Poľana'
+    -
+      value: 'Malá Tŕňa'
+      label: 'Malá Tŕňa'
+    -
+      value: Málaš
+      label: Málaš
+    -
+      value: Malatiná
+      label: Malatiná
+    -
+      value: Malatíny
+      label: Malatíny
+    -
+      value: Malcov
+      label: Malcov
+    -
+      value: Malčice
+      label: Malčice
+    -
+      value: 'Malé Borové'
+      label: 'Malé Borové'
+    -
+      value: 'Malé Dvorníky'
+      label: 'Malé Dvorníky'
+    -
+      value: 'Malé Chyndice'
+      label: 'Malé Chyndice'
+    -
+      value: 'Malé Hoste'
+      label: 'Malé Hoste'
+    -
+      value: 'Malé Kosihy'
+      label: 'Malé Kosihy'
+    -
+      value: 'Malé Kozmálovce'
+      label: 'Malé Kozmálovce'
+    -
+      value: 'Malé Kršteňany'
+      label: 'Malé Kršteňany'
+    -
+      value: 'Malé Lednice'
+      label: 'Malé Lednice'
+    -
+      value: 'Malé Leváre'
+      label: 'Malé Leváre'
+    -
+      value: 'Malé Ludince'
+      label: 'Malé Ludince'
+    -
+      value: 'Malé Ozorovce'
+      label: 'Malé Ozorovce'
+    -
+      value: 'Malé Raškovce'
+      label: 'Malé Raškovce'
+    -
+      value: 'Malé Ripňany'
+      label: 'Malé Ripňany'
+    -
+      value: 'Malé Straciny'
+      label: 'Malé Straciny'
+    -
+      value: 'Malé Trakany'
+      label: 'Malé Trakany'
+    -
+      value: 'Malé Uherce'
+      label: 'Malé Uherce'
+    -
+      value: 'Malé Vozokany'
+      label: 'Malé Vozokany'
+    -
+      value: 'Malé Zálužie'
+      label: 'Malé Zálužie'
+    -
+      value: 'Malé Zlievce'
+      label: 'Malé Zlievce'
+    -
+      value: Málinec
+      label: Málinec
+    -
+      value: Malinová
+      label: Malinová
+    -
+      value: Malinovo
+      label: Malinovo
+    -
+      value: Malužiná
+      label: Malužiná
+    -
+      value: 'Malý Cetín'
+      label: 'Malý Cetín'
+    -
+      value: 'Malý Čepčín'
+      label: 'Malý Čepčín'
+    -
+      value: 'Malý Horeš'
+      label: 'Malý Horeš'
+    -
+      value: 'Malý Kamenec'
+      label: 'Malý Kamenec'
+    -
+      value: 'Malý Krtíš'
+      label: 'Malý Krtíš'
+    -
+      value: 'Malý Lapáš'
+      label: 'Malý Lapáš'
+    -
+      value: 'Malý Lipník'
+      label: 'Malý Lipník'
+    -
+      value: 'Malý Slavkov'
+      label: 'Malý Slavkov'
+    -
+      value: 'Malý Slivník'
+      label: 'Malý Slivník'
+    -
+      value: 'Malý Šariš'
+      label: 'Malý Šariš'
+    -
+      value: Malženice
+      label: Malženice
+    -
+      value: Mankovce
+      label: Mankovce
+    -
+      value: Maňa
+      label: Maňa
+    -
+      value: Marcelová
+      label: Marcelová
+    -
+      value: Margecany
+      label: Margecany
+    -
+      value: Marhaň
+      label: Marhaň
+    -
+      value: Marianka
+      label: Marianka
+    -
+      value: Markovce
+      label: Markovce
+    -
+      value: Markuška
+      label: Markuška
+    -
+      value: Markušovce
+      label: Markušovce
+    -
+      value: 'Maršová - Rašov'
+      label: 'Maršová - Rašov'
+    -
+      value: Martin
+      label: Martin
+    -
+      value: 'Martin nad Žitavou'
+      label: 'Martin nad Žitavou'
+    -
+      value: Martinček
+      label: Martinček
+    -
+      value: Martinová
+      label: Martinová
+    -
+      value: Martovce
+      label: Martovce
+    -
+      value: Mašková
+      label: Mašková
+    -
+      value: Maškovce
+      label: Maškovce
+    -
+      value: 'Matejovce nad Hornádom'
+      label: 'Matejovce nad Hornádom'
+    -
+      value: Matiaška
+      label: Matiaška
+    -
+      value: Matiašovce
+      label: Matiašovce
+    -
+      value: Matovce
+      label: Matovce
+    -
+      value: Matúškovo
+      label: Matúškovo
+    -
+      value: Matysová
+      label: Matysová
+    -
+      value: 'Maťovské Vojkovce'
+      label: 'Maťovské Vojkovce'
+    -
+      value: Medovarce
+      label: Medovarce
+    -
+      value: Medvedie
+      label: Medvedie
+    -
+      value: Medveďov
+      label: Medveďov
+    -
+      value: Medzany
+      label: Medzany
+    -
+      value: Medzev
+      label: Medzev
+    -
+      value: Medzianky
+      label: Medzianky
+    -
+      value: Medzibrod
+      label: Medzibrod
+    -
+      value: 'Medzibrodie nad Oravou'
+      label: 'Medzibrodie nad Oravou'
+    -
+      value: Medzilaborce
+      label: Medzilaborce
+    -
+      value: 'Melčice - Lieskové'
+      label: 'Melčice - Lieskové'
+    -
+      value: Melek
+      label: Melek
+    -
+      value: Meliata
+      label: Meliata
+    -
+      value: Mengusovce
+      label: Mengusovce
+    -
+      value: Merašice
+      label: Merašice
+    -
+      value: Merník
+      label: Merník
+    -
+      value: Mestečko
+      label: Mestečko
+    -
+      value: Mestisko
+      label: Mestisko
+    -
+      value: Mičakovce
+      label: Mičakovce
+    -
+      value: Mierovo
+      label: Mierovo
+    -
+      value: Miezgovce
+      label: Miezgovce
+    -
+      value: Michajlov
+      label: Michajlov
+    -
+      value: 'Michal na Ostrove'
+      label: 'Michal na Ostrove'
+    -
+      value: 'Michal nad Žitavou'
+      label: 'Michal nad Žitavou'
+    -
+      value: Michalková
+      label: Michalková
+    -
+      value: Michalok
+      label: Michalok
+    -
+      value: Michalová
+      label: Michalová
+    -
+      value: Michalovce
+      label: Michalovce
+    -
+      value: Michaľany
+      label: Michaľany
+    -
+      value: Miklušovce
+      label: Miklušovce
+    -
+      value: Miková
+      label: Miková
+    -
+      value: Mikulášová
+      label: Mikulášová
+    -
+      value: Mikušovce
+      label: Mikušovce
+    -
+      value: Milhosť
+      label: Milhosť
+    -
+      value: Miloslavov
+      label: Miloslavov
+    -
+      value: Milpoš
+      label: Milpoš
+    -
+      value: Miňovce
+      label: Miňovce
+    -
+      value: Mirkovce
+      label: Mirkovce
+    -
+      value: Miroľa
+      label: Miroľa
+    -
+      value: Mládzovo
+      label: Mládzovo
+    -
+      value: Mlynárovce
+      label: Mlynárovce
+    -
+      value: Mlynčeky
+      label: Mlynčeky
+    -
+      value: Mlynica
+      label: Mlynica
+    -
+      value: Mlynky
+      label: Mlynky
+    -
+      value: 'Mníchova Lehota'
+      label: 'Mníchova Lehota'
+    -
+      value: 'Mníšek nad Hnilcom'
+      label: 'Mníšek nad Hnilcom'
+    -
+      value: 'Mníšek nad Popradom'
+      label: 'Mníšek nad Popradom'
+    -
+      value: Moča
+      label: Moča
+    -
+      value: Močenok
+      label: Močenok
+    -
+      value: Močiar
+      label: Močiar
+    -
+      value: Modra
+      label: Modra
+    -
+      value: 'Modra nad Cirochou'
+      label: 'Modra nad Cirochou'
+    -
+      value: Modrany
+      label: Modrany
+    -
+      value: Modrová
+      label: Modrová
+    -
+      value: Modrovka
+      label: Modrovka
+    -
+      value: 'Modrý Kameň'
+      label: 'Modrý Kameň'
+    -
+      value: Mojmírovce
+      label: Mojmírovce
+    -
+      value: Mojš
+      label: Mojš
+    -
+      value: Mojtín
+      label: Mojtín
+    -
+      value: Mojzesovo
+      label: Mojzesovo
+    -
+      value: 'Mokrá Lúka'
+      label: 'Mokrá Lúka'
+    -
+      value: Mokrance
+      label: Mokrance
+    -
+      value: Mokroluh
+      label: Mokroluh
+    -
+      value: 'Mokrý Háj'
+      label: 'Mokrý Háj'
+    -
+      value: 'Moldava nad Bodvou'
+      label: 'Moldava nad Bodvou'
+    -
+      value: Moravany
+      label: Moravany
+    -
+      value: 'Moravany nad Váhom'
+      label: 'Moravany nad Váhom'
+    -
+      value: 'Moravské Lieskové'
+      label: 'Moravské Lieskové'
+    -
+      value: 'Moravský Svätý Ján'
+      label: 'Moravský Svätý Ján'
+    -
+      value: 'Most pri Bratislave'
+      label: 'Most pri Bratislave'
+    -
+      value: Mostová
+      label: Mostová
+    -
+      value: Moškovec
+      label: Moškovec
+    -
+      value: Mošovce
+      label: Mošovce
+    -
+      value: Moštenica
+      label: Moštenica
+    -
+      value: Mošurov
+      label: Mošurov
+    -
+      value: Motešice
+      label: Motešice
+    -
+      value: Motyčky
+      label: Motyčky
+    -
+      value: Môlča
+      label: Môlča
+    -
+      value: Mrázovce
+      label: Mrázovce
+    -
+      value: Mučín
+      label: Mučín
+    -
+      value: Mudroňovo
+      label: Mudroňovo
+    -
+      value: Mudrovce
+      label: Mudrovce
+    -
+      value: Muľa
+      label: Muľa
+    -
+      value: Muráň
+      label: Muráň
+    -
+      value: 'Muránska Dlhá Lúka'
+      label: 'Muránska Dlhá Lúka'
+    -
+      value: 'Muránska Huta'
+      label: 'Muránska Huta'
+    -
+      value: 'Muránska Lehota'
+      label: 'Muránska Lehota'
+    -
+      value: 'Muránska Zdychava'
+      label: 'Muránska Zdychava'
+    -
+      value: Mútne
+      label: Mútne
+    -
+      value: Mužla
+      label: Mužla
+    -
+      value: Myjava
+      label: Myjava
+    -
+      value: Myslina
+      label: Myslina
+    -
+      value: Mýtna
+      label: Mýtna
+    -
+      value: 'Mýtne Ludany'
+      label: 'Mýtne Ludany'
+    -
+      value: 'Mýto pod Ďumbierom'
+      label: 'Mýto pod Ďumbierom'
+    -
+      value: 'Nacina Ves'
+      label: 'Nacina Ves'
+    -
+      value: Nadlice
+      label: Nadlice
+    -
+      value: Naháč
+      label: Naháč
+    -
+      value: Nálepkovo
+      label: Nálepkovo
+    -
+      value: Námestovo
+      label: Námestovo
+    -
+      value: Nána
+      label: Nána
+    -
+      value: Nandraž
+      label: Nandraž
+    -
+      value: Necpaly
+      label: Necpaly
+    -
+      value: Nedanovce
+      label: Nedanovce
+    -
+      value: Nedašovce
+      label: Nedašovce
+    -
+      value: Neded
+      label: Neded
+    -
+      value: Nededza
+      label: Nededza
+    -
+      value: 'Nedožery - Brezany'
+      label: 'Nedožery - Brezany'
+    -
+      value: 'Nechválova Polianka'
+      label: 'Nechválova Polianka'
+    -
+      value: Nemce
+      label: Nemce
+    -
+      value: Nemcovce
+      label: Nemcovce
+    -
+      value: Nemčice
+      label: Nemčice
+    -
+      value: Nemčiňany
+      label: Nemčiňany
+    -
+      value: Nemecká
+      label: Nemecká
+    -
+      value: Nemečky
+      label: Nemečky
+    -
+      value: Nemešany
+      label: Nemešany
+    -
+      value: Nemšová
+      label: Nemšová
+    -
+      value: Nenince
+      label: Nenince
+    -
+      value: Neporadza
+      label: Neporadza
+    -
+      value: Nesvady
+      label: Nesvady
+    -
+      value: Nesluša
+      label: Nesluša
+    -
+      value: Neverice
+      label: Neverice
+    -
+      value: Nevidzany
+      label: Nevidzany
+    -
+      value: Nevoľné
+      label: Nevoľné
+    -
+      value: 'Nezbudská Lúčka'
+      label: 'Nezbudská Lúčka'
+    -
+      value: Nimnica
+      label: Nimnica
+    -
+      value: Nitra
+      label: Nitra
+    -
+      value: 'Nitra nad Ipľom'
+      label: 'Nitra nad Ipľom'
+    -
+      value: 'Nitrianska Blatnica'
+      label: 'Nitrianska Blatnica'
+    -
+      value: 'Nitrianska Streda'
+      label: 'Nitrianska Streda'
+    -
+      value: 'Nitrianske Hrnčiarovce'
+      label: 'Nitrianske Hrnčiarovce'
+    -
+      value: 'Nitrianske Pravno'
+      label: 'Nitrianske Pravno'
+    -
+      value: 'Nitrianske Rudno'
+      label: 'Nitrianske Rudno'
+    -
+      value: 'Nitrianske Sučany'
+      label: 'Nitrianske Sučany'
+    -
+      value: Nitrica
+      label: Nitrica
+    -
+      value: Nižná
+      label: Nižná
+    -
+      value: 'Nižná Boca'
+      label: 'Nižná Boca'
+    -
+      value: 'Nižná Hutka'
+      label: 'Nižná Hutka'
+    -
+      value: 'Nižná Jablonka'
+      label: 'Nižná Jablonka'
+    -
+      value: 'Nižná Jedľová'
+      label: 'Nižná Jedľová'
+    -
+      value: 'Nižná Kamenica'
+      label: 'Nižná Kamenica'
+    -
+      value: 'Nižná Myšľa'
+      label: 'Nižná Myšľa'
+    -
+      value: 'Nižná Olšava'
+      label: 'Nižná Olšava'
+    -
+      value: 'Nižná Pisaná'
+      label: 'Nižná Pisaná'
+    -
+      value: 'Nižná Polianka'
+      label: 'Nižná Polianka'
+    -
+      value: 'Nižná Rybnica'
+      label: 'Nižná Rybnica'
+    -
+      value: 'Nižná Sitnica'
+      label: 'Nižná Sitnica'
+    -
+      value: 'Nižná Slaná'
+      label: 'Nižná Slaná'
+    -
+      value: 'Nižná Voľa'
+      label: 'Nižná Voľa'
+    -
+      value: 'Nižné Ladičkovce'
+      label: 'Nižné Ladičkovce'
+    -
+      value: 'Nižné Nemecké'
+      label: 'Nižné Nemecké'
+    -
+      value: 'Nižné Repaše'
+      label: 'Nižné Repaše'
+    -
+      value: 'Nižné Ružbachy'
+      label: 'Nižné Ružbachy'
+    -
+      value: 'Nižný Čaj'
+      label: 'Nižný Čaj'
+    -
+      value: 'Nižný Hrabovec'
+      label: 'Nižný Hrabovec'
+    -
+      value: 'Nižný Hrušov'
+      label: 'Nižný Hrušov'
+    -
+      value: 'Nižný Klátov'
+      label: 'Nižný Klátov'
+    -
+      value: 'Nižný Komárnik'
+      label: 'Nižný Komárnik'
+    -
+      value: 'Nižný Kručov'
+      label: 'Nižný Kručov'
+    -
+      value: 'Nižný Lánec'
+      label: 'Nižný Lánec'
+    -
+      value: 'Nižný Mirošov'
+      label: 'Nižný Mirošov'
+    -
+      value: 'Nižný Orlík'
+      label: 'Nižný Orlík'
+    -
+      value: 'Nižný Skálnik'
+      label: 'Nižný Skálnik'
+    -
+      value: 'Nižný Slavkov'
+      label: 'Nižný Slavkov'
+    -
+      value: 'Nižný Tvarožec'
+      label: 'Nižný Tvarožec'
+    -
+      value: 'Nižný Žipov'
+      label: 'Nižný Žipov'
+    -
+      value: Nolčovo
+      label: Nolčovo
+    -
+      value: Norovce
+      label: Norovce
+    -
+      value: 'Nová Baňa'
+      label: 'Nová Baňa'
+    -
+      value: 'Nová Bašta'
+      label: 'Nová Bašta'
+    -
+      value: 'Nová Bošáca'
+      label: 'Nová Bošáca'
+    -
+      value: 'Nová Bystrica'
+      label: 'Nová Bystrica'
+    -
+      value: 'Nová Dedina'
+      label: 'Nová Dedina'
+    -
+      value: 'Nová Dedinka'
+      label: 'Nová Dedinka'
+    -
+      value: 'Nová Dubnica'
+      label: 'Nová Dubnica'
+    -
+      value: 'Nová Kelča'
+      label: 'Nová Kelča'
+    -
+      value: 'Nová Lehota'
+      label: 'Nová Lehota'
+    -
+      value: 'Nová Lesná'
+      label: 'Nová Lesná'
+    -
+      value: 'Nová Ľubovňa'
+      label: 'Nová Ľubovňa'
+    -
+      value: 'Nová Polhora'
+      label: 'Nová Polhora'
+    -
+      value: 'Nová Polianka'
+      label: 'Nová Polianka'
+    -
+      value: 'Nová Sedlica'
+      label: 'Nová Sedlica'
+    -
+      value: 'Nová Ves'
+      label: 'Nová Ves'
+    -
+      value: 'Nová Ves nad Váhom'
+      label: 'Nová Ves nad Váhom'
+    -
+      value: 'Nová Ves nad Žitavou'
+      label: 'Nová Ves nad Žitavou'
+    -
+      value: 'Nová Vieska'
+      label: 'Nová Vieska'
+    -
+      value: Nováčany
+      label: Nováčany
+    -
+      value: Nováky
+      label: Nováky
+    -
+      value: 'Nové Hony'
+      label: 'Nové Hony'
+    -
+      value: 'Nové Mesto nad Váhom'
+      label: 'Nové Mesto nad Váhom'
+    -
+      value: 'Nové Sady'
+      label: 'Nové Sady'
+    -
+      value: 'Nové Zámky'
+      label: 'Nové Zámky'
+    -
+      value: Novosad
+      label: Novosad
+    -
+      value: Novoť
+      label: Novoť
+    -
+      value: 'Nový Ruskov'
+      label: 'Nový Ruskov'
+    -
+      value: 'Nový Salaš'
+      label: 'Nový Salaš'
+    -
+      value: 'Nový Tekov'
+      label: 'Nový Tekov'
+    -
+      value: 'Nový Život'
+      label: 'Nový Život'
+    -
+      value: Nýrovce
+      label: Nýrovce
+    -
+      value: Ňagov
+      label: Ňagov
+    -
+      value: Ňárad
+      label: Ňárad
+    -
+      value: Obeckov
+      label: Obeckov
+    -
+      value: Obišovce
+      label: Obišovce
+    -
+      value: Oborín
+      label: Oborín
+    -
+      value: Obručné
+      label: Obručné
+    -
+      value: Obyce
+      label: Obyce
+    -
+      value: Očkov
+      label: Očkov
+    -
+      value: Očová
+      label: Očová
+    -
+      value: Odorín
+      label: Odorín
+    -
+      value: Ohrady
+      label: Ohrady
+    -
+      value: Ohradzany
+      label: Ohradzany
+    -
+      value: Ochodnica
+      label: Ochodnica
+    -
+      value: Ochtiná
+      label: Ochtiná
+    -
+      value: Okoč
+      label: Okoč
+    -
+      value: 'Okoličná na Ostrove'
+      label: 'Okoličná na Ostrove'
+    -
+      value: Okrúhle
+      label: Okrúhle
+    -
+      value: Okružná
+      label: Okružná
+    -
+      value: Olcnava
+      label: Olcnava
+    -
+      value: Olejníkov
+      label: Olejníkov
+    -
+      value: Olešná
+      label: Olešná
+    -
+      value: Olováry
+      label: Olováry
+    -
+      value: Olšovany
+      label: Olšovany
+    -
+      value: Oľdza
+      label: Oľdza
+    -
+      value: Oľka
+      label: Oľka
+    -
+      value: Oľšavce
+      label: Oľšavce
+    -
+      value: Oľšavica
+      label: Oľšavica
+    -
+      value: Oľšavka
+      label: Oľšavka
+    -
+      value: Oľšinkov
+      label: Oľšinkov
+    -
+      value: Oľšov
+      label: Oľšov
+    -
+      value: Omastiná
+      label: Omastiná
+    -
+      value: Omšenie
+      label: Omšenie
+    -
+      value: Ondavka
+      label: Ondavka
+    -
+      value: 'Ondavské Matiašovce'
+      label: 'Ondavské Matiašovce'
+    -
+      value: Ondrašovce
+      label: Ondrašovce
+    -
+      value: Ondrašová
+      label: Ondrašová
+    -
+      value: Ondrejovce
+      label: Ondrejovce
+    -
+      value: Opátka
+      label: Opátka
+    -
+      value: Opatovce
+      label: Opatovce
+    -
+      value: 'Opatovce nad Nitrou'
+      label: 'Opatovce nad Nitrou'
+    -
+      value: 'Opatovská Nová Ves'
+      label: 'Opatovská Nová Ves'
+    -
+      value: Opava
+      label: Opava
+    -
+      value: Opiná
+      label: Opiná
+    -
+      value: Opoj
+      label: Opoj
+    -
+      value: Oponice
+      label: Oponice
+    -
+      value: Oravce
+      label: Oravce
+    -
+      value: Orávka
+      label: Orávka
+    -
+      value: 'Oravská Jasenica'
+      label: 'Oravská Jasenica'
+    -
+      value: 'Oravská Lesná'
+      label: 'Oravská Lesná'
+    -
+      value: 'Oravská Polhora'
+      label: 'Oravská Polhora'
+    -
+      value: 'Oravská Poruba'
+      label: 'Oravská Poruba'
+    -
+      value: 'Oravský Biely Potok'
+      label: 'Oravský Biely Potok'
+    -
+      value: 'Oravský Podzámok'
+      label: 'Oravský Podzámok'
+    -
+      value: Ordzovany
+      label: Ordzovany
+    -
+      value: Orechová
+      label: Orechová
+    -
+      value: 'Orechová Potôň'
+      label: 'Orechová Potôň'
+    -
+      value: 'Oravské Veselé'
+      label: 'Oravské Veselé'
+    -
+      value: Oreské
+      label: Oreské
+    -
+      value: Orešany
+      label: Orešany
+    -
+      value: Orlov
+      label: Orlov
+    -
+      value: Orovnica
+      label: Orovnica
+    -
+      value: Ortuťová
+      label: Ortuťová
+    -
+      value: Osádka
+      label: Osádka
+    -
+      value: Osadné
+      label: Osadné
+    -
+      value: Osikov
+      label: Osikov
+    -
+      value: Oslany
+      label: Oslany
+    -
+      value: Osrblie
+      label: Osrblie
+    -
+      value: 'Ostrá Lúka'
+      label: 'Ostrá Lúka'
+    -
+      value: Ostratice
+      label: Ostratice
+    -
+      value: Ostrov
+      label: Ostrov
+    -
+      value: Ostrovany
+      label: Ostrovany
+    -
+      value: 'Ostrý Grúň'
+      label: 'Ostrý Grúň'
+    -
+      value: Osturňa
+      label: Osturňa
+    -
+      value: Osuské
+      label: Osuské
+    -
+      value: Oščadnica
+      label: Oščadnica
+    -
+      value: Otrhánky
+      label: Otrhánky
+    -
+      value: Otročok
+      label: Otročok
+    -
+      value: Ovčiarsko
+      label: Ovčiarsko
+    -
+      value: Ovčie
+      label: Ovčie
+    -
+      value: Ozdín
+      label: Ozdín
+    -
+      value: Ožďany
+      label: Ožďany
+    -
+      value: Pača
+      label: Pača
+    -
+      value: Padáň
+      label: Padáň
+    -
+      value: Padarovce
+      label: Padarovce
+    -
+      value: Pakostov
+      label: Pakostov
+    -
+      value: Palárikovo
+      label: Palárikovo
+    -
+      value: Palín
+      label: Palín
+    -
+      value: Palota
+      label: Palota
+    -
+      value: 'Panické Dravce'
+      label: 'Panické Dravce'
+    -
+      value: Paňa
+      label: Paňa
+    -
+      value: Paňovce
+      label: Paňovce
+    -
+      value: Papín
+      label: Papín
+    -
+      value: Papradno
+      label: Papradno
+    -
+      value: Parchovany
+      label: Parchovany
+    -
+      value: Parihuzovce
+      label: Parihuzovce
+    -
+      value: Párnica
+      label: Párnica
+    -
+      value: 'Partizánska Ľupča'
+      label: 'Partizánska Ľupča'
+    -
+      value: Partizánske
+      label: Partizánske
+    -
+      value: Pastovce
+      label: Pastovce
+    -
+      value: Pastuchov
+      label: Pastuchov
+    -
+      value: Pašková
+      label: Pašková
+    -
+      value: 'Paština Závada'
+      label: 'Paština Závada'
+    -
+      value: Pata
+      label: Pata
+    -
+      value: Pataš
+      label: Pataš
+    -
+      value: 'Pavčina Lehota'
+      label: 'Pavčina Lehota'
+    -
+      value: Pavlice
+      label: Pavlice
+    -
+      value: Pavlová
+      label: Pavlová
+    -
+      value: 'Pavlova Ves'
+      label: 'Pavlova Ves'
+    -
+      value: Pavlovce
+      label: Pavlovce
+    -
+      value: 'Pavlovce nad Uhom'
+      label: 'Pavlovce nad Uhom'
+    -
+      value: Pavľany
+      label: Pavľany
+    -
+      value: Pažiť
+      label: Pažiť
+    -
+      value: Pčoliné
+      label: Pčoliné
+    -
+      value: Pečenice
+      label: Pečenice
+    -
+      value: Pečeňady
+      label: Pečeňady
+    -
+      value: Pečeňany
+      label: Pečeňany
+    -
+      value: 'Pečovská Nová Ves'
+      label: 'Pečovská Nová Ves'
+    -
+      value: Peder
+      label: Peder
+    -
+      value: 'Perín - Chym'
+      label: 'Perín - Chym'
+    -
+      value: Pernek
+      label: Pernek
+    -
+      value: Petkovce
+      label: Petkovce
+    -
+      value: Petrikovce
+      label: Petrikovce
+    -
+      value: Petrová
+      label: Petrová
+    -
+      value: 'Petrova Lehota'
+      label: 'Petrova Lehota'
+    -
+      value: 'Petrova Ves'
+      label: 'Petrova Ves'
+    -
+      value: Petrovany
+      label: Petrovany
+    -
+      value: Petrovce
+      label: Petrovce
+    -
+      value: 'Petrovce nad Laborcom'
+      label: 'Petrovce nad Laborcom'
+    -
+      value: Petrovice
+      label: Petrovice
+    -
+      value: Petrovo
+      label: Petrovo
+    -
+      value: Pezinok
+      label: Pezinok
+    -
+      value: Piešťany
+      label: Piešťany
+    -
+      value: Pichne
+      label: Pichne
+    -
+      value: Píla
+      label: Píla
+    -
+      value: Pinciná
+      label: Pinciná
+    -
+      value: Pinkovce
+      label: Pinkovce
+    -
+      value: Piskorovce
+      label: Piskorovce
+    -
+      value: Pitelová
+      label: Pitelová
+    -
+      value: Plášťovce
+      label: Plášťovce
+    -
+      value: 'Plavé Vozokany'
+      label: 'Plavé Vozokany'
+    -
+      value: 'Plavecké Podhradie'
+      label: 'Plavecké Podhradie'
+    -
+      value: 'Plavecký Mikuláš'
+      label: 'Plavecký Mikuláš'
+    -
+      value: 'Plavecký Peter'
+      label: 'Plavecký Peter'
+    -
+      value: 'Plavecký Štvrtok'
+      label: 'Plavecký Štvrtok'
+    -
+      value: Plaveč
+      label: Plaveč
+    -
+      value: Plavnica
+      label: Plavnica
+    -
+      value: Plechotice
+      label: Plechotice
+    -
+      value: Pleš
+      label: Pleš
+    -
+      value: Plešivec
+      label: Plešivec
+    -
+      value: 'Plevník - Drienové'
+      label: 'Plevník - Drienové'
+    -
+      value: Pliešovce
+      label: Pliešovce
+    -
+      value: Ploské
+      label: Ploské
+    -
+      value: Pobedim
+      label: Pobedim
+    -
+      value: Počarová
+      label: Počarová
+    -
+      value: Počúvadlo
+      label: Počúvadlo
+    -
+      value: Podbiel
+      label: Podbiel
+    -
+      value: Podbranč
+      label: Podbranč
+    -
+      value: Podbrezová
+      label: Podbrezová
+    -
+      value: Podhájska
+      label: Podhájska
+    -
+      value: Podhorany
+      label: Podhorany
+    -
+      value: Podhorie
+      label: Podhorie
+    -
+      value: Podhoroď
+      label: Podhoroď
+    -
+      value: Podhradie
+      label: Podhradie
+    -
+      value: Podhradík
+      label: Podhradík
+    -
+      value: Podkonice
+      label: Podkonice
+    -
+      value: Podkriváň
+      label: Podkriváň
+    -
+      value: Podkylava
+      label: Podkylava
+    -
+      value: Podlužany
+      label: Podlužany
+    -
+      value: Podolie
+      label: Podolie
+    -
+      value: Podolínec
+      label: Podolínec
+    -
+      value: Podrečany
+      label: Podrečany
+    -
+      value: Podskalie
+      label: Podskalie
+    -
+      value: Podtureň
+      label: Podtureň
+    -
+      value: Podvysoká
+      label: Podvysoká
+    -
+      value: Podzámčok
+      label: Podzámčok
+    -
+      value: Pohorelá
+      label: Pohorelá
+    -
+      value: Pohranice
+      label: Pohranice
+    -
+      value: 'Pohronská Polhora'
+      label: 'Pohronská Polhora'
+    -
+      value: 'Pohronský Bukovec'
+      label: 'Pohronský Bukovec'
+    -
+      value: 'Pohronský Ruskov'
+      label: 'Pohronský Ruskov'
+    -
+      value: Pochabany
+      label: Pochabany
+    -
+      value: Pokryváč
+      label: Pokryváč
+    -
+      value: Poliakovce
+      label: Poliakovce
+    -
+      value: Polianka
+      label: Polianka
+    -
+      value: Polichno
+      label: Polichno
+    -
+      value: Polina
+      label: Polina
+    -
+      value: Poloma
+      label: Poloma
+    -
+      value: Polomka
+      label: Polomka
+    -
+      value: Poltár
+      label: Poltár
+    -
+      value: Poluvsie
+      label: Poluvsie
+    -
+      value: Poľanovce
+      label: Poľanovce
+    -
+      value: Poľany
+      label: Poľany
+    -
+      value: 'Poľný Kesov'
+      label: 'Poľný Kesov'
+    -
+      value: Pongrácovce
+      label: Pongrácovce
+    -
+      value: Poniky
+      label: Poniky
+    -
+      value: Poprad
+      label: Poprad
+    -
+      value: Poproč
+      label: Poproč
+    -
+      value: 'Popudinské Močidľany'
+      label: 'Popudinské Močidľany'
+    -
+      value: Poráč
+      label: Poráč
+    -
+      value: Poriadie
+      label: Poriadie
+    -
+      value: Porostov
+      label: Porostov
+    -
+      value: Poruba
+      label: Poruba
+    -
+      value: 'Poruba pod Vihorlatom'
+      label: 'Poruba pod Vihorlatom'
+    -
+      value: Porúbka
+      label: Porúbka
+    -
+      value: Poša
+      label: Poša
+    -
+      value: Potok
+      label: Potok
+    -
+      value: Potoky
+      label: Potoky
+    -
+      value: Potôčky
+      label: Potôčky
+    -
+      value: Potvorice
+      label: Potvorice
+    -
+      value: Považany
+      label: Považany
+    -
+      value: 'Považská Bystrica'
+      label: 'Považská Bystrica'
+    -
+      value: Povina
+      label: Povina
+    -
+      value: Povoda
+      label: Povoda
+    -
+      value: Povrazník
+      label: Povrazník
+    -
+      value: Pozba
+      label: Pozba
+    -
+      value: Pozdišovce
+      label: Pozdišovce
+    -
+      value: Pôtor
+      label: Pôtor
+    -
+      value: Praha
+      label: Praha
+    -
+      value: Prakovce
+      label: Prakovce
+    -
+      value: Prašice
+      label: Prašice
+    -
+      value: Prašník
+      label: Prašník
+    -
+      value: Pravenec
+      label: Pravenec
+    -
+      value: Pravica
+      label: Pravica
+    -
+      value: Pravotice
+      label: Pravotice
+    -
+      value: Práznovce
+      label: Práznovce
+    -
+      value: Prečín
+      label: Prečín
+    -
+      value: Predajná
+      label: Predajná
+    -
+      value: Predmier
+      label: Predmier
+    -
+      value: Prenčov
+      label: Prenčov
+    -
+      value: Preseľany
+      label: Preseľany
+    -
+      value: Prestavlky
+      label: Prestavlky
+    -
+      value: Prešov
+      label: Prešov
+    -
+      value: Príbelce
+      label: Príbelce
+    -
+      value: Pribeník
+      label: Pribeník
+    -
+      value: Pribeta
+      label: Pribeta
+    -
+      value: Pribiš
+      label: Pribiš
+    -
+      value: Príbovce
+      label: Príbovce
+    -
+      value: Pribylina
+      label: Pribylina
+    -
+      value: Priechod
+      label: Priechod
+    -
+      value: Priekopa
+      label: Priekopa
+    -
+      value: Priepasné
+      label: Priepasné
+    -
+      value: Prietrž
+      label: Prietrž
+    -
+      value: Prietržka
+      label: Prietržka
+    -
+      value: Prievaly
+      label: Prievaly
+    -
+      value: Prievidza
+      label: Prievidza
+    -
+      value: Prihradzany
+      label: Prihradzany
+    -
+      value: Príkra
+      label: Príkra
+    -
+      value: Príslop
+      label: Príslop
+    -
+      value: Prituľany
+      label: Prituľany
+    -
+      value: Proč
+      label: Proč
+    -
+      value: Prochot
+      label: Prochot
+    -
+      value: Prosačov
+      label: Prosačov
+    -
+      value: Prosiek
+      label: Prosiek
+    -
+      value: Prša
+      label: Prša
+    -
+      value: Pruské
+      label: Pruské
+    -
+      value: Prusy
+      label: Prusy
+    -
+      value: Pružina
+      label: Pružina
+    -
+      value: Pstriná
+      label: Pstriná
+    -
+      value: Ptičie
+      label: Ptičie
+    -
+      value: Ptrukša
+      label: Ptrukša
+    -
+      value: Pucov
+      label: Pucov
+    -
+      value: Púchov
+      label: Púchov
+    -
+      value: Pukanec
+      label: Pukanec
+    -
+      value: 'Pusté Čemerné'
+      label: 'Pusté Čemerné'
+    -
+      value: 'Pusté Pole'
+      label: 'Pusté Pole'
+    -
+      value: 'Pusté Sady'
+      label: 'Pusté Sady'
+    -
+      value: 'Pusté Úľany'
+      label: 'Pusté Úľany'
+    -
+      value: Pušovce
+      label: Pušovce
+    -
+      value: Rabča
+      label: Rabča
+    -
+      value: Rabčice
+      label: Rabčice
+    -
+      value: Rad
+      label: Rad
+    -
+      value: Radatice
+      label: Radatice
+    -
+      value: Radava
+      label: Radava
+    -
+      value: Radimov
+      label: Radimov
+    -
+      value: Radnovce
+      label: Radnovce
+    -
+      value: Radobica
+      label: Radobica
+    -
+      value: Radoľa
+      label: Radoľa
+    -
+      value: Radoma
+      label: Radoma
+    -
+      value: Radošina
+      label: Radošina
+    -
+      value: Radošovce
+      label: Radošovce
+    -
+      value: Radôstka
+      label: Radôstka
+    -
+      value: Radvanovce
+      label: Radvanovce
+    -
+      value: 'Radvaň nad Dunajom'
+      label: 'Radvaň nad Dunajom'
+    -
+      value: 'Radvaň nad Laborcom'
+      label: 'Radvaň nad Laborcom'
+    -
+      value: Radzovce
+      label: Radzovce
+    -
+      value: Rafajovce
+      label: Rafajovce
+    -
+      value: Rajčany
+      label: Rajčany
+    -
+      value: Rajec
+      label: Rajec
+    -
+      value: 'Rajecká Lesná'
+      label: 'Rajecká Lesná'
+    -
+      value: 'Rajecké Teplice'
+      label: 'Rajecké Teplice'
+    -
+      value: Rákoš
+      label: Rákoš
+    -
+      value: Raková
+      label: Raková
+    -
+      value: Rakovčík
+      label: Rakovčík
+    -
+      value: 'Rakovec nad Ondavou'
+      label: 'Rakovec nad Ondavou'
+    -
+      value: Rakovice
+      label: Rakovice
+    -
+      value: Rakovnica
+      label: Rakovnica
+    -
+      value: Rakovo
+      label: Rakovo
+    -
+      value: Rakša
+      label: Rakša
+    -
+      value: Rakúsy
+      label: Rakúsy
+    -
+      value: Rakytník
+      label: Rakytník
+    -
+      value: Rankovce
+      label: Rankovce
+    -
+      value: Rapovce
+      label: Rapovce
+    -
+      value: Raslavice
+      label: Raslavice
+    -
+      value: Rastislavice
+      label: Rastislavice
+    -
+      value: Rašice
+      label: Rašice
+    -
+      value: Ratka
+      label: Ratka
+    -
+      value: Ratková
+      label: Ratková
+    -
+      value: Ratkovce
+      label: Ratkovce
+    -
+      value: Ratkovo
+      label: Ratkovo
+    -
+      value: 'Ratkovská Lehota'
+      label: 'Ratkovská Lehota'
+    -
+      value: 'Ratkovská Suchá'
+      label: 'Ratkovská Suchá'
+    -
+      value: 'Ratkovské Bystré'
+      label: 'Ratkovské Bystré'
+    -
+      value: Ratnovce
+      label: Ratnovce
+    -
+      value: Ratvaj
+      label: Ratvaj
+    -
+      value: Ráztočno
+      label: Ráztočno
+    -
+      value: Ráztoka
+      label: Ráztoka
+    -
+      value: Ražňany
+      label: Ražňany
+    -
+      value: Reca
+      label: Reca
+    -
+      value: Regetovka
+      label: Regetovka
+    -
+      value: Rejdová
+      label: Rejdová
+    -
+      value: Reľov
+      label: Reľov
+    -
+      value: Remeniny
+      label: Remeniny
+    -
+      value: 'Remetské Hámre'
+      label: 'Remetské Hámre'
+    -
+      value: Renčišov
+      label: Renčišov
+    -
+      value: Repejov
+      label: Repejov
+    -
+      value: Repište
+      label: Repište
+    -
+      value: Rešica
+      label: Rešica
+    -
+      value: Rešov
+      label: Rešov
+    -
+      value: Revúca
+      label: Revúca
+    -
+      value: 'Revúcka Lehota'
+      label: 'Revúcka Lehota'
+    -
+      value: Riečka
+      label: Riečka
+    -
+      value: Richnava
+      label: Richnava
+    -
+      value: Richvald
+      label: Richvald
+    -
+      value: 'Rimavská Baňa'
+      label: 'Rimavská Baňa'
+    -
+      value: 'Rimavská Seč'
+      label: 'Rimavská Seč'
+    -
+      value: 'Rimavská Sobota'
+      label: 'Rimavská Sobota'
+    -
+      value: 'Rimavské Brezovo'
+      label: 'Rimavské Brezovo'
+    -
+      value: 'Rimavské Janovce'
+      label: 'Rimavské Janovce'
+    -
+      value: 'Rimavské Zalužany'
+      label: 'Rimavské Zalužany'
+    -
+      value: Rohov
+      label: Rohov
+    -
+      value: Rohovce
+      label: Rohovce
+    -
+      value: Rohožník
+      label: Rohožník
+    -
+      value: Rochovce
+      label: Rochovce
+    -
+      value: Rokycany
+      label: Rokycany
+    -
+      value: Rokytov
+      label: Rokytov
+    -
+      value: 'Rokytov pri Humennom'
+      label: 'Rokytov pri Humennom'
+    -
+      value: Rokytovce
+      label: Rokytovce
+    -
+      value: Rosina
+      label: Rosina
+    -
+      value: Roškovce
+      label: Roškovce
+    -
+      value: Roštár
+      label: Roštár
+    -
+      value: Rovensko
+      label: Rovensko
+    -
+      value: Rovinka
+      label: Rovinka
+    -
+      value: Rovné
+      label: Rovné
+    -
+      value: Rovňany
+      label: Rovňany
+    -
+      value: Rozhanovce
+      label: Rozhanovce
+    -
+      value: Rozložná
+      label: Rozložná
+    -
+      value: Roztoky
+      label: Roztoky
+    -
+      value: Rožkovany
+      label: Rožkovany
+    -
+      value: Rožňava
+      label: Rožňava
+    -
+      value: 'Rožňavské Bystré'
+      label: 'Rožňavské Bystré'
+    -
+      value: Rúbaň
+      label: Rúbaň
+    -
+      value: Rudina
+      label: Rudina
+    -
+      value: Rudinka
+      label: Rudinka
+    -
+      value: Rudinská
+      label: Rudinská
+    -
+      value: Rudlov
+      label: Rudlov
+    -
+      value: Rudná
+      label: Rudná
+    -
+      value: 'Rudnianska Lehota'
+      label: 'Rudnianska Lehota'
+    -
+      value: Rudník
+      label: Rudník
+    -
+      value: Rudno
+      label: Rudno
+    -
+      value: 'Rudno nad Hronom'
+      label: 'Rudno nad Hronom'
+    -
+      value: Rudňany
+      label: Rudňany
+    -
+      value: Rumanová
+      label: Rumanová
+    -
+      value: Rumince
+      label: Rumince
+    -
+      value: Runina
+      label: Runina
+    -
+      value: Ruská
+      label: Ruská
+    -
+      value: 'Ruská Bystrá'
+      label: 'Ruská Bystrá'
+    -
+      value: 'Ruská Kajňa'
+      label: 'Ruská Kajňa'
+    -
+      value: 'Ruská Nová Ves'
+      label: 'Ruská Nová Ves'
+    -
+      value: 'Ruská Poruba'
+      label: 'Ruská Poruba'
+    -
+      value: 'Ruská Volová'
+      label: 'Ruská Volová'
+    -
+      value: 'Ruská Voľa'
+      label: 'Ruská Voľa'
+    -
+      value: 'Ruská Voľa nad Popradom'
+      label: 'Ruská Voľa nad Popradom'
+    -
+      value: Ruskov
+      label: Ruskov
+    -
+      value: Ruskovce
+      label: Ruskovce
+    -
+      value: 'Ruský Hrabovec'
+      label: 'Ruský Hrabovec'
+    -
+      value: 'Ruský Potok'
+      label: 'Ruský Potok'
+    -
+      value: Ružiná
+      label: Ružiná
+    -
+      value: Ružindol
+      label: Ružindol
+    -
+      value: Ružomberok
+      label: Ružomberok
+    -
+      value: Rybany
+      label: Rybany
+    -
+      value: Rybky
+      label: Rybky
+    -
+      value: Rybník
+      label: Rybník
+    -
+      value: Rykynčice
+      label: Rykynčice
+    -
+      value: Sabinov
+      label: Sabinov
+    -
+      value: Sačurov
+      label: Sačurov
+    -
+      value: Sádočné
+      label: Sádočné
+    -
+      value: 'Sady nad Torysou'
+      label: 'Sady nad Torysou'
+    -
+      value: Salka
+      label: Salka
+    -
+      value: Santovka
+      label: Santovka
+    -
+      value: Sap
+      label: Sap
+    -
+      value: Sása
+      label: Sása
+    -
+      value: Sasinkovo
+      label: Sasinkovo
+    -
+      value: Sazdice
+      label: Sazdice
+    -
+      value: 'Sebedín - Bečov'
+      label: 'Sebedín - Bečov'
+    -
+      value: Sebedražie
+      label: Sebedražie
+    -
+      value: Sebechleby
+      label: Sebechleby
+    -
+      value: Seč
+      label: Seč
+    -
+      value: Sečianky
+      label: Sečianky
+    -
+      value: Sečovce
+      label: Sečovce
+    -
+      value: 'Sečovská Polianka'
+      label: 'Sečovská Polianka'
+    -
+      value: 'Sedliacka Dubová'
+      label: 'Sedliacka Dubová'
+    -
+      value: Sedliská
+      label: Sedliská
+    -
+      value: Sedmerovec
+      label: Sedmerovec
+    -
+      value: Sejkov
+      label: Sejkov
+    -
+      value: Sekule
+      label: Sekule
+    -
+      value: Selce
+      label: Selce
+    -
+      value: Selec
+      label: Selec
+    -
+      value: Selice
+      label: Selice
+    -
+      value: Seľany
+      label: Seľany
+    -
+      value: Semerovo
+      label: Semerovo
+    -
+      value: Senec
+      label: Senec
+    -
+      value: Seniakovce
+      label: Seniakovce
+    -
+      value: Senica
+      label: Senica
+    -
+      value: Senné
+      label: Senné
+    -
+      value: Senohrad
+      label: Senohrad
+    -
+      value: Seňa
+      label: Seňa
+    -
+      value: Sereď
+      label: Sereď
+    -
+      value: Sielnica
+      label: Sielnica
+    -
+      value: Sihelné
+      label: Sihelné
+    -
+      value: Sihla
+      label: Sihla
+    -
+      value: Sikenica
+      label: Sikenica
+    -
+      value: Sikenička
+      label: Sikenička
+    -
+      value: Siladice
+      label: Siladice
+    -
+      value: Silica
+      label: Silica
+    -
+      value: 'Silická Brezová'
+      label: 'Silická Brezová'
+    -
+      value: 'Silická Jablonica'
+      label: 'Silická Jablonica'
+    -
+      value: Sirk
+      label: Sirk
+    -
+      value: Sirník
+      label: Sirník
+    -
+      value: Skačany
+      label: Skačany
+    -
+      value: Skalica
+      label: Skalica
+    -
+      value: Skalité
+      label: Skalité
+    -
+      value: 'Skalka nad Váhom'
+      label: 'Skalka nad Váhom'
+    -
+      value: Skároš
+      label: Skároš
+    -
+      value: Skerešovo
+      label: Skerešovo
+    -
+      value: Sklabiná
+      label: Sklabiná
+    -
+      value: 'Sklabinský Podzámok'
+      label: 'Sklabinský Podzámok'
+    -
+      value: Sklabiňa
+      label: Sklabiňa
+    -
+      value: Sklené
+      label: Sklené
+    -
+      value: 'Sklené Teplice'
+      label: 'Sklené Teplice'
+    -
+      value: Skrabské
+      label: Skrabské
+    -
+      value: Skýcov
+      label: Skýcov
+    -
+      value: Sládkovičovo
+      label: Sládkovičovo
+    -
+      value: Slančík
+      label: Slančík
+    -
+      value: Slanec
+      label: Slanec
+    -
+      value: 'Slanská Huta'
+      label: 'Slanská Huta'
+    -
+      value: 'Slanské Nové Mesto'
+      label: 'Slanské Nové Mesto'
+    -
+      value: Slaská
+      label: Slaská
+    -
+      value: Slatina
+      label: Slatina
+    -
+      value: 'Slatina nad Bebravou'
+      label: 'Slatina nad Bebravou'
+    -
+      value: 'Slatinka nad Bebravou'
+      label: 'Slatinka nad Bebravou'
+    -
+      value: 'Slatinské Lazy'
+      label: 'Slatinské Lazy'
+    -
+      value: Slatvina
+      label: Slatvina
+    -
+      value: Slavec
+      label: Slavec
+    -
+      value: Slavkovce
+      label: Slavkovce
+    -
+      value: Slavnica
+      label: Slavnica
+    -
+      value: Slavoška
+      label: Slavoška
+    -
+      value: Slavošovce
+      label: Slavošovce
+    -
+      value: Slepčany
+      label: Slepčany
+    -
+      value: Sliač
+      label: Sliač
+    -
+      value: Sliepkovce
+      label: Sliepkovce
+    -
+      value: Slizké
+      label: Slizké
+    -
+      value: Slivník
+      label: Slivník
+    -
+      value: Slopná
+      label: Slopná
+    -
+      value: Slovany
+      label: Slovany
+    -
+      value: 'Slovenská Kajňa'
+      label: 'Slovenská Kajňa'
+    -
+      value: 'Slovenská Ľupča'
+      label: 'Slovenská Ľupča'
+    -
+      value: 'Slovenská Nová Ves'
+      label: 'Slovenská Nová Ves'
+    -
+      value: 'Slovenská Ves'
+      label: 'Slovenská Ves'
+    -
+      value: 'Slovenská Volová'
+      label: 'Slovenská Volová'
+    -
+      value: 'Slovenské Ďarmoty'
+      label: 'Slovenské Ďarmoty'
+    -
+      value: 'Slovenské Kľačany'
+      label: 'Slovenské Kľačany'
+    -
+      value: 'Slovenské Krivé'
+      label: 'Slovenské Krivé'
+    -
+      value: 'Slovenské Nové Mesto'
+      label: 'Slovenské Nové Mesto'
+    -
+      value: 'Slovenské Pravno'
+      label: 'Slovenské Pravno'
+    -
+      value: 'Slovenský Grob'
+      label: 'Slovenský Grob'
+    -
+      value: Slovinky
+      label: Slovinky
+    -
+      value: Sľažany
+      label: Sľažany
+    -
+      value: Smilno
+      label: Smilno
+    -
+      value: Smižany
+      label: Smižany
+    -
+      value: Smolenice
+      label: Smolenice
+    -
+      value: Smolinské
+      label: Smolinské
+    -
+      value: 'Smolnícka Huta'
+      label: 'Smolnícka Huta'
+    -
+      value: Smolník
+      label: Smolník
+    -
+      value: Smrdáky
+      label: Smrdáky
+    -
+      value: Smrečany
+      label: Smrečany
+    -
+      value: Snakov
+      label: Snakov
+    -
+      value: Snežnica
+      label: Snežnica
+    -
+      value: Snina
+      label: Snina
+    -
+      value: Socovce
+      label: Socovce
+    -
+      value: Soblahov
+      label: Soblahov
+    -
+      value: Soboš
+      label: Soboš
+    -
+      value: Sobotište
+      label: Sobotište
+    -
+      value: Sobrance
+      label: Sobrance
+    -
+      value: Sokolce
+      label: Sokolce
+    -
+      value: Sokolovce
+      label: Sokolovce
+    -
+      value: Sokoľ
+      label: Sokoľ
+    -
+      value: Sokoľany
+      label: Sokoľany
+    -
+      value: Solčany
+      label: Solčany
+    -
+      value: Solčianky
+      label: Solčianky
+    -
+      value: Sološnica
+      label: Sološnica
+    -
+      value: Soľ
+      label: Soľ
+    -
+      value: Soľnička
+      label: Soľnička
+    -
+      value: Soľník
+      label: Soľník
+    -
+      value: Somotor
+      label: Somotor
+    -
+      value: Sopkovce
+      label: Sopkovce
+    -
+      value: 'Spišská Belá'
+      label: 'Spišská Belá'
+    -
+      value: 'Spišská Nová Ves'
+      label: 'Spišská Nová Ves'
+    -
+      value: 'Spišská Stará Ves'
+      label: 'Spišská Stará Ves'
+    -
+      value: 'Spišská Teplica'
+      label: 'Spišská Teplica'
+    -
+      value: 'Spišské Bystré'
+      label: 'Spišské Bystré'
+    -
+      value: 'Spišské Hanušovce'
+      label: 'Spišské Hanušovce'
+    -
+      value: 'Spišské Podhradie'
+      label: 'Spišské Podhradie'
+    -
+      value: 'Spišské Tomášovce'
+      label: 'Spišské Tomášovce'
+    -
+      value: 'Spišské Vlachy'
+      label: 'Spišské Vlachy'
+    -
+      value: 'Spišský Hrhov'
+      label: 'Spišský Hrhov'
+    -
+      value: 'Spišský Hrušov'
+      label: 'Spišský Hrušov'
+    -
+      value: 'Spišský Štiavnik'
+      label: 'Spišský Štiavnik'
+    -
+      value: 'Spišský Štvrtok'
+      label: 'Spišský Štvrtok'
+    -
+      value: Stakčín
+      label: Stakčín
+    -
+      value: 'Stakčínska Roztoka'
+      label: 'Stakčínska Roztoka'
+    -
+      value: Stanča
+      label: Stanča
+    -
+      value: Stankovany
+      label: Stankovany
+    -
+      value: Stankovce
+      label: Stankovce
+    -
+      value: 'Stará Bašta'
+      label: 'Stará Bašta'
+    -
+      value: 'Stará Bystrica'
+      label: 'Stará Bystrica'
+    -
+      value: 'Stará Halič'
+      label: 'Stará Halič'
+    -
+      value: 'Stará Huta'
+      label: 'Stará Huta'
+    -
+      value: 'Stará Kremnička'
+      label: 'Stará Kremnička'
+    -
+      value: 'Stará Lehota'
+      label: 'Stará Lehota'
+    -
+      value: 'Stará Lesná'
+      label: 'Stará Lesná'
+    -
+      value: 'Stará Ľubovňa'
+      label: 'Stará Ľubovňa'
+    -
+      value: 'Stará Myjava'
+      label: 'Stará Myjava'
+    -
+      value: 'Stará Turá'
+      label: 'Stará Turá'
+    -
+      value: 'Stará Voda'
+      label: 'Stará Voda'
+    -
+      value: Staré
+      label: Staré
+    -
+      value: 'Staré Hory'
+      label: 'Staré Hory'
+    -
+      value: Starina
+      label: Starina
+    -
+      value: 'Starý Hrádok'
+      label: 'Starý Hrádok'
+    -
+      value: 'Starý Tekov'
+      label: 'Starý Tekov'
+    -
+      value: Staškov
+      label: Staškov
+    -
+      value: Staškovce
+      label: Staškovce
+    -
+      value: 'Stebnícka Huta'
+      label: 'Stebnícka Huta'
+    -
+      value: Stebník
+      label: Stebník
+    -
+      value: Stožok
+      label: Stožok
+    -
+      value: 'Stráne pod Tatrami'
+      label: 'Stráne pod Tatrami'
+    -
+      value: Stránska
+      label: Stránska
+    -
+      value: Stránske
+      label: Stránske
+    -
+      value: Stráňany
+      label: Stráňany
+    -
+      value: Stráňavy
+      label: Stráňavy
+    -
+      value: Stratená
+      label: Stratená
+    -
+      value: Stráža
+      label: Stráža
+    -
+      value: Strážne
+      label: Strážne
+    -
+      value: Strážske
+      label: Strážske
+    -
+      value: Strečno
+      label: Strečno
+    -
+      value: 'Streda nad Bodrogom'
+      label: 'Streda nad Bodrogom'
+    -
+      value: 'Stredné Plachtince'
+      label: 'Stredné Plachtince'
+    -
+      value: Strekov
+      label: Strekov
+    -
+      value: Strelníky
+      label: Strelníky
+    -
+      value: Stretava
+      label: Stretava
+    -
+      value: Stretavka
+      label: Stretavka
+    -
+      value: Streženice
+      label: Streženice
+    -
+      value: Strihovce
+      label: Strihovce
+    -
+      value: Stročín
+      label: Stročín
+    -
+      value: Stropkov
+      label: Stropkov
+    -
+      value: Studená
+      label: Studená
+    -
+      value: Studenec
+      label: Studenec
+    -
+      value: Studienka
+      label: Studienka
+    -
+      value: Stuľany
+      label: Stuľany
+    -
+      value: Stupava
+      label: Stupava
+    -
+      value: Stupné
+      label: Stupné
+    -
+      value: Sučany
+      label: Sučany
+    -
+      value: Sudince
+      label: Sudince
+    -
+      value: Súdovce
+      label: Súdovce
+    -
+      value: 'Suchá Dolina'
+      label: 'Suchá Dolina'
+    -
+      value: 'Suchá Hora'
+      label: 'Suchá Hora'
+    -
+      value: 'Suchá nad Parnou'
+      label: 'Suchá nad Parnou'
+    -
+      value: Sucháň
+      label: Sucháň
+    -
+      value: Suché
+      label: Suché
+    -
+      value: 'Suché Brezovo'
+      label: 'Suché Brezovo'
+    -
+      value: Suchohrad
+      label: Suchohrad
+    -
+      value: Sukov
+      label: Sukov
+    -
+      value: Sulín
+      label: Sulín
+    -
+      value: Súlovce
+      label: Súlovce
+    -
+      value: 'Súľov - Hradná'
+      label: 'Súľov - Hradná'
+    -
+      value: Sušany
+      label: Sušany
+    -
+      value: Sútor
+      label: Sútor
+    -
+      value: 'Svätá Mária'
+      label: 'Svätá Mária'
+    -
+      value: Svätoplukovo
+      label: Svätoplukovo
+    -
+      value: Svätuš
+      label: Svätuš
+    -
+      value: Svätuše
+      label: Svätuše
+    -
+      value: 'Svätý Anton'
+      label: 'Svätý Anton'
+    -
+      value: 'Svätý Jur'
+      label: 'Svätý Jur'
+    -
+      value: 'Svätý Kríž'
+      label: 'Svätý Kríž'
+    -
+      value: 'Svätý Peter'
+      label: 'Svätý Peter'
+    -
+      value: Svederník
+      label: Svederník
+    -
+      value: Sverepec
+      label: Sverepec
+    -
+      value: Sveržov
+      label: Sveržov
+    -
+      value: Svetlice
+      label: Svetlice
+    -
+      value: Svidnička
+      label: Svidnička
+    -
+      value: Svidník
+      label: Svidník
+    -
+      value: Svinia
+      label: Svinia
+    -
+      value: Svinica
+      label: Svinica
+    -
+      value: Svinice
+      label: Svinice
+    -
+      value: Svinná
+      label: Svinná
+    -
+      value: Svit
+      label: Svit
+    -
+      value: Svodín
+      label: Svodín
+    -
+      value: Svrbice
+      label: Svrbice
+    -
+      value: Svrčinovec
+      label: Svrčinovec
+    -
+      value: Šahy
+      label: Šahy
+    -
+      value: 'Šajdíkove Humence'
+      label: 'Šajdíkove Humence'
+    -
+      value: Šalgovce
+      label: Šalgovce
+    -
+      value: Šalgočka
+      label: Šalgočka
+    -
+      value: Šalov
+      label: Šalov
+    -
+      value: Šaľa
+      label: Šaľa
+    -
+      value: Šambron
+      label: Šambron
+    -
+      value: Šamorín
+      label: Šamorín
+    -
+      value: Šamudovce
+      label: Šamudovce
+    -
+      value: Šandal
+      label: Šandal
+    -
+      value: Šarbov
+      label: Šarbov
+    -
+      value: 'Šarišská Poruba'
+      label: 'Šarišská Poruba'
+    -
+      value: 'Šarišská Trstená'
+      label: 'Šarišská Trstená'
+    -
+      value: 'Šarišské Bohdanovce'
+      label: 'Šarišské Bohdanovce'
+    -
+      value: 'Šarišské Čierne'
+      label: 'Šarišské Čierne'
+    -
+      value: 'Šarišské Dravce'
+      label: 'Šarišské Dravce'
+    -
+      value: 'Šarišské Jastrabie'
+      label: 'Šarišské Jastrabie'
+    -
+      value: 'Šarišské Michaľany'
+      label: 'Šarišské Michaľany'
+    -
+      value: 'Šarišské Sokolovce'
+      label: 'Šarišské Sokolovce'
+    -
+      value: 'Šarišský Štiavnik'
+      label: 'Šarišský Štiavnik'
+    -
+      value: Šarkan
+      label: Šarkan
+    -
+      value: Šarovce
+      label: Šarovce
+    -
+      value: Šašová
+      label: Šašová
+    -
+      value: 'Šaštín - Stráže'
+      label: 'Šaštín - Stráže'
+    -
+      value: Šávoľ
+      label: Šávoľ
+    -
+      value: Šelpice
+      label: Šelpice
+    -
+      value: Šemetkovce
+      label: Šemetkovce
+    -
+      value: Šemša
+      label: Šemša
+    -
+      value: Šenkvice
+      label: Šenkvice
+    -
+      value: 'Šiatorská Bukovinka'
+      label: 'Šiatorská Bukovinka'
+    -
+      value: Šiba
+      label: Šiba
+    -
+      value: Šíd
+      label: Šíd
+    -
+      value: Šimonovce
+      label: Šimonovce
+    -
+      value: Šindliar
+      label: Šindliar
+    -
+      value: Šintava
+      label: Šintava
+    -
+      value: Šípkov
+      label: Šípkov
+    -
+      value: Šípkové
+      label: Šípkové
+    -
+      value: Širákov
+      label: Širákov
+    -
+      value: Širkovce
+      label: Širkovce
+    -
+      value: Široké
+      label: Široké
+    -
+      value: Šišov
+      label: Šišov
+    -
+      value: Šivetice
+      label: Šivetice
+    -
+      value: Šmigovec
+      label: Šmigovec
+    -
+      value: Šoltýska
+      label: Šoltýska
+    -
+      value: Šoporňa
+      label: Šoporňa
+    -
+      value: Špačince
+      label: Špačince
+    -
+      value: 'Špania Dolina'
+      label: 'Špania Dolina'
+    -
+      value: 'Španie Pole'
+      label: 'Španie Pole'
+    -
+      value: Šrobárová
+      label: Šrobárová
+    -
+      value: Štefanov
+      label: Štefanov
+    -
+      value: 'Štefanov nad Oravou'
+      label: 'Štefanov nad Oravou'
+    -
+      value: Štefanová
+      label: Štefanová
+    -
+      value: Štefanovce
+      label: Štefanovce
+    -
+      value: Štefanovičová
+      label: Štefanovičová
+    -
+      value: Štefurov
+      label: Štefurov
+    -
+      value: Šterusy
+      label: Šterusy
+    -
+      value: 'Štiavnické Bane'
+      label: 'Štiavnické Bane'
+    -
+      value: Štiavnička
+      label: Štiavnička
+    -
+      value: Štiavnik
+      label: Štiavnik
+    -
+      value: Štítnik
+      label: Štítnik
+    -
+      value: Štós
+      label: Štós
+    -
+      value: Štôla
+      label: Štôla
+    -
+      value: Štrba
+      label: Štrba
+    -
+      value: Štrkovec
+      label: Štrkovec
+    -
+      value: Štúrovo
+      label: Štúrovo
+    -
+      value: Štvrtok
+      label: Štvrtok
+    -
+      value: 'Štvrtok na Ostrove'
+      label: 'Štvrtok na Ostrove'
+    -
+      value: Šuľa
+      label: Šuľa
+    -
+      value: Šumiac
+      label: Šumiac
+    -
+      value: Šuňava
+      label: Šuňava
+    -
+      value: Šurany
+      label: Šurany
+    -
+      value: Šurianky
+      label: Šurianky
+    -
+      value: Šurice
+      label: Šurice
+    -
+      value: Šúrovce
+      label: Šúrovce
+    -
+      value: Šútovo
+      label: Šútovo
+    -
+      value: Šútovce
+      label: Šútovce
+    -
+      value: Švábovce
+      label: Švábovce
+    -
+      value: Švedlár
+      label: Švedlár
+    -
+      value: Švošov
+      label: Švošov
+    -
+      value: Tachty
+      label: Tachty
+    -
+      value: Tajná
+      label: Tajná
+    -
+      value: Tajov
+      label: Tajov
+    -
+      value: Tarnov
+      label: Tarnov
+    -
+      value: 'Tatranská Javorina'
+      label: 'Tatranská Javorina'
+    -
+      value: Tašuľa
+      label: Tašuľa
+    -
+      value: Tehla
+      label: Tehla
+    -
+      value: Tekolďany
+      label: Tekolďany
+    -
+      value: 'Tekovská Breznica'
+      label: 'Tekovská Breznica'
+    -
+      value: 'Tekovské Lužany'
+      label: 'Tekovské Lužany'
+    -
+      value: 'Tekovské Nemce'
+      label: 'Tekovské Nemce'
+    -
+      value: 'Tekovský Hrádok'
+      label: 'Tekovský Hrádok'
+    -
+      value: Telgárt
+      label: Telgárt
+    -
+      value: Telince
+      label: Telince
+    -
+      value: Temeš
+      label: Temeš
+    -
+      value: Teplička
+      label: Teplička
+    -
+      value: 'Teplička nad Váhom'
+      label: 'Teplička nad Váhom'
+    -
+      value: Tepličky
+      label: Tepličky
+    -
+      value: 'Teplý Vrch'
+      label: 'Teplý Vrch'
+    -
+      value: Terany
+      label: Terany
+    -
+      value: Terchová
+      label: Terchová
+    -
+      value: Teriakovce
+      label: Teriakovce
+    -
+      value: Terňa
+      label: Terňa
+    -
+      value: Tesáre
+      label: Tesáre
+    -
+      value: 'Tesárske Mlyňany'
+      label: 'Tesárske Mlyňany'
+    -
+      value: Tešedíkovo
+      label: Tešedíkovo
+    -
+      value: Tibava
+      label: Tibava
+    -
+      value: 'Tichý Potok'
+      label: 'Tichý Potok'
+    -
+      value: Timoradza
+      label: Timoradza
+    -
+      value: Tisinec
+      label: Tisinec
+    -
+      value: Tisovec
+      label: Tisovec
+    -
+      value: Tlmače
+      label: Tlmače
+    -
+      value: Točnica
+      label: Točnica
+    -
+      value: Tokajík
+      label: Tokajík
+    -
+      value: Tomášikovo
+      label: Tomášikovo
+    -
+      value: Tomášov
+      label: Tomášov
+    -
+      value: Tomášovce
+      label: Tomášovce
+    -
+      value: Topoľa
+      label: Topoľa
+    -
+      value: Topoľčany
+      label: Topoľčany
+    -
+      value: Topoľčianky
+      label: Topoľčianky
+    -
+      value: Topoľnica
+      label: Topoľnica
+    -
+      value: Topoľníky
+      label: Topoľníky
+    -
+      value: Topoľovka
+      label: Topoľovka
+    -
+      value: Toporec
+      label: Toporec
+    -
+      value: Tornaľa
+      label: Tornaľa
+    -
+      value: Torysa
+      label: Torysa
+    -
+      value: Torysky
+      label: Torysky
+    -
+      value: Tovarné
+      label: Tovarné
+    -
+      value: 'Tovarnianska Polianka'
+      label: 'Tovarnianska Polianka'
+    -
+      value: Tovarníky
+      label: Tovarníky
+    -
+      value: Tôň
+      label: Tôň
+    -
+      value: Trakovice
+      label: Trakovice
+    -
+      value: Trávnica
+      label: Trávnica
+    -
+      value: Trávnik
+      label: Trávnik
+    -
+      value: Trebatice
+      label: Trebatice
+    -
+      value: Trebejov
+      label: Trebejov
+    -
+      value: Trebeľovce
+      label: Trebeľovce
+    -
+      value: Trebichava
+      label: Trebichava
+    -
+      value: Trebišov
+      label: Trebišov
+    -
+      value: Trebostovo
+      label: Trebostovo
+    -
+      value: Trebušovce
+      label: Trebušovce
+    -
+      value: Trenč
+      label: Trenč
+    -
+      value: 'Trenčianska Teplá'
+      label: 'Trenčianska Teplá'
+    -
+      value: 'Trenčianska Turná'
+      label: 'Trenčianska Turná'
+    -
+      value: 'Trenčianske Bohuslavice'
+      label: 'Trenčianske Bohuslavice'
+    -
+      value: 'Trenčianske Jastrabie'
+      label: 'Trenčianske Jastrabie'
+    -
+      value: 'Trenčianske Mitice'
+      label: 'Trenčianske Mitice'
+    -
+      value: 'Trenčianske Stankovce'
+      label: 'Trenčianske Stankovce'
+    -
+      value: 'Trenčianske Teplice'
+      label: 'Trenčianske Teplice'
+    -
+      value: Trenčín
+      label: Trenčín
+    -
+      value: 'Trhová Hradská'
+      label: 'Trhová Hradská'
+    -
+      value: Trhovište
+      label: Trhovište
+    -
+      value: Trnava
+      label: Trnava
+    -
+      value: 'Trnavá Hora'
+      label: 'Trnavá Hora'
+    -
+      value: 'Trnava pri Laborci'
+      label: 'Trnava pri Laborci'
+    -
+      value: Trnávka
+      label: Trnávka
+    -
+      value: Trnkov
+      label: Trnkov
+    -
+      value: Trnovec
+      label: Trnovec
+    -
+      value: 'Trnovec nad Váhom'
+      label: 'Trnovec nad Váhom'
+    -
+      value: Trnovo
+      label: Trnovo
+    -
+      value: Tročany
+      label: Tročany
+    -
+      value: Trpín
+      label: Trpín
+    -
+      value: Trstená
+      label: Trstená
+    -
+      value: 'Trstená na Ostrove'
+      label: 'Trstená na Ostrove'
+    -
+      value: Trstené
+      label: Trstené
+    -
+      value: 'Trstené pri Hornáde'
+      label: 'Trstené pri Hornáde'
+    -
+      value: Trstice
+      label: Trstice
+    -
+      value: Trstín
+      label: Trstín
+    -
+      value: Trsťany
+      label: Trsťany
+    -
+      value: Tŕnie
+      label: Tŕnie
+    -
+      value: Tuhár
+      label: Tuhár
+    -
+      value: Tuhrina
+      label: Tuhrina
+    -
+      value: Tuchyňa
+      label: Tuchyňa
+    -
+      value: Tulčík
+      label: Tulčík
+    -
+      value: Tupá
+      label: Tupá
+    -
+      value: Turá
+      label: Turá
+    -
+      value: Turany
+      label: Turany
+    -
+      value: 'Turany nad Ondavou'
+      label: 'Turany nad Ondavou'
+    -
+      value: Turcovce
+      label: Turcovce
+    -
+      value: Turček
+      label: Turček
+    -
+      value: Turčianky
+      label: Turčianky
+    -
+      value: 'Turčianska Štiavnička'
+      label: 'Turčianska Štiavnička'
+    -
+      value: 'Turčianske Jaseno'
+      label: 'Turčianske Jaseno'
+    -
+      value: 'Turčianske Kľačany'
+      label: 'Turčianske Kľačany'
+    -
+      value: 'Turčianske Teplice'
+      label: 'Turčianske Teplice'
+    -
+      value: 'Turčiansky Ďur'
+      label: 'Turčiansky Ďur'
+    -
+      value: 'Turčiansky Peter'
+      label: 'Turčiansky Peter'
+    -
+      value: Turčok
+      label: Turčok
+    -
+      value: Turecká
+      label: Turecká
+    -
+      value: Tureň
+      label: Tureň
+    -
+      value: Turie
+      label: Turie
+    -
+      value: Turík
+      label: Turík
+    -
+      value: 'Turnianska Nová Ves'
+      label: 'Turnianska Nová Ves'
+    -
+      value: 'Turňa nad Bodvou'
+      label: 'Turňa nad Bodvou'
+    -
+      value: Turová
+      label: Turová
+    -
+      value: Turzovka
+      label: Turzovka
+    -
+      value: Tušice
+      label: Tušice
+    -
+      value: 'Tušická Nová Ves'
+      label: 'Tušická Nová Ves'
+    -
+      value: Tužina
+      label: Tužina
+    -
+      value: Tvarožná
+      label: Tvarožná
+    -
+      value: Tvrdomestice
+      label: Tvrdomestice
+    -
+      value: Tvrdošín
+      label: Tvrdošín
+    -
+      value: Tvrdošovce
+      label: Tvrdošovce
+    -
+      value: Ťapešovo
+      label: Ťapešovo
+    -
+      value: Ubľa
+      label: Ubľa
+    -
+      value: Úbrež
+      label: Úbrež
+    -
+      value: Udavské
+      label: Udavské
+    -
+      value: Udiča
+      label: Udiča
+    -
+      value: Údol
+      label: Údol
+    -
+      value: Uhliská
+      label: Uhliská
+    -
+      value: Úhorná
+      label: Úhorná
+    -
+      value: 'Uhorská Ves'
+      label: 'Uhorská Ves'
+    -
+      value: Uhorské
+      label: Uhorské
+    -
+      value: Uhrovec
+      label: Uhrovec
+    -
+      value: 'Uhrovské Podhradie'
+      label: 'Uhrovské Podhradie'
+    -
+      value: Ulič
+      label: Ulič
+    -
+      value: 'Uličské Krivé'
+      label: 'Uličské Krivé'
+    -
+      value: Uloža
+      label: Uloža
+    -
+      value: 'Úľany nad Žitavou'
+      label: 'Úľany nad Žitavou'
+    -
+      value: Unín
+      label: Unín
+    -
+      value: Uňatín
+      label: Uňatín
+    -
+      value: Urmince
+      label: Urmince
+    -
+      value: Utekáč
+      label: Utekáč
+    -
+      value: Uzovce
+      label: Uzovce
+    -
+      value: 'Uzovská Panica'
+      label: 'Uzovská Panica'
+    -
+      value: 'Uzovské Pekľany'
+      label: 'Uzovské Pekľany'
+    -
+      value: 'Uzovský Šalgov'
+      label: 'Uzovský Šalgov'
+    -
+      value: Vaďovce
+      label: Vaďovce
+    -
+      value: Vagrinec
+      label: Vagrinec
+    -
+      value: Váhovce
+      label: Váhovce
+    -
+      value: Vajkovce
+      label: Vajkovce
+    -
+      value: Valaliky
+      label: Valaliky
+    -
+      value: Valaská
+      label: Valaská
+    -
+      value: 'Valaská Belá'
+      label: 'Valaská Belá'
+    -
+      value: 'Valaská Dubová'
+      label: 'Valaská Dubová'
+    -
+      value: 'Valaškovce (vojenský obvod)'
+      label: 'Valaškovce (vojenský obvod)'
+    -
+      value: Valča
+      label: Valča
+    -
+      value: Valentovce
+      label: Valentovce
+    -
+      value: Valice
+      label: Valice
+    -
+      value: Valkovce
+      label: Valkovce
+    -
+      value: Vaľkovňa
+      label: Vaľkovňa
+    -
+      value: Vaniškovce
+      label: Vaniškovce
+    -
+      value: Vápeník
+      label: Vápeník
+    -
+      value: Varadka
+      label: Varadka
+    -
+      value: Varechovce
+      label: Varechovce
+    -
+      value: Varhaňovce
+      label: Varhaňovce
+    -
+      value: Varín
+      label: Varín
+    -
+      value: Vasiľov
+      label: Vasiľov
+    -
+      value: Vavrečka
+      label: Vavrečka
+    -
+      value: Vavrinec
+      label: Vavrinec
+    -
+      value: Vavrišovo
+      label: Vavrišovo
+    -
+      value: Važec
+      label: Važec
+    -
+      value: Vechec
+      label: Vechec
+    -
+      value: Velčice
+      label: Velčice
+    -
+      value: Veličná
+      label: Veličná
+    -
+      value: Velušovce
+      label: Velušovce
+    -
+      value: Veľaty
+      label: Veľaty
+    -
+      value: 'Veľká Čausa'
+      label: 'Veľká Čausa'
+    -
+      value: 'Veľká Čierna'
+      label: 'Veľká Čierna'
+    -
+      value: 'Veľká Dolina'
+      label: 'Veľká Dolina'
+    -
+      value: 'Veľká Franková'
+      label: 'Veľká Franková'
+    -
+      value: 'Veľká Hradná'
+      label: 'Veľká Hradná'
+    -
+      value: 'Veľká Ida'
+      label: 'Veľká Ida'
+    -
+      value: 'Veľká Lesná'
+      label: 'Veľká Lesná'
+    -
+      value: 'Veľká Lodina'
+      label: 'Veľká Lodina'
+    -
+      value: 'Veľká Lomnica'
+      label: 'Veľká Lomnica'
+    -
+      value: 'Veľká Mača'
+      label: 'Veľká Mača'
+    -
+      value: 'Veľká Paka'
+      label: 'Veľká Paka'
+    -
+      value: 'Veľká Tŕňa'
+      label: 'Veľká Tŕňa'
+    -
+      value: 'Veľké Bierovce'
+      label: 'Veľké Bierovce'
+    -
+      value: 'Veľké Blahovo'
+      label: 'Veľké Blahovo'
+    -
+      value: 'Veľké Borové'
+      label: 'Veľké Borové'
+    -
+      value: 'Veľké Držkovce'
+      label: 'Veľké Držkovce'
+    -
+      value: 'Veľké Dvorany'
+      label: 'Veľké Dvorany'
+    -
+      value: 'Veľké Dvorníky'
+      label: 'Veľké Dvorníky'
+    -
+      value: 'Veľké Hoste'
+      label: 'Veľké Hoste'
+    -
+      value: 'Veľké Chlievany'
+      label: 'Veľké Chlievany'
+    -
+      value: 'Veľké Chyndice'
+      label: 'Veľké Chyndice'
+    -
+      value: 'Veľké Kapušany'
+      label: 'Veľké Kapušany'
+    -
+      value: 'Veľké Kosihy'
+      label: 'Veľké Kosihy'
+    -
+      value: 'Veľké Kostoľany'
+      label: 'Veľké Kostoľany'
+    -
+      value: 'Veľké Kozmálovce'
+      label: 'Veľké Kozmálovce'
+    -
+      value: 'Veľké Kršteňany'
+      label: 'Veľké Kršteňany'
+    -
+      value: 'Veľké Leváre'
+      label: 'Veľké Leváre'
+    -
+      value: 'Veľké Lovce'
+      label: 'Veľké Lovce'
+    -
+      value: 'Veľké Ludince'
+      label: 'Veľké Ludince'
+    -
+      value: 'Veľké Orvište'
+      label: 'Veľké Orvište'
+    -
+      value: 'Veľké Ozorovce'
+      label: 'Veľké Ozorovce'
+    -
+      value: 'Veľké Raškovce'
+      label: 'Veľké Raškovce'
+    -
+      value: 'Veľké Revištia'
+      label: 'Veľké Revištia'
+    -
+      value: 'Veľké Ripňany'
+      label: 'Veľké Ripňany'
+    -
+      value: 'Veľké Rovné'
+      label: 'Veľké Rovné'
+    -
+      value: 'Veľké Slemence'
+      label: 'Veľké Slemence'
+    -
+      value: 'Veľké Trakany'
+      label: 'Veľké Trakany'
+    -
+      value: 'Veľké Turovce'
+      label: 'Veľké Turovce'
+    -
+      value: 'Veľké Uherce'
+      label: 'Veľké Uherce'
+    -
+      value: 'Veľké Úľany'
+      label: 'Veľké Úľany'
+    -
+      value: 'Veľké Vozokany'
+      label: 'Veľké Vozokany'
+    -
+      value: 'Veľké Zálužie'
+      label: 'Veľké Zálužie'
+    -
+      value: Veľkrop
+      label: Veľkrop
+    -
+      value: 'Veľký Biel'
+      label: 'Veľký Biel'
+    -
+      value: 'Veľký Cetín'
+      label: 'Veľký Cetín'
+    -
+      value: 'Veľký Čepčín'
+      label: 'Veľký Čepčín'
+    -
+      value: 'Veľký Ďur'
+      label: 'Veľký Ďur'
+    -
+      value: 'Veľký Folkmar'
+      label: 'Veľký Folkmar'
+    -
+      value: 'Veľký Grob'
+      label: 'Veľký Grob'
+    -
+      value: 'Veľký Horeš'
+      label: 'Veľký Horeš'
+    -
+      value: 'Veľký Kamenec'
+      label: 'Veľký Kamenec'
+    -
+      value: 'Veľký Klíž'
+      label: 'Veľký Klíž'
+    -
+      value: 'Veľký Krtíš'
+      label: 'Veľký Krtíš'
+    -
+      value: 'Veľký Kýr'
+      label: 'Veľký Kýr'
+    -
+      value: 'Veľký Lapáš'
+      label: 'Veľký Lapáš'
+    -
+      value: 'Veľký Lipník'
+      label: 'Veľký Lipník'
+    -
+      value: 'Veľký Meder'
+      label: 'Veľký Meder'
+    -
+      value: 'Veľký Slavkov'
+      label: 'Veľký Slavkov'
+    -
+      value: 'Veľký Slivník'
+      label: 'Veľký Slivník'
+    -
+      value: 'Veľký Šariš'
+      label: 'Veľký Šariš'
+    -
+      value: Veľopolie
+      label: Veľopolie
+    -
+      value: Vernár
+      label: Vernár
+    -
+      value: Veselé
+      label: Veselé
+    -
+      value: 'Veterná Poruba'
+      label: 'Veterná Poruba'
+    -
+      value: Vieska
+      label: Vieska
+    -
+      value: 'Vieska nad Žitavou'
+      label: 'Vieska nad Žitavou'
+    -
+      value: Vikartovce
+      label: Vikartovce
+    -
+      value: Vinica
+      label: Vinica
+    -
+      value: Viničky
+      label: Viničky
+    -
+      value: Viničné
+      label: Viničné
+    -
+      value: Vinné
+      label: Vinné
+    -
+      value: Vinodol
+      label: Vinodol
+    -
+      value: 'Vinohrady nad Váhom'
+      label: 'Vinohrady nad Váhom'
+    -
+      value: Vinosady
+      label: Vinosady
+    -
+      value: Virt
+      label: Virt
+    -
+      value: Vislanka
+      label: Vislanka
+    -
+      value: Vislava
+      label: Vislava
+    -
+      value: Visolaje
+      label: Visolaje
+    -
+      value: Višňov
+      label: Višňov
+    -
+      value: Višňové
+      label: Višňové
+    -
+      value: Vištuk
+      label: Vištuk
+    -
+      value: Vitanová
+      label: Vitanová
+    -
+      value: Vítkovce
+      label: Vítkovce
+    -
+      value: Víťaz
+      label: Víťaz
+    -
+      value: Víťazovce
+      label: Víťazovce
+    -
+      value: Vlača
+      label: Vlača
+    -
+      value: Vladiča
+      label: Vladiča
+    -
+      value: Vlachovo
+      label: Vlachovo
+    -
+      value: Vlachy
+      label: Vlachy
+    -
+      value: Vlčany
+      label: Vlčany
+    -
+      value: Vlčkovce
+      label: Vlčkovce
+    -
+      value: Vlkas
+      label: Vlkas
+    -
+      value: Vlková
+      label: Vlková
+    -
+      value: Vlkovce
+      label: Vlkovce
+    -
+      value: Vlky
+      label: Vlky
+    -
+      value: Voderady
+      label: Voderady
+    -
+      value: Vojany
+      label: Vojany
+    -
+      value: Vojčice
+      label: Vojčice
+    -
+      value: Vojka
+      label: Vojka
+    -
+      value: 'Vojka nad Dunajom'
+      label: 'Vojka nad Dunajom'
+    -
+      value: Vojkovce
+      label: Vojkovce
+    -
+      value: Vojnatina
+      label: Vojnatina
+    -
+      value: Vojňany
+      label: Vojňany
+    -
+      value: Vojtovce
+      label: Vojtovce
+    -
+      value: Volica
+      label: Volica
+    -
+      value: Volkovce
+      label: Volkovce
+    -
+      value: Voľa
+      label: Voľa
+    -
+      value: Vozokany
+      label: Vozokany
+    -
+      value: Vráble
+      label: Vráble
+    -
+      value: Vrádište
+      label: Vrádište
+    -
+      value: Vrakúň
+      label: Vrakúň
+    -
+      value: 'Vranov nad Topľou'
+      label: 'Vranov nad Topľou'
+    -
+      value: Vrbnica
+      label: Vrbnica
+    -
+      value: Vrbov
+      label: Vrbov
+    -
+      value: Vrbovce
+      label: Vrbovce
+    -
+      value: 'Vrbová nad Váhom'
+      label: 'Vrbová nad Váhom'
+    -
+      value: Vrbové
+      label: Vrbové
+    -
+      value: Vrchteplá
+      label: Vrchteplá
+    -
+      value: Vrícko
+      label: Vrícko
+    -
+      value: 'Vršatské Podhradie'
+      label: 'Vršatské Podhradie'
+    -
+      value: Vrútky
+      label: Vrútky
+    -
+      value: Vtáčkovce
+      label: Vtáčkovce
+    -
+      value: Výborná
+      label: Výborná
+    -
+      value: 'Výčapy - Opatovce'
+      label: 'Výčapy - Opatovce'
+    -
+      value: Vydrany
+      label: Vydrany
+    -
+      value: Vydrná
+      label: Vydrná
+    -
+      value: Vydrník
+      label: Vydrník
+    -
+      value: Východná
+      label: Východná
+    -
+      value: Výrava
+      label: Výrava
+    -
+      value: Vysočany
+      label: Vysočany
+    -
+      value: Vysoká
+      label: Vysoká
+    -
+      value: 'Vysoká nad Kysucou'
+      label: 'Vysoká nad Kysucou'
+    -
+      value: 'Vysoká nad Uhom'
+      label: 'Vysoká nad Uhom'
+    -
+      value: 'Vysoká pri Morave'
+      label: 'Vysoká pri Morave'
+    -
+      value: 'Vysoké Tatry'
+      label: 'Vysoké Tatry'
+    -
+      value: Vyškovce
+      label: Vyškovce
+    -
+      value: 'Vyškovce nad Ipľom'
+      label: 'Vyškovce nad Ipľom'
+    -
+      value: 'Vyšná Boca'
+      label: 'Vyšná Boca'
+    -
+      value: 'Vyšná Hutka'
+      label: 'Vyšná Hutka'
+    -
+      value: 'Vyšná Jablonka'
+      label: 'Vyšná Jablonka'
+    -
+      value: 'Vyšná Jedľová'
+      label: 'Vyšná Jedľová'
+    -
+      value: 'Vyšná Kamenica'
+      label: 'Vyšná Kamenica'
+    -
+      value: 'Vyšná Myšľa'
+      label: 'Vyšná Myšľa'
+    -
+      value: 'Vyšná Olšava'
+      label: 'Vyšná Olšava'
+    -
+      value: 'Vyšná Pisaná'
+      label: 'Vyšná Pisaná'
+    -
+      value: 'Vyšná Polianka'
+      label: 'Vyšná Polianka'
+    -
+      value: 'Vyšná Rybnica'
+      label: 'Vyšná Rybnica'
+    -
+      value: 'Vyšná Sitnica'
+      label: 'Vyšná Sitnica'
+    -
+      value: 'Vyšná Slaná'
+      label: 'Vyšná Slaná'
+    -
+      value: 'Vyšná Šebastová'
+      label: 'Vyšná Šebastová'
+    -
+      value: 'Vyšná Voľa'
+      label: 'Vyšná Voľa'
+    -
+      value: 'Vyšné Ladičkovce'
+      label: 'Vyšné Ladičkovce'
+    -
+      value: 'Vyšné nad Hronom'
+      label: 'Vyšné nad Hronom'
+    -
+      value: 'Vyšné Nemecké'
+      label: 'Vyšné Nemecké'
+    -
+      value: 'Vyšné Remety'
+      label: 'Vyšné Remety'
+    -
+      value: 'Vyšné Repaše'
+      label: 'Vyšné Repaše'
+    -
+      value: 'Vyšné Ružbachy'
+      label: 'Vyšné Ružbachy'
+    -
+      value: 'Vyšný Čaj'
+      label: 'Vyšný Čaj'
+    -
+      value: 'Vyšný Hrabovec'
+      label: 'Vyšný Hrabovec'
+    -
+      value: 'Vyšný Hrušov'
+      label: 'Vyšný Hrušov'
+    -
+      value: 'Vyšný Kazimír'
+      label: 'Vyšný Kazimír'
+    -
+      value: 'Vyšný Klátov'
+      label: 'Vyšný Klátov'
+    -
+      value: 'Vyšný Komárnik'
+      label: 'Vyšný Komárnik'
+    -
+      value: 'Vyšný Kručov'
+      label: 'Vyšný Kručov'
+    -
+      value: 'Vyšný Kubín'
+      label: 'Vyšný Kubín'
+    -
+      value: 'Vyšný Mirošov'
+      label: 'Vyšný Mirošov'
+    -
+      value: 'Vyšný Orlík'
+      label: 'Vyšný Orlík'
+    -
+      value: 'Vyšný Slavkov'
+      label: 'Vyšný Slavkov'
+    -
+      value: 'Vyšný Tvarožec'
+      label: 'Vyšný Tvarožec'
+    -
+      value: 'Vyšný Žipov'
+      label: 'Vyšný Žipov'
+    -
+      value: Zábiedovo
+      label: Zábiedovo
+    -
+      value: Záborie
+      label: Záborie
+    -
+      value: Záborské
+      label: Záborské
+    -
+      value: Zádiel
+      label: Zádiel
+    -
+      value: Záhor
+      label: Záhor
+    -
+      value: 'Záhorie (vojenský obvod)'
+      label: 'Záhorie (vojenský obvod)'
+    -
+      value: 'Záhorská Ves'
+      label: 'Záhorská Ves'
+    -
+      value: Záhradné
+      label: Záhradné
+    -
+      value: Zákamenné
+      label: Zákamenné
+    -
+      value: Zákopčie
+      label: Zákopčie
+    -
+      value: Zalaba
+      label: Zalaba
+    -
+      value: Zálesie
+      label: Zálesie
+    -
+      value: Zalužice
+      label: Zalužice
+    -
+      value: Zamarovce
+      label: Zamarovce
+    -
+      value: Zámutov
+      label: Zámutov
+    -
+      value: Záriečie
+      label: Záriečie
+    -
+      value: Záskalie
+      label: Záskalie
+    -
+      value: Zatín
+      label: Zatín
+    -
+      value: Závada
+      label: Závada
+    -
+      value: Závadka
+      label: Závadka
+    -
+      value: Zavar
+      label: Zavar
+    -
+      value: 'Závažná Poruba'
+      label: 'Závažná Poruba'
+    -
+      value: Závod
+      label: Závod
+    -
+      value: Zázrivá
+      label: Zázrivá
+    -
+      value: Zbehňov
+      label: Zbehňov
+    -
+      value: Zbehy
+      label: Zbehy
+    -
+      value: Zboj
+      label: Zboj
+    -
+      value: Zbojné
+      label: Zbojné
+    -
+      value: Zborov
+      label: Zborov
+    -
+      value: 'Zborov nad Bystricou'
+      label: 'Zborov nad Bystricou'
+    -
+      value: Zbrojníky
+      label: Zbrojníky
+    -
+      value: 'Zbudská Belá'
+      label: 'Zbudská Belá'
+    -
+      value: 'Zbudské Dlhé'
+      label: 'Zbudské Dlhé'
+    -
+      value: Zbudza
+      label: Zbudza
+    -
+      value: Zbyňov
+      label: Zbyňov
+    -
+      value: Zeleneč
+      label: Zeleneč
+    -
+      value: 'Zemianska Olča'
+      label: 'Zemianska Olča'
+    -
+      value: 'Zemianske Kostoľany'
+      label: 'Zemianske Kostoľany'
+    -
+      value: 'Zemianske Podhradie'
+      label: 'Zemianske Podhradie'
+    -
+      value: 'Zemianske Sady'
+      label: 'Zemianske Sady'
+    -
+      value: Zemné
+      label: Zemné
+    -
+      value: Zemplín
+      label: Zemplín
+    -
+      value: 'Zemplínska Nová Ves'
+      label: 'Zemplínska Nová Ves'
+    -
+      value: 'Zemplínska Široká'
+      label: 'Zemplínska Široká'
+    -
+      value: 'Zemplínska Teplica'
+      label: 'Zemplínska Teplica'
+    -
+      value: 'Zemplínske Hámre'
+      label: 'Zemplínske Hámre'
+    -
+      value: 'Zemplínske Hradište'
+      label: 'Zemplínske Hradište'
+    -
+      value: 'Zemplínske Jastrabie'
+      label: 'Zemplínske Jastrabie'
+    -
+      value: 'Zemplínske Kopčany'
+      label: 'Zemplínske Kopčany'
+    -
+      value: 'Zemplínsky Branč'
+      label: 'Zemplínsky Branč'
+    -
+      value: 'Zlatá Baňa'
+      label: 'Zlatá Baňa'
+    -
+      value: 'Zlatá Idka'
+      label: 'Zlatá Idka'
+    -
+      value: Zlaté
+      label: Zlaté
+    -
+      value: 'Zlaté Klasy'
+      label: 'Zlaté Klasy'
+    -
+      value: 'Zlaté Moravce'
+      label: 'Zlaté Moravce'
+    -
+      value: 'Zlatná na Ostrove'
+      label: 'Zlatná na Ostrove'
+    -
+      value: Zlatník
+      label: Zlatník
+    -
+      value: Zlatníky
+      label: Zlatníky
+    -
+      value: Zlatno
+      label: Zlatno
+    -
+      value: Zliechov
+      label: Zliechov
+    -
+      value: Zohor
+      label: Zohor
+    -
+      value: Zubák
+      label: Zubák
+    -
+      value: Zuberec
+      label: Zuberec
+    -
+      value: Zubné
+      label: Zubné
+    -
+      value: Zubrohlava
+      label: Zubrohlava
+    -
+      value: Zvolen
+      label: Zvolen
+    -
+      value: Zvončín
+      label: Zvončín
+    -
+      value: Žabokreky
+      label: Žabokreky
+    -
+      value: 'Žabokreky nad Nitrou'
+      label: 'Žabokreky nad Nitrou'
+    -
+      value: Žakarovce
+      label: Žakarovce
+    -
+      value: Žakovce
+      label: Žakovce
+    -
+      value: Žalobín
+      label: Žalobín
+    -
+      value: Žarnov
+      label: Žarnov
+    -
+      value: Žarnovica
+      label: Žarnovica
+    -
+      value: Žaškov
+      label: Žaškov
+    -
+      value: Žbince
+      label: Žbince
+    -
+      value: Ždaňa
+      label: Ždaňa
+    -
+      value: Ždiar
+      label: Ždiar
+    -
+      value: Žehňa
+      label: Žehňa
+    -
+      value: Žehra
+      label: Žehra
+    -
+      value: Železník
+      label: Železník
+    -
+      value: Želiezovce
+      label: Želiezovce
+    -
+      value: Želmanovce
+      label: Želmanovce
+    -
+      value: Žemberovce
+      label: Žemberovce
+    -
+      value: Žemliare
+      label: Žemliare
+    -
+      value: Žiar
+      label: Žiar
+    -
+      value: 'Žiar nad Hronom'
+      label: 'Žiar nad Hronom'
+    -
+      value: Žihárec
+      label: Žihárec
+    -
+      value: Žikava
+      label: Žikava
+    -
+      value: Žilina
+      label: Žilina
+    -
+      value: Žipov
+      label: Žipov
+    -
+      value: Žirany
+      label: Žirany
+    -
+      value: Žitavany
+      label: Žitavany
+    -
+      value: Žitavce
+      label: Žitavce
+    -
+      value: 'Žitná - Radiša'
+      label: 'Žitná - Radiša'
+    -
+      value: Žlkovce
+      label: Žlkovce
+    -
+      value: Župčany
+      label: Župčany
+    -
+      value: Zahraničie
+      label: Zahraničie
+    -
+      value: '0'
+      label: '0'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

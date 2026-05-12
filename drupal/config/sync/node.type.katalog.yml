@@ -1,0 +1,11 @@
+uuid: 6949a419-4d1f-427b-9094-0d9d1f81d675
+langcode: en
+status: true
+dependencies: {  }
+name: 'Položka do katalógu albumov Folk.sk'
+type: katalog
+description: 'Prostredníctvom tohto typu obsahu sa dá pridať položka do katalógu albumov na Folk.sk.'
+help: 'Odoslaním tohto formulára nielenže prispievate k tvorbe katalógu (za čo vám veľmi pekne ďakujeme), ale tiež potvrdzujete, že máte právo publikovať všetky zdroje, ktoré ste k danému CD pridali (jedná sa najmä o obrázky a audio súbory) alebo ste ich autorom.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

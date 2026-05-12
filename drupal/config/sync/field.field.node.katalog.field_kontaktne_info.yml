@@ -1,0 +1,19 @@
+uuid: 983e39d0-02c2-4e1b-b6ef-c20f8c522001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kontaktne_info
+    - node.type.katalog
+id: node.katalog.field_kontaktne_info
+field_name: field_kontaktne_info
+entity_type: node
+bundle: katalog
+label: 'Kontaktné informácie'
+description: 'Sem zadajte ďalšie kontaktné informácie prostredníctvom ktorých si záujemcovia môžu toto CD kúpiť, napr. telefónne číslo, adresu alebo e-mail.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

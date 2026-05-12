@@ -1,0 +1,9 @@
+uuid: c3a40cec-95e3-4fd4-861f-210bb2d69e1f
+langcode: en
+status: true
+dependencies: {  }
+name: Mesto
+vid: mesto
+description: 'Zoznam miest pre kalendár akcií'
+weight: 0
+new_revision: false

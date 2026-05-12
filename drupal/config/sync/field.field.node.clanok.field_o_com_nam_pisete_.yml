@@ -1,0 +1,25 @@
+uuid: 1e682fc0-3a53-4b89-890a-026390ce1d22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_o_com_nam_pisete_
+    - node.type.clanok
+    - taxonomy.vocabulary.o_com_nam_pisete_
+id: node.clanok.field_o_com_nam_pisete_
+field_name: field_o_com_nam_pisete_
+entity_type: node
+bundle: clanok
+label: 'O čom nám píšete?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      o_com_nam_pisete_: o_com_nam_pisete_
+    auto_create: true
+field_type: entity_reference

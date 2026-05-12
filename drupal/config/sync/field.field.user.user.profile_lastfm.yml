@@ -1,0 +1,22 @@
+uuid: aab8153e-9404-40ed-96ed-4df000fe9d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_lastfm
+  module:
+    - text
+    - user
+id: user.user.profile_lastfm
+field_name: profile_lastfm
+entity_type: user
+bundle: user
+label: 'Moje Last.fm konto'
+description: 'Sem vpíšte svoje prihlasovacie meno ktoré používate na serveri <a href="http://last.fm">last.fm</a>. Použijeme ho na to aby sme vedľa vašej stránky s profilom mohli zobraziť aj vaše osobné rádio. Ak ešte nemáte konto na <a href="http://last.fm">last.fm</a>, určite sa tam registrujte, veľmi odporúčame!'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

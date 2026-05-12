@@ -1,0 +1,20 @@
+uuid: de05b4af-0511-4a93-97dd-bbde5a448431
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_co_nam_pisete_
+field_name: field_co_nam_pisete_
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 5615ba9b-b848-4df2-940d-03a6537d099b
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.profil
+  module:
+    - node
+id: node_profil
+label: 'Node: profil'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  e57a5265-653c-40ee-be91-a9cae1b07416:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      profil: profil
+selection_logic: and
+weight: -10
+relationships: {  }

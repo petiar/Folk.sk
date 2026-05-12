@@ -1,0 +1,9 @@
+uuid: d25f92b1-fb17-40b8-8027-33c5b7b68049
+langcode: en
+status: true
+dependencies: {  }
+name: 'O čom nám píšete?'
+vid: o_com_nam_pisete_
+description: '<em>Kategórie pre články</em> slúžia na roztriedenie článkov podľa ich obsahu.'
+weight: 0
+new_revision: false

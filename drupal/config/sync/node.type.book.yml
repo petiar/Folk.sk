@@ -1,0 +1,11 @@
+uuid: e2491c51-d61b-4911-b193-19313ffcd80f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Stránka knihy'
+type: book
+description: '<em>Stránka knihy</em> je typ obsahu, teda článku, ktorý sa dá organizovať do väčších celkov, ktoré sa nazývame <em>knihy</em>. Takáto <em>stránka</em> potom automaticky zobrazuje odkazy na nasledujúce a predchádzajúce stránky a poskytuje tak jednoduchú navigáciu v rámci celej <em>knihy</em>.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

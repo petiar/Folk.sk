@@ -1,0 +1,22 @@
+uuid: 49074d0c-ef9b-499b-9ae6-11a376e8014f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pesnicka
+id: node.pesnicka.status
+field_name: status
+entity_type: node
+bundle: pesnicka
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

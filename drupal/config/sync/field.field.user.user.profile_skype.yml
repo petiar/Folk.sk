@@ -1,0 +1,22 @@
+uuid: 1929b9aa-c764-4e47-95b6-eede9b2dee77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_skype
+  module:
+    - text
+    - user
+id: user.user.profile_skype
+field_name: profile_skype
+entity_type: user
+bundle: user
+label: 'Skype prezývka'
+description: 'Ak používate Skype, zadajte sem vašu prezývku.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

@@ -1,0 +1,35 @@
+uuid: 07ea8e41-ec7a-4de2-89bf-6a067fe723ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pozvanka.body
+    - field.field.node.pozvanka.comment
+    - field.field.node.pozvanka.upload
+    - node.type.pozvanka
+  module:
+    - text
+    - user
+id: node.pozvanka.teaser
+targetEntityType: node
+bundle: pozvanka
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  langcode: true
+  upload: true

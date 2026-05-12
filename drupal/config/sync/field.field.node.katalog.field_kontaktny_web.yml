@@ -1,0 +1,23 @@
+uuid: 989324b7-9d33-4b7d-8605-782c1735c2b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kontaktny_web
+    - node.type.katalog
+  module:
+    - link
+id: node.katalog.field_kontaktny_web
+field_name: field_kontaktny_web
+entity_type: node
+bundle: katalog
+label: Webstránka
+description: 'Sem vpíšte adresu vašej internetovej prezentácie, prostredníctvom ktorej sa dá album objednať.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: null
+  link_type: 17
+field_type: link

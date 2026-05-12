@@ -1,0 +1,22 @@
+uuid: ef594d46-0e70-403c-a45b-6e2452cd4bb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.televizia
+id: node.televizia.status
+field_name: status
+entity_type: node
+bundle: televizia
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

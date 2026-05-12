@@ -1,0 +1,13 @@
+uuid: 066db073-dbbf-44f3-81bd-2b3eb42f1f50
+langcode: sk
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: 1TFiplNN7Wmj_DtVLLLP-NLPYpZJdAswKY-vTrYgFyo
+id: user.register
+label: Registrovať
+description: null
+targetEntityType: user
+cache: true

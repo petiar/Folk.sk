@@ -1,0 +1,23 @@
+uuid: fee8dfe1-c860-46e0-b9b6-57999d36bc98
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.katalog
+  module:
+    - node
+id: node_katalog
+label: 'Node: katalog'
+type: 'canonical_entities:node'
+pattern: '/katalog/[node:title]'
+selection_criteria:
+  5d7511df-1338-4fa2-89d3-6f78425655e5:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      katalog: katalog
+selection_logic: and
+weight: -10
+relationships: {  }

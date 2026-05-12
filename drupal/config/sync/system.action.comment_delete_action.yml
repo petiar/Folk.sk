@@ -1,0 +1,13 @@
+uuid: 876aaa5b-c23a-4dbb-af86-62780caaf2d7
+langcode: sk
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: vpBH8OmL4sdesCdeZLsW8KOutB5gkbreWJbfjhfFKaQ
+id: comment_delete_action
+label: 'Odstrániť komentár'
+type: comment
+plugin: 'entity:delete_action:comment'
+configuration: {  }

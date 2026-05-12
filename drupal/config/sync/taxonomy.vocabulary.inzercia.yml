@@ -1,0 +1,9 @@
+uuid: 6235f736-19eb-4c47-8ead-fc57ad1e8aa4
+langcode: en
+status: true
+dependencies: {  }
+name: Inzercia
+vid: inzercia
+description: 'Kategórie pre inzeráty'
+weight: 0
+new_revision: false

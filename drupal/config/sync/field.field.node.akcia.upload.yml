@@ -1,0 +1,27 @@
+uuid: 8a43e96f-0820-45ff-849b-c181c56a7234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.upload
+    - node.type.akcia
+  module:
+    - file
+id: node.akcia.upload
+field_name: upload
+entity_type: node
+bundle: akcia
+label: upload
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+  max_filesize: 0.3MB
+  description_field: true
+field_type: file

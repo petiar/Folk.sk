@@ -1,0 +1,20 @@
+uuid: bd8fef25-d34d-47e9-beee-feb7159e69e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_rok_vydania
+field_name: field_rok_vydania
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

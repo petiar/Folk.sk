@@ -1,0 +1,46 @@
+uuid: 85875d3c-26ad-4ce2-af79-a2a94186fdb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.clanok.body
+    - field.field.node.clanok.comment
+    - field.field.node.clanok.field_co_nam_pisete_
+    - field.field.node.clanok.field_festival
+    - field.field.node.clanok.field_muzikant
+    - field.field.node.clanok.field_o_com_nam_pisete_
+    - field.field.node.clanok.field_suvisiace_v_katalogu
+    - field.field.node.clanok.field_suvisiaci_clanok
+    - field.field.node.clanok.upload
+    - node.type.clanok
+  module:
+    - user
+id: node.clanok.search_result
+targetEntityType: node
+bundle: clanok
+mode: search_result
+content:
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_co_nam_pisete_: true
+  field_festival: true
+  field_muzikant: true
+  field_o_com_nam_pisete_: true
+  field_suvisiace_v_katalogu: true
+  langcode: true
+  upload: true

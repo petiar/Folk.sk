@@ -1,0 +1,11 @@
+uuid: bb848f8b-a654-48b2-8cb5-f27f44bc4dbd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Užívateľské video'
+type: video
+description: 'Tento typ obsahu slúži pre pridávanie iných videí ako tých z produkcie Folk.sk. To znamená rôzne videá nájdené na YouTube, Vimeo, Google Video, MySpace, atď. <strong>Videá z produkcie TV Folk.sk sem nepatria!</strong>'
+help: 'Tento formulár slúži na pridanie videa, ktoré ste našli na internete a o ktorom si myslíte že by mohlo zaujať širokú folkovú obec. Stačí zadať názov, krátky popis a odkaz na ono video. Ďakujeme!'
+new_revision: false
+preview_mode: 1
+display_submitted: false

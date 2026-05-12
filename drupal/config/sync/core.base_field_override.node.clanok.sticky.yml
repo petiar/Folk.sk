@@ -1,0 +1,22 @@
+uuid: 586dc7be-ced0-4d3e-a2f0-035c690919f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clanok
+id: node.clanok.sticky
+field_name: sticky
+entity_type: node
+bundle: clanok
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,27 @@
+uuid: 0fae3e28-0031-4b4a-a81b-b3fa114e9208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ukazka_piesne
+    - node.type.katalog
+  module:
+    - file
+id: node.katalog.field_ukazka_piesne
+field_name: field_ukazka_piesne
+entity_type: node
+bundle: katalog
+label: Ukážka
+description: 'Tu môžte nahrať na ukážku z CD. Maximálna veľkosť jedného súboru je 3MB, maximálna veľkosť všetkých súborov ktoré môžte nahrať je 5MB (takže ak máte ukážky o veľkosti každá necelý 1MB, môžte ich pridať až päť). <strong>Nepoužívajte diakritiku a medzery v názvoch!</strong>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: mp3_obchod
+  file_extensions: 'mp3 ogg aac'
+  max_filesize: 3MB
+  description_field: true
+field_type: file

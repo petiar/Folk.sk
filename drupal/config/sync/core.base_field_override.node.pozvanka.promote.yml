@@ -1,0 +1,22 @@
+uuid: 9f67a043-4d2b-4e98-a0e2-c583a295ca29
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pozvanka
+id: node.pozvanka.promote
+field_name: promote
+entity_type: node
+bundle: pozvanka
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

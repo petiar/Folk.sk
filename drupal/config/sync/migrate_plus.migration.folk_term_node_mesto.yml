@@ -1,0 +1,41 @@
+uuid: b1811428-9787-4fac-8be6-63d3f47e4049
+langcode: sk
+status: true
+dependencies: {  }
+id: folk_term_node_mesto
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - Content
+  - folk
+migration_group: null
+label: 'Akcia → Mesto (vocab 6) — custom migrácia bez d6_node_complete'
+source:
+  plugin: d6_term_node
+  vid: 6
+process:
+  nid:
+    -
+      plugin: migration_lookup
+      migration: d6_node
+      no_stub: true
+      source: nid
+    -
+      plugin: skip_on_empty
+      method: row
+  type: type
+  field_mesto:
+    plugin: migration_lookup
+    migration: d6_taxonomy_term
+    no_stub: true
+    source: tid
+destination:
+  plugin: 'entity:node'
+idMap: {  }
+migration_dependencies:
+  required:
+    - d6_taxonomy_term
+    - d6_node
+include: null

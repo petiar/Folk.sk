@@ -1,0 +1,19 @@
+uuid: 2e1f0463-f042-42ba-b57b-7ebe2cf69355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nazov_kapely
+    - node.type.katalog
+id: node.katalog.field_nazov_kapely
+field_name: field_nazov_kapely
+entity_type: node
+bundle: katalog
+label: 'Názov skupiny, meno pesničkára'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

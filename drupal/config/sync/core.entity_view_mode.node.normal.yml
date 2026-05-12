@@ -1,0 +1,11 @@
+uuid: 2c876a1e-a83f-46d2-9550-fc1ed985db3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.normal
+label: Normal
+description: null
+targetEntityType: node
+cache: true

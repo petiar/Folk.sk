@@ -1,0 +1,19 @@
+uuid: 55f31ba5-d53f-49e9-83dd-818e18ff7b1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cena_informacia
+    - node.type.katalog
+id: node.katalog.field_cena_informacia
+field_name: field_cena_informacia
+entity_type: node
+bundle: katalog
+label: 'Podrobnejšia informácia k cene'
+description: 'Sem zadajte podrobnejšie informácie o cene, napr. poštovné a balné a pod.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,22 @@
+uuid: a7fbd03e-b84d-41a8-b65c-2a4c5fabbb28
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.redakcny_stlpcek
+id: node.redakcny_stlpcek.sticky
+field_name: sticky
+entity_type: node
+bundle: redakcny_stlpcek
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,25 @@
+uuid: 7d06f25c-10c7-499d-8c54-902154172c83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_festival
+    - node.type.video
+    - taxonomy.vocabulary.festival
+id: node.video.field_festival
+field_name: field_festival
+entity_type: node
+bundle: video
+label: Festival
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      festival: festival
+    auto_create: true
+field_type: entity_reference

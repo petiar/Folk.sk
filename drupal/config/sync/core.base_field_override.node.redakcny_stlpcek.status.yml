@@ -1,0 +1,22 @@
+uuid: 51b90c0d-abe3-490e-997b-0def5eb741bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.redakcny_stlpcek
+id: node.redakcny_stlpcek.status
+field_name: status
+entity_type: node
+bundle: redakcny_stlpcek
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 0bb0eb6a-0189-4dd4-a478-e4f600ab31c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nazov_piesne
+field_name: field_nazov_piesne
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

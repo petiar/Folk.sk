@@ -1,0 +1,21 @@
+uuid: 07cba0a1-02e5-41ed-969e-991e6322e9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_mesto
+  module:
+    - options
+    - user
+id: user.user.profile_mesto
+field_name: profile_mesto
+entity_type: user
+bundle: user
+label: Mesto
+description: 'Mesto v ktorom žijete. Napíšte pár prvých písmen a potom vyberte z poskytnutého zoznamu. Ak si neželáte zverejniť tento údaj nezadávajte nič. Ak žijete mimo Slovenska, zadajte <em>Zahraničie</em>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,11 @@
+uuid: bbd7f32d-13e6-4876-9515-4e46920aeffe
+langcode: en
+status: true
+dependencies: {  }
+name: 'Príspevok na osobný blog'
+type: blog
+description: '<em>Príspevok na blog</em> je jednoduchý samostatný článok, ktorý sa zobrazuje na príslušných stránkach. Ide väčšinou o osobné zápisky, či postrehy. Boli by sme veľmi radi keby mali niečo spoločné s hudbou všeobecne a potešíme sa i zápiskom z kuchyne vašej kapely. Administrátori všetky blogy pozorne čítajú a niektoré následne uverejňujú aj na hlavnej stránke.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

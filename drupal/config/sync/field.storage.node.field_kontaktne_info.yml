@@ -1,0 +1,19 @@
+uuid: 9c7787a1-8820-4a5f-8747-c42a1f31beef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_kontaktne_info
+field_name: field_kontaktne_info
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

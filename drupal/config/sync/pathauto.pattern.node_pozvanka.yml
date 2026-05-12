@@ -1,0 +1,23 @@
+uuid: 3f51d155-43f6-4d67-8d9b-e849257ec03b
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.pozvanka
+  module:
+    - node
+id: node_pozvanka
+label: 'Node: pozvanka'
+type: 'canonical_entities:node'
+pattern: '/pozvanka/[node:title]'
+selection_criteria:
+  dda20704-4267-4843-b3eb-3d3484a361b7:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      pozvanka: pozvanka
+selection_logic: and
+weight: -10
+relationships: {  }

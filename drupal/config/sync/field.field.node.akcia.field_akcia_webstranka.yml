@@ -1,0 +1,23 @@
+uuid: 18d65a8c-1672-4b34-b6d2-f9c531f80425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_akcia_webstranka
+    - node.type.akcia
+  module:
+    - link
+id: node.akcia.field_akcia_webstranka
+field_name: field_akcia_webstranka
+entity_type: node
+bundle: akcia
+label: 'Internetová stránka akcie'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: null
+  link_type: 17
+field_type: link

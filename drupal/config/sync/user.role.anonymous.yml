@@ -1,0 +1,24 @@
+uuid: 669113f4-66d3-49ba-9440-2ce0cd02d9f9
+langcode: sk
+status: true
+dependencies:
+  config:
+    - filter.format.neuplne_html
+  module:
+    - comment
+    - filter
+    - search
+    - system
+_core:
+  default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
+id: anonymous
+label: 'Anonymný používateľ'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access user profiles'
+  - 'search content'
+  - 'use advanced search'
+  - 'use text format neuplne_html'

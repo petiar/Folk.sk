@@ -1,0 +1,19 @@
+uuid: 7fe0c303-4e75-4be9-b6d4-f47985a25d24
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_suvisiace_v_katalogu
+field_name: field_suvisiace_v_katalogu
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

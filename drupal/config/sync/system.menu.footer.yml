@@ -1,0 +1,10 @@
+uuid: 22683a8c-c7cd-4611-9c77-c2b1256685cf
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: Päta
+description: 'Site information links'
+locked: true

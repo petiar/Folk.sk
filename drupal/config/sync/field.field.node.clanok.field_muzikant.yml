@@ -1,0 +1,25 @@
+uuid: 8794daed-aed9-4878-855f-59a63561af31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_muzikant
+    - node.type.clanok
+    - taxonomy.vocabulary.muzikant
+id: node.clanok.field_muzikant
+field_name: field_muzikant
+entity_type: node
+bundle: clanok
+label: Muzikant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      muzikant: muzikant
+    auto_create: true
+field_type: entity_reference

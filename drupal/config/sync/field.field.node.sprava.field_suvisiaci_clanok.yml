@@ -1,0 +1,21 @@
+uuid: ff7e33a9-0f90-444c-b345-d7f61b094949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suvisiaci_clanok
+    - node.type.sprava
+id: node.sprava.field_suvisiaci_clanok
+field_name: field_suvisiaci_clanok
+entity_type: node
+bundle: sprava
+label: 'Súvisiace články'
+description: 'Tu môžte zadať články, ktoré súvisia s týmto. Začnite písať prvých pár písmen (napríklad meno hudobníka o ktorom píšete) a systém sám dohľadá článok podľa jeho názvu.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

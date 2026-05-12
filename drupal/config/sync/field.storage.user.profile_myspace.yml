@@ -1,0 +1,19 @@
+uuid: eeee66c1-e164-4402-8dbb-c82efdc112eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.profile_myspace
+field_name: profile_myspace
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

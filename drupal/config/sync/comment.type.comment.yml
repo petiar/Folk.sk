@@ -1,0 +1,10 @@
+uuid: dd4c5bea-5f6d-4ea2-a8d5-89cc986797fe
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
+id: comment
+label: 'Predvolené komentáre'
+target_entity_type_id: node
+description: 'Povoliť komentovanie obsahu'

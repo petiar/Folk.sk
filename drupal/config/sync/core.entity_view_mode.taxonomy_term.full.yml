@@ -1,0 +1,13 @@
+uuid: dd4e633c-8d01-4ffc-82ad-d56c69adc483
+langcode: sk
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: iukUENpf8CFvjZbGGacKX_Ges0-lU9z6zvsd32P6kbo
+id: taxonomy_term.full
+label: 'Stránka termínu taxonómie'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

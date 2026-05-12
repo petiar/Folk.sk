@@ -1,0 +1,11 @@
+uuid: 0870e8e7-b384-453e-8964-ec0e2bf04203
+langcode: en
+status: true
+dependencies: {  }
+name: 'Redakčný stĺpček'
+type: redakcny_stlpcek
+description: 'Redakčný stĺpček je typ obsahu, ktorým sa členovia redakcie prihovárajú svojim čitateľom, reagujú na aktuálne udalosti a odkrývajú (pokiaľ možno) dianie v redakcii aby sa viac otvorili.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

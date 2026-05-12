@@ -1,0 +1,11 @@
+uuid: 1fb9f7c3-9b6e-40b4-9dce-b02551e24850
+langcode: en
+status: true
+dependencies: {  }
+name: 'Príspevok do diskusie'
+type: forum
+description: '<em>Téma fóra</em> je prvý príspevok do novej diskusie vo fóre.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

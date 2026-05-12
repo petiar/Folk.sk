@@ -1,0 +1,11 @@
+uuid: f5bdd70d-6a36-4f3f-9971-44ac9809c69d
+langcode: en
+status: true
+dependencies: {  }
+name: Správa
+type: sprava
+description: 'Správa je krátka upútavka, oznam, aktuálna informácia, taká, čo sa nehodí ako klasický článok najmä kvôli jej obmedzenej aktuálnosti.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

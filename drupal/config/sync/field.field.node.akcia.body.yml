@@ -1,0 +1,24 @@
+uuid: 3d6fa8da-c6fa-42f1-9b85-6b7eb74c7b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.akcia
+  module:
+    - text
+id: node.akcia.body
+field_name: body
+entity_type: node
+bundle: akcia
+label: 'Popis akcie'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

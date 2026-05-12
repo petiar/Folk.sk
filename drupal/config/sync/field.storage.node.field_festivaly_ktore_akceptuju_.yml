@@ -1,0 +1,20 @@
+uuid: 474022cd-079a-43d9-ae62-2f9603f162e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_festivaly_ktore_akceptuju_
+field_name: field_festivaly_ktore_akceptuju_
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

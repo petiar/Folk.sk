@@ -1,0 +1,14 @@
+uuid: 7fa77811-3398-4815-96b2-acd23af1f350
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spravca
+  module:
+    - user
+id: user_add_role_action.spravca
+label: 'Add the správca role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: spravca

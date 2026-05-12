@@ -1,0 +1,118 @@
+uuid: b91d3890-b9cf-4e08-9469-b9ae457df660
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.katalog.body
+    - field.field.node.katalog.comment
+    - field.field.node.katalog.field_booklet
+    - field.field.node.katalog.field_cena
+    - field.field.node.katalog.field_cena_informacia
+    - field.field.node.katalog.field_kontaktne_info
+    - field.field.node.katalog.field_kontaktny_web
+    - field.field.node.katalog.field_muzikant
+    - field.field.node.katalog.field_nazov_kapely
+    - field.field.node.katalog.field_nazov_piesne
+    - field.field.node.katalog.field_rok_vydania
+    - field.field.node.katalog.field_suvisiaci_clanok
+    - field.field.node.katalog.field_ukazka_piesne
+    - field.field.node.katalog.field_zaner
+    - node.type.katalog
+  module:
+    - datetime
+    - file
+    - link
+    - text
+    - user
+id: node.katalog.search_result
+targetEntityType: node
+bundle: katalog
+mode: search_result
+content:
+  field_cena:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cena_informacia:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_kontaktne_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_kontaktny_web:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nazov_kapely:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  field_nazov_piesne:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_rok_vydania:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: fallback
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ukazka_piesne:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_booklet: true
+  field_muzikant: true
+  field_zaner: true
+  langcode: true

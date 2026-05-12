@@ -1,0 +1,60 @@
+uuid: c707aa25-fe0e-45ea-affb-c34f95d7235e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.preview
+    - field.field.node.katalog.body
+    - field.field.node.katalog.comment
+    - field.field.node.katalog.field_booklet
+    - field.field.node.katalog.field_cena
+    - field.field.node.katalog.field_cena_informacia
+    - field.field.node.katalog.field_kontaktne_info
+    - field.field.node.katalog.field_kontaktny_web
+    - field.field.node.katalog.field_muzikant
+    - field.field.node.katalog.field_nazov_kapely
+    - field.field.node.katalog.field_nazov_piesne
+    - field.field.node.katalog.field_rok_vydania
+    - field.field.node.katalog.field_suvisiaci_clanok
+    - field.field.node.katalog.field_ukazka_piesne
+    - field.field.node.katalog.field_zaner
+    - node.type.katalog
+  module:
+    - image
+    - user
+id: node.katalog.preview
+targetEntityType: node
+bundle: katalog
+mode: preview
+content:
+  field_booklet:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_cena: true
+  field_cena_informacia: true
+  field_kontaktne_info: true
+  field_kontaktny_web: true
+  field_muzikant: true
+  field_nazov_kapely: true
+  field_nazov_piesne: true
+  field_rok_vydania: true
+  field_suvisiaci_clanok: true
+  field_ukazka_piesne: true
+  field_zaner: true
+  langcode: true

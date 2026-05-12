@@ -1,0 +1,22 @@
+uuid: 9708dde1-fa72-484e-866d-64eb2e5c034b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.akcia
+id: node.akcia.status
+field_name: status
+entity_type: node
+bundle: akcia
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

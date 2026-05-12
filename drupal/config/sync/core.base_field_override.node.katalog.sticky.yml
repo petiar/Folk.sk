@@ -1,0 +1,22 @@
+uuid: ecd48d3c-33d2-46bf-884c-0ffe046a7788
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.katalog
+id: node.katalog.sticky
+field_name: sticky
+entity_type: node
+bundle: katalog
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

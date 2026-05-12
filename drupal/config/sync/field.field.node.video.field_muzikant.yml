@@ -1,0 +1,25 @@
+uuid: 9fcccd52-66df-461a-832a-5d228f83a25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_muzikant
+    - node.type.video
+    - taxonomy.vocabulary.muzikant
+id: node.video.field_muzikant
+field_name: field_muzikant
+entity_type: node
+bundle: video
+label: Muzikant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      muzikant: muzikant
+    auto_create: true
+field_type: entity_reference

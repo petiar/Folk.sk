@@ -1,0 +1,19 @@
+uuid: ce8751b3-5fc9-4e1f-8658-e71e65a05c6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_profil_kapely
+field_name: field_profil_kapely
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

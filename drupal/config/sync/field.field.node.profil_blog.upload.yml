@@ -1,0 +1,27 @@
+uuid: 63d50376-1f13-4b13-88b6-e03616528486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.upload
+    - node.type.profil_blog
+  module:
+    - file
+id: node.profil_blog.upload
+field_name: upload
+entity_type: node
+bundle: profil_blog
+label: upload
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+  max_filesize: 0.3MB
+  description_field: true
+field_type: file

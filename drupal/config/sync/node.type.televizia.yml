@@ -1,0 +1,11 @@
+uuid: acc292af-52a4-4e71-9bd0-28429c3279f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'TV Folk.sk'
+type: televizia
+description: 'Video vytvorené tímom Folk.sk pre TV Folk.sk'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

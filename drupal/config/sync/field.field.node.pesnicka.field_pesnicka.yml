@@ -1,0 +1,27 @@
+uuid: d06ebd92-399d-4806-bcf0-127c18927db1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pesnicka
+    - node.type.pesnicka
+  module:
+    - file
+id: node.pesnicka.field_pesnicka
+field_name: field_pesnicka
+entity_type: node
+bundle: pesnicka
+label: 'Súbor s pesničkou'
+description: 'Nahrajte samotnú pesničku. Povolené formáty sú mp3 alebo ogg.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: pesnicky
+  file_extensions: 'mp3 ogg'
+  max_filesize: 3MB
+  description_field: false
+field_type: file

@@ -1,0 +1,22 @@
+uuid: 02d71c36-4c1a-471e-83b0-66b11022ca1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.katalog
+id: node.katalog.status
+field_name: status
+entity_type: node
+bundle: katalog
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

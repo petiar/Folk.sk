@@ -1,0 +1,19 @@
+uuid: 2d657a2a-3a75-429c-aeda-57ad04abc4dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_televizia_id
+field_name: field_televizia_id
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

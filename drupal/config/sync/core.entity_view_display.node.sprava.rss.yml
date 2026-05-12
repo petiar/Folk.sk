@@ -1,0 +1,34 @@
+uuid: 860d671f-9f1a-49f0-ab12-75d91fb8d791
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.sprava.body
+    - field.field.node.sprava.comment
+    - field.field.node.sprava.field_suvisiaci_clanok
+    - node.type.sprava
+  module:
+    - user
+id: node.sprava.rss
+targetEntityType: node
+bundle: sprava
+mode: rss
+content:
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  langcode: true

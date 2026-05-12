@@ -1,0 +1,33 @@
+uuid: 2baaa962-7b1d-4f84-b4f0-86656c528d04
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment
+    - node.type.pozvanka
+  module:
+    - comment
+id: node.pozvanka.comment
+field_name: comment
+entity_type: node
+bundle: pozvanka
+label: Komentáre
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

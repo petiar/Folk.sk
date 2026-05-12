@@ -1,0 +1,23 @@
+uuid: 6b85ad73-091c-4d4c-a428-973af72a3bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_myspace
+  module:
+    - link
+    - user
+id: user.user.profile_myspace
+field_name: profile_myspace
+entity_type: user
+bundle: user
+label: 'Môj MySpace'
+description: 'Ak máte stránku na MySpace, zadajte odkaz na ňu. Nezabudnite na <strong>http://</strong>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

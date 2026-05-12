@@ -1,0 +1,22 @@
+uuid: 6e43cdac-6a78-447c-a64c-0e05be483a21
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.akcia
+id: node.akcia.sticky
+field_name: sticky
+entity_type: node
+bundle: akcia
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

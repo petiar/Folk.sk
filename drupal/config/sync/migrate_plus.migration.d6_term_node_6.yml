@@ -1,0 +1,35 @@
+uuid: fe34efd5-d5f6-4611-a2e8-67eb2140cc77
+langcode: sk
+status: true
+dependencies: {  }
+id: d6_term_node_6
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - Content
+migration_group: null
+label: 'Term/node relationships - Mesto (vid 6)'
+source:
+  plugin: d6_term_node
+process:
+  nid:
+    -
+      plugin: migration_lookup
+      migration:
+        - d6_node
+      source: nid
+    -
+      plugin: skip_on_empty
+      method: row
+  type: type
+destination:
+  plugin: 'entity:node'
+idMap: {  }
+migration_dependencies:
+  required:
+    - d6_vocabulary_entity_display
+    - d6_vocabulary_entity_form_display
+    - d6_node
+include: null

@@ -1,0 +1,9 @@
+uuid: 41329cd2-7c40-4e01-951a-f3b56a3695ca
+langcode: en
+status: true
+dependencies: {  }
+name: Žáner
+vid: zaner
+description: 'Zoznam hudobných žánrov'
+weight: 0
+new_revision: false

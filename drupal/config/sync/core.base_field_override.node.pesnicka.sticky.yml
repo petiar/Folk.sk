@@ -1,0 +1,22 @@
+uuid: 5ae03b34-9942-4adb-8bfd-a38a2834d2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pesnicka
+id: node.pesnicka.sticky
+field_name: sticky
+entity_type: node
+bundle: pesnicka
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

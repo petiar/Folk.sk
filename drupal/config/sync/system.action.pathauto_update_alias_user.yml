@@ -1,0 +1,16 @@
+uuid: 78245681-fc19-4ff2-a81c-286c861c0352
+langcode: sk
+status: true
+dependencies:
+  module:
+    - pathauto
+  enforced:
+    module:
+      - user
+_core:
+  default_config_hash: 6eiNWATGTd3lUEKuxNPNyDRDVMsUlM0HS90_R6JJLUI
+id: pathauto_update_alias_user
+label: 'Aktualizovať URL alias'
+type: user
+plugin: pathauto_update_alias
+configuration: {  }

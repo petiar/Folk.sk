@@ -1,0 +1,11 @@
+uuid: 65dc6780-1191-4aba-950e-3bcc0887485b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Akcia do kalendára'
+type: akcia
+description: 'Akcia do kalendára - koncert, festival a podobne...'
+help: "Prosíme aby ste v názve akcie nepoužívali VEĽKÉ PÍSMENÁ ani výkričníky. V prípade, že sa jedná o festival, zadajte jeho názov. Ak ide o samostatný koncert, zadajte meno (hlavného) účinkujúceho.\r\n<strong>Ak má popis akcie viac ako 50 slov, bude automaticky zaradený aj medzi upútavky.</strong>"
+new_revision: true
+preview_mode: 1
+display_submitted: false

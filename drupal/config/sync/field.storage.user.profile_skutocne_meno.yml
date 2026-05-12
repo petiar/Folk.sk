@@ -1,0 +1,20 @@
+uuid: 8eac92f9-59ac-4c5b-823e-0e0bda532367
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - user
+id: user.profile_skutocne_meno
+field_name: profile_skutocne_meno
+entity_type: user
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 8de1aa32-97f7-43a4-a697-f9ab6bafc1a5
+langcode: en
+status: true
+dependencies: {  }
+name: Serial
+vid: serial
+description: null
+weight: 0
+new_revision: false

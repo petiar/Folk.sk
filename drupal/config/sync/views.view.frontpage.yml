@@ -1,0 +1,147 @@
+uuid: b9ce465a-8202-4fc4-8b6b-eed574aabe5d
+langcode: sk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.blog
+    - node.type.clanok
+  module:
+    - node
+    - user
+id: frontpage
+label: 'Úvodná stránka'
+module: views
+description: 'Články a blogy zoradené od najnovšieho'
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Úvodná stránka'
+      fields: {  }
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 20
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Nasledujúca ›'
+            previous: '‹ Predchádzajúca'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Položiek na stránku'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Všetky -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: 'Použiť filter'
+          reset_button: false
+          reset_button_label: Resetovať
+          exposed_sorts_label: 'Zoradiť podľa'
+          expose_sort_order: true
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          plugin_id: bundle
+          operator: in
+          value:
+            clanok: clanok
+            blog: blog
+          group: 1
+          expose:
+            operator: ''
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+          links: true
+          langcode: ''
+          rendering_language: '***LANGUAGE_entity_translation***'
+      use_more: false
+      use_more_always: false
+      use_more_text: viac
+      rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Stránka
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: frontpage
+      menu:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

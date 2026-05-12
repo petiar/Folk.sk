@@ -1,0 +1,23 @@
+uuid: c8659b49-2374-444e-9449-f0d2191e1fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cena
+    - node.type.katalog
+id: node.katalog.field_cena
+field_name: field_cena
+entity_type: node
+bundle: katalog
+label: Cena
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100000
+  prefix: ''
+  suffix: Sk
+field_type: integer

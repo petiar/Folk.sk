@@ -1,0 +1,19 @@
+uuid: b138ec21-74c0-448d-97e9-8f635f37b9c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - user
+id: user.profile_moj_profil
+field_name: profile_moj_profil
+entity_type: user
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

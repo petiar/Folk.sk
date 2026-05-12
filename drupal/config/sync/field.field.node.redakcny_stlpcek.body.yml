@@ -1,0 +1,24 @@
+uuid: 9c7bdadf-c426-4cdd-ba9c-4f2a96cc5cab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.redakcny_stlpcek
+  module:
+    - text
+id: node.redakcny_stlpcek.body
+field_name: body
+entity_type: node
+bundle: redakcny_stlpcek
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

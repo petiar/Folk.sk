@@ -1,0 +1,64 @@
+uuid: e86c6ba5-7b6d-4bc8-8bd0-98ca48e451a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.pesnicka.body
+    - field.field.node.pesnicka.comment
+    - field.field.node.pesnicka.field_legal
+    - field.field.node.pesnicka.field_muzikant
+    - field.field.node.pesnicka.field_pesnicka
+    - field.field.node.pesnicka.upload
+    - node.type.pesnicka
+  module:
+    - comment
+    - file
+    - text
+    - user
+id: node.pesnicka.default
+targetEntityType: node
+bundle: pesnicka
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  comment:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_muzikant:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  upload:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  field_legal: true
+  field_pesnicka: true
+  langcode: true

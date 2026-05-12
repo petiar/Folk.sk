@@ -1,0 +1,11 @@
+uuid: db29f83d-028e-4583-ba7a-5a44869d3176
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
+id: en
+label: Angličtina
+direction: ltr
+weight: 0
+locked: false

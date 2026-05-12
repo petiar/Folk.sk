@@ -1,0 +1,21 @@
+uuid: 637326dc-f0b1-4618-a1fa-fb390ca01253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vstupne_nezname
+    - node.type.akcia
+id: node.akcia.field_vstupne_nezname
+field_name: field_vstupne_nezname
+entity_type: node
+bundle: akcia
+label: 'Neviem aké je vstupné'
+description: 'Zaškrtnite toto políčko ak neviete aké je vstupné. Ak sa ho v budúcnosti dozviete, prosíme, aktualizujte tieto informácie. Ako ste prihlásení, ako autor máte právo meniť údaje o tejto akcii.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

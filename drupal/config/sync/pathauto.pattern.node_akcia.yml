@@ -1,0 +1,23 @@
+uuid: df604995-8a2e-4c9e-9a00-39d01d1286d1
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.akcia
+  module:
+    - node
+id: node_akcia
+label: 'Node: akcia'
+type: 'canonical_entities:node'
+pattern: '/akcia/[node:title]'
+selection_criteria:
+  d45324d4-1543-4879-b73c-61ccd6d4af07:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      akcia: akcia
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,52 @@
+uuid: ac18b863-ef8f-44ac-a8d8-dc6a7796a102
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.televizia.body
+    - field.field.node.televizia.comment
+    - field.field.node.televizia.field_co_nam_pisete_
+    - field.field.node.televizia.field_festival
+    - field.field.node.televizia.field_muzikant
+    - field.field.node.televizia.field_suvisiaci_clanok
+    - field.field.node.televizia.field_televizia_id
+    - field.field.node.televizia.upload
+    - node.type.televizia
+  module:
+    - text
+    - user
+id: node.televizia.teaser
+targetEntityType: node
+bundle: televizia
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  field_co_nam_pisete_: true
+  field_festival: true
+  field_muzikant: true
+  field_televizia_id: true
+  langcode: true
+  upload: true

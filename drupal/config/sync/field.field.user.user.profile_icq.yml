@@ -1,0 +1,22 @@
+uuid: 76afb59b-48f1-4490-bbf0-ee5602c8eeff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.profile_icq
+  module:
+    - text
+    - user
+id: user.user.profile_icq
+field_name: profile_icq
+entity_type: user
+bundle: user
+label: 'ICQ číslo'
+description: 'Sem zadajte svoje ICQ číslo ak ho chcete zverejniť.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

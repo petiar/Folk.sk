@@ -1,0 +1,9 @@
+uuid: a5b2e860-0d1c-484f-8cb2-2cfe60c4a774
+langcode: en
+status: true
+dependencies: {  }
+name: 'Štítky pre označenie blogov'
+vid: stitky_pre_oznacenie_blogov
+description: 'Blogy sa nezaraďujú do kategórií, ale označujú tzv. štítkami (v angličtine Tagy). Každý štítok je jedno slovo, ktoré sa svojim obsahom čo najviac týka témy článku. Napríklad pre reportáž z koncertu pesničkára môžte uviesť štítky "koncert" a "pesničkár".'
+weight: 0
+new_revision: false

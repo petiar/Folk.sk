@@ -1,0 +1,9 @@
+uuid: af3a3532-0798-48b5-9926-dfa6642e1b61
+langcode: en
+status: true
+dependencies: {  }
+name: 'Čo nám píšete?'
+vid: co_nam_pisete_
+description: 'Vyberte jednu z možností podľa toho, akú formu (<em>aka slohový štýl</em>) ste pri písaní použili.'
+weight: 0
+new_revision: false

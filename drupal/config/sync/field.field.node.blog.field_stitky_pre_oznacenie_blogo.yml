@@ -1,0 +1,25 @@
+uuid: 2d31afed-69e5-4489-b92d-37ba776890db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stitky_pre_oznacenie_blogo
+    - node.type.blog
+    - taxonomy.vocabulary.stitky_pre_oznacenie_blogov
+id: node.blog.field_stitky_pre_oznacenie_blogo
+field_name: field_stitky_pre_oznacenie_blogo
+entity_type: node
+bundle: blog
+label: 'Štítky pre označenie blogov'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stitky_pre_oznacenie_blogov: stitky_pre_oznacenie_blogov
+    auto_create: true
+field_type: entity_reference

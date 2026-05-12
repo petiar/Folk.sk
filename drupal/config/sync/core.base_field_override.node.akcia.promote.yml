@@ -1,0 +1,22 @@
+uuid: 85e03b6a-4711-4717-a70d-3b80fab7dc54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.akcia
+id: node.akcia.promote
+field_name: promote
+entity_type: node
+bundle: akcia
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

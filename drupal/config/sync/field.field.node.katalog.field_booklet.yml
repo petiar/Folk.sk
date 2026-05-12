@@ -1,0 +1,38 @@
+uuid: 4a9a8145-ea40-4474-9043-bef0a1a8b0ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_booklet
+    - node.type.katalog
+  module:
+    - image
+id: node.katalog.field_booklet
+field_name: field_booklet
+entity_type: node
+bundle: katalog
+label: 'Obrázok CD'
+description: 'Tuná nahrajte obrázok k albumu - booklet.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: booklety
+  file_extensions: 'jpg jpeg png gif'
+  max_filesize: 100KB
+  max_resolution: 200x200
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

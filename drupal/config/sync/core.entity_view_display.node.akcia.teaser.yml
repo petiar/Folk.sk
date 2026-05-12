@@ -1,0 +1,57 @@
+uuid: 84b44fbd-31b2-4256-b3e2-b665af87c686
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.akcia.body
+    - field.field.node.akcia.comment
+    - field.field.node.akcia.field_akcia_webstranka
+    - field.field.node.akcia.field_datumcas
+    - field.field.node.akcia.field_festival
+    - field.field.node.akcia.field_mesto
+    - field.field.node.akcia.field_miesto
+    - field.field.node.akcia.field_muzikant
+    - field.field.node.akcia.field_profil_kapely
+    - field.field.node.akcia.field_suvisiaci_clanok
+    - field.field.node.akcia.field_ucinkujuci
+    - field.field.node.akcia.field_vstupne
+    - field.field.node.akcia.field_vstupne_nezname
+    - field.field.node.akcia.upload
+    - node.type.akcia
+  module:
+    - text
+    - user
+id: node.akcia.teaser
+targetEntityType: node
+bundle: akcia
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  field_akcia_webstranka: true
+  field_datumcas: true
+  field_festival: true
+  field_mesto: true
+  field_miesto: true
+  field_muzikant: true
+  field_profil_kapely: true
+  field_suvisiaci_clanok: true
+  field_ucinkujuci: true
+  field_vstupne: true
+  field_vstupne_nezname: true
+  langcode: true
+  upload: true

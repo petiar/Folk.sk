@@ -1,0 +1,24 @@
+uuid: df08b163-b7d5-4994-940b-41ca49a32f78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rok_vydania
+    - node.type.katalog
+  module:
+    - datetime
+id: node.katalog.field_rok_vydania
+field_name: field_rok_vydania
+entity_type: node
+bundle: katalog
+label: 'Rok vydania'
+description: 'Vyberte rok vydania albumu.'
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: relative
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 30a6c6fe-d723-48a8-a7fc-2bf0a73d1e8e
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.forum
+  module:
+    - node
+id: node_forum
+label: 'Node: forum'
+type: 'canonical_entities:node'
+pattern: '/diskusia/[node:title]'
+selection_criteria:
+  bb1fec12-02dd-4ab9-a146-bfe1084a5672:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      forum: forum
+selection_logic: and
+weight: -10
+relationships: {  }

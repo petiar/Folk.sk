@@ -1,0 +1,13 @@
+uuid: 3cf80f5f-9e26-489c-bafa-361f06a4e844
+langcode: sk
+status: false
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: Q7yUUYeRLByl-MCGveKKF_KhAtNICLCMJuKWfugCvso
+id: block_content.full
+label: Plný
+description: ''
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,9 @@
+uuid: c77d410f-4d97-4252-aa3c-243db345d281
+langcode: en
+status: true
+dependencies: {  }
+name: 'Festivaly ktoré akceptujú prihlášky z Folk.sk'
+vid: festivaly_ktore_akceptuju_prih
+description: 'Zoznam festivalov, na ktoré sa dá prihlásiť prostredníctvom Folk.sk.'
+weight: 0
+new_revision: false

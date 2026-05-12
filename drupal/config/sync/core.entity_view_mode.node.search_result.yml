@@ -1,0 +1,13 @@
+uuid: 90a6b0c8-75ea-4a77-b58c-5d80f8dad79a
+langcode: sk
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: d8wBEm7XvJ6H3S0IneDD9PfTBklPIH7GMpxElVemPf8
+id: node.search_result
+label: 'Search result'
+description: ''
+targetEntityType: node
+cache: true

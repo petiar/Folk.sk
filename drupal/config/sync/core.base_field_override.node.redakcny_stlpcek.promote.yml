@@ -1,0 +1,22 @@
+uuid: 80f17eaa-7bc3-40db-8712-4c7121d65e7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.redakcny_stlpcek
+id: node.redakcny_stlpcek.promote
+field_name: promote
+entity_type: node
+bundle: redakcny_stlpcek
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

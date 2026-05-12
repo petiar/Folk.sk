@@ -1,0 +1,22 @@
+uuid: 211b2d49-f981-43d2-8a23-2150ac135b61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.video
+id: node.video.sticky
+field_name: sticky
+entity_type: node
+bundle: video
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

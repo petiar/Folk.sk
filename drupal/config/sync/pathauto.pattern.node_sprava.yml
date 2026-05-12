@@ -1,0 +1,23 @@
+uuid: f84b9eea-d9f0-40dd-a96c-52c9ee8556eb
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.sprava
+  module:
+    - node
+id: node_sprava
+label: 'Node: sprava'
+type: 'canonical_entities:node'
+pattern: '/sprava/[node:title]'
+selection_criteria:
+  14d10ff2-7095-4190-a21c-1c9e1f4210e5:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      sprava: sprava
+selection_logic: and
+weight: -10
+relationships: {  }

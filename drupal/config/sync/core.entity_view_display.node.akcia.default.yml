@@ -1,0 +1,160 @@
+uuid: 637636b3-a6ab-4dc7-ab96-146d804eaddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.akcia.body
+    - field.field.node.akcia.comment
+    - field.field.node.akcia.field_akcia_webstranka
+    - field.field.node.akcia.field_datumcas
+    - field.field.node.akcia.field_festival
+    - field.field.node.akcia.field_mesto
+    - field.field.node.akcia.field_miesto
+    - field.field.node.akcia.field_muzikant
+    - field.field.node.akcia.field_profil_kapely
+    - field.field.node.akcia.field_suvisiaci_clanok
+    - field.field.node.akcia.field_ucinkujuci
+    - field.field.node.akcia.field_vstupne
+    - field.field.node.akcia.field_vstupne_nezname
+    - field.field.node.akcia.upload
+    - node.type.akcia
+  module:
+    - comment
+    - datetime
+    - file
+    - link
+    - text
+    - user
+id: node.akcia.default
+targetEntityType: node
+bundle: akcia
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  comment:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_akcia_webstranka:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_datumcas:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_festival:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_mesto:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_miesto:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  field_muzikant:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_profil_kapely:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_suvisiaci_clanok:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ucinkujuci:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_vstupne:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vstupne_nezname:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  upload:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  langcode: true

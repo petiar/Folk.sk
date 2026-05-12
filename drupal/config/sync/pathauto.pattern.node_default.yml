@@ -1,0 +1,14 @@
+uuid: ef6f1703-7b4d-4582-a8a5-3c3ff37b5cc8
+langcode: sk
+status: true
+dependencies:
+  module:
+    - node
+id: node_default
+label: 'Nody — predvolený'
+type: 'canonical_entities:node'
+pattern: '/clanok/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

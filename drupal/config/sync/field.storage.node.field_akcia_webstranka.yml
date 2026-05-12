@@ -1,0 +1,19 @@
+uuid: c5bd65ad-16e9-4854-8e5f-f8a0e6d613ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_akcia_webstranka
+field_name: field_akcia_webstranka
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

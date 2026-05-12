@@ -1,0 +1,22 @@
+uuid: 615799b8-c302-4243-9464-b4e66c82c04f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clanok
+id: node.clanok.status
+field_name: status
+entity_type: node
+bundle: clanok
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
