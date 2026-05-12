@@ -1,26 +1,23 @@
-<article{{ attributes.addClass('card', 'h-100', 'shadow-sm') }}>
+<article{{ attributes.addClass('node--view-mode-teaser') }}>
+  <div class="node__content">
 
-  {% if content.field_image %}
-    <a href="{{ url }}">{{ content.field_image }}</a>
-  {% endif %}
+    <div class="node-type-label">{{ node.type.entity.label }}</div>
 
-  <div class="card-body d-flex flex-column">
+    <h2 class="node__title">
+      <a href="{{ url }}">{{ label }}</a>
+    </h2>
 
-    <div class="mb-2">
-      <span class="badge text-bg-primary">{{ node.type.entity.label }}</span>
-      <small class="text-muted ms-2">{{ node.createdtime|date('d.m.Y') }}</small>
+    <div class="node__meta">
+      {{ node.createdtime|date('d. m. Y') }}
+      {% if author_name %} — {{ author_name }}{% endif %}
     </div>
 
-    <h5 class="card-title">
-      <a href="{{ url }}" class="text-decoration-none stretched-link">{{ label }}</a>
-    </h5>
-
     {% if content.body %}
-      <div class="card-text text-muted small mb-3">{{ content.body }}</div>
+      <div class="field--name-body">{{ content.body }}</div>
     {% endif %}
 
-    <div class="mt-auto d-flex justify-content-between align-items-center">
-      <small class="text-muted">{{ 'od'|t }} {{ author_name }}</small>
+    <div class="node__readmore">
+      <a href="{{ url }}">Čítať ďalej →</a>
     </div>
 
   </div>

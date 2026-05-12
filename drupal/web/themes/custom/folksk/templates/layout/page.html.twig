@@ -1,47 +1,50 @@
-{% if page.header or page.primary_menu %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+{# ── Header ────────────────────────────────────────────────────────────────── #}
+<header class="site-header">
   <div class="container">
+    <div class="site-name">
+      <a href="{{ path('<front>') }}">Folk<span>.</span>sk</a>
+    </div>
+    {% if site_slogan %}
+      <div class="site-slogan">{{ site_slogan }}</div>
+    {% endif %}
+  </div>
 
-    <a class="navbar-brand" href="{{ path('<front>') }}">folk.sk</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    {% if page.primary_menu %}
-      <div class="collapse navbar-collapse" id="mainNav">
+  {# Navigácia #}
+  {% if page.primary_menu %}
+    <nav class="site-nav">
+      <div class="container d-flex justify-content-center">
         {{ page.primary_menu }}
       </div>
-    {% endif %}
+    </nav>
+  {% endif %}
+</header>
 
-  </div>
-</nav>
-{% endif %}
-
-{% if page.breadcrumb %}
-  <div class="bg-light border-bottom py-2">
-    <div class="container">{{ page.breadcrumb }}</div>
-  </div>
-{% endif %}
-
+{# ── Highlighted / Flash messages ─────────────────────────────────────────── #}
 {% if page.highlighted %}
   <div class="container mt-3">{{ page.highlighted }}</div>
 {% endif %}
 
-<main class="container my-5">
+{# ── Hlavný obsah ─────────────────────────────────────────────────────────── #}
+<main class="container">
   <div class="row">
-    <div class="{{ page.sidebar ? 'col-lg-8' : 'col-12' }}">
+
+    {# Obsah — 8 stĺpcov #}
+    <div class="col-lg-8">
       {{ page.content }}
     </div>
-    {% if page.sidebar %}
-      <aside class="col-lg-4">{{ page.sidebar }}</aside>
-    {% endif %}
+
+    {# Sidebar — 4 stĺpce #}
+    <aside class="col-lg-4 site-sidebar">
+      {{ page.sidebar }}
+    </aside>
+
   </div>
 </main>
 
-<footer class="py-5 mt-5">
-  <div class="container text-center">
+{# ── Päta ────────────────────────────────────────────────────────────────────#}
+<footer class="site-footer">
+  <div class="container">
     {% if page.footer %}{{ page.footer }}{% endif %}
-    <p class="mb-0 small opacity-50">© {{ "now"|date("Y") }} folk.sk</p>
+    <p class="mb-0">© {{ "now"|date("Y") }} folk.sk</p>
   </div>
 </footer>

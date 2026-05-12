@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file folksk.theme
+ */
+
+/**
+ * Pridá site_slogan do page premenných.
+ */
+function folksk_preprocess_page(&$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_slogan'] = $config->get('slogan');
+  $variables['site_name']   = $config->get('name');
+}
