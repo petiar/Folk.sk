@@ -1,0 +1,14 @@
+{% for type, messages in message_list %}
+  {% set alert_class = {
+    'status':  'alert-success',
+    'warning': 'alert-warning',
+    'error':   'alert-error',
+  }[type] ?? 'alert-info' %}
+  <div role="alert" class="alert {{ alert_class }} mb-4">
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}

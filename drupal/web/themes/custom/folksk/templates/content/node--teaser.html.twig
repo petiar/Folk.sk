@@ -1,0 +1,57 @@
+{% set classes = [
+  'card',
+  'bg-base-100',
+  'shadow-md',
+  'hover:shadow-lg',
+  'transition-shadow',
+  'duration-200',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if content.field_image %}
+    <figure class="rounded-t-2xl overflow-hidden">
+      <a href="{{ url }}">
+        {{ content.field_image }}
+      </a>
+    </figure>
+  {% endif %}
+
+  <div class="card-body">
+
+    {# Badge pre typ obsahu #}
+    <div class="flex items-center gap-2 mb-1">
+      <span class="badge badge-primary badge-sm">
+        {{ node.type.entity.label }}
+      </span>
+      <span class="text-xs text-base-content/50">
+        {{ node.createdtime|date('d.m.Y') }}
+      </span>
+    </div>
+
+    {# Titulok #}
+    <h2 class="card-title text-lg leading-snug">
+      <a href="{{ url }}" class="hover:text-primary transition-colors">
+        {{ label }}
+      </a>
+    </h2>
+
+    {# Teaser text #}
+    {% if content.body %}
+      <div class="text-base-content/70 text-sm line-clamp-3">
+        {{ content.body }}
+      </div>
+    {% endif %}
+
+    {# Autor + čítať viac #}
+    <div class="card-actions justify-between items-center mt-4">
+      <span class="text-xs text-base-content/50">
+        {{ 'od'|t }} {{ author_name }}
+      </span>
+      <a href="{{ url }}" class="btn btn-primary btn-sm">
+        {{ 'Čítať viac'|t }}
+      </a>
+    </div>
+
+  </div>
+</article>

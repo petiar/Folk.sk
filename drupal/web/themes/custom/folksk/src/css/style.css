@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Globálna typografia */
+@layer base {
+  body {
+    @apply bg-base-200 text-base-content font-sans;
+  }
+
+  h1 { @apply text-3xl font-bold mb-4; }
+  h2 { @apply text-2xl font-bold mb-3; }
+  h3 { @apply text-xl font-semibold mb-2; }
+
+  a {
+    @apply text-primary hover:opacity-75 transition-opacity;
+  }
+
+  p { @apply mb-4 leading-relaxed; }
+}
+
+/* Drupal-specific reset */
+@layer components {
+  /* Skryť Drupal focus outline (nahradíme vlastným) */
+  .visually-hidden {
+    @apply sr-only;
+  }
+
+  /* Messages */
+  .messages--status  { @apply alert alert-success mb-4; }
+  .messages--warning { @apply alert alert-warning mb-4; }
+  .messages--error   { @apply alert alert-error mb-4; }
+
+  /* Pager */
+  .pager { @apply flex justify-center my-8; }
+  .pager__items { @apply join; }
+  .pager__item a,
+  .pager__item--current .pager__link {
+    @apply join-item btn btn-sm;
+  }
+  .pager__item--current .pager__link {
+    @apply btn-primary;
+  }
+}

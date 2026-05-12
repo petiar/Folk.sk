@@ -1,0 +1,15 @@
+name: Folk.sk
+type: theme
+description: 'Téma pre folk.sk postavená na daisyUI + Tailwind CSS'
+core_version_requirement: ^11
+base theme: false
+libraries:
+  - folksk/global
+regions:
+  header: Hlavička
+  primary_menu: Hlavná navigácia
+  breadcrumb: Navigačná lišta
+  highlighted: Zvýraznené
+  content: Obsah
+  sidebar: Postranný panel
+  footer: Päta

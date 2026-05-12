@@ -1,0 +1,13 @@
+{
+  "name": "folksk-theme",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i src/css/style.css -o dist/css/style.css --minify",
+    "watch": "npx tailwindcss -i src/css/style.css -o dist/css/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4",
+    "daisyui": "^4.12"
+  }
+}
