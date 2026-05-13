@@ -44,10 +44,9 @@ function folk_migrate_update_10003(): void {
 function folk_migrate_update_10004(): void {
   \Drupal::service('module_installer')->install(['datetime_range']);
 
-  $db    = \Drupal::database();
-  $d6_db = \Drupal\Core\Database\Database::getConnection('default', 'migrate');
+  $db = \Drupal::database();
 
-  // Záloha pred zmazaním
+  // Záloha pred zmazaním (ak tabuľka existuje — t.j. migrácia už bežala)
   $rows = [];
   if ($db->schema()->tableExists('node__field_datumcas')) {
     $rows = $db->select('node__field_datumcas', 'f')->fields('f')->execute()->fetchAll();
@@ -74,10 +73,10 @@ function folk_migrate_update_10004(): void {
     'required'    => FALSE,
   ])->save();
 
-  // Ak máme zálohu (update z existujúceho D11), obnov ju
+  // Ak máme zálohu (migrácia bežala pred týmto hookom), obnov dáta
   if ($rows) {
     foreach ($rows as $row) {
-      $val = $row->field_datumcas_value;
+      $val  = $row->field_datumcas_value;
       $data = [
         'bundle'                   => $row->bundle,
         'deleted'                  => $row->deleted,
@@ -94,10 +93,15 @@ function folk_migrate_update_10004(): void {
     return;
   }
 
-  // Čistá inštalácia — načítaj z D6
-  $d6_rows  = $d6_db->query("SELECT nid, field_datumcas_value FROM content_type_akcia WHERE field_datumcas_value IS NOT NULL")->fetchAllKeyed();
-  $map      = $db->select('migrate_map_d6_node_complete__akcia', 'm')->fields('m', ['sourceid1', 'destid1'])->execute()->fetchAllKeyed();
-  $rev_map  = [];
+  // Čistá inštalácia bez migrovaných dát — ak je dostupná D6 DB, načítaj dátumy
+  if (!\Drupal\Core\Database\Database::getConnectionInfo('migrate')) {
+    return;
+  }
+
+  $d6_db   = \Drupal\Core\Database\Database::getConnection('default', 'migrate');
+  $d6_rows = $d6_db->query("SELECT nid, field_datumcas_value FROM content_type_akcia WHERE field_datumcas_value IS NOT NULL")->fetchAllKeyed();
+  $map     = $db->select('migrate_map_d6_node_complete__akcia', 'm')->fields('m', ['sourceid1', 'destid1'])->execute()->fetchAllKeyed();
+  $rev_map = [];
   foreach ($db->select('node_field_data', 'n')->fields('n', ['nid', 'vid', 'langcode'])->condition('type', 'akcia')->execute()->fetchAll() as $r) {
     $rev_map[$r->nid] = ['vid' => $r->vid, 'langcode' => $r->langcode];
   }
