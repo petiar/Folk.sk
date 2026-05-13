@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Delete unused content types and their nodes.
+ */
+function folk_migrate_update_10001(): void {
+  $types = ['pesnicka', 'profil_blog', 'profil', 'book', 'page', 'simplenews', 'poll'];
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $type_storage = \Drupal::entityTypeManager()->getStorage('node_type');
+
+  foreach ($types as $type) {
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', $type)
+      ->accessCheck(FALSE)
+      ->execute();
+    if ($nids) {
+      $node_storage->delete($node_storage->loadMultiple($nids));
+    }
+    $node_type = $type_storage->load($type);
+    if ($node_type) {
+      $node_type->delete();
+    }
+  }
+}

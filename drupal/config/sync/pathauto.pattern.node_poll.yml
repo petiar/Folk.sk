@@ -1,23 +1,14 @@
 uuid: 82bb55ba-10d8-4213-9c1b-3b692f528584
 langcode: sk
-status: true
+status: false
 dependencies:
-  config:
-    - node.type.poll
   module:
     - node
 id: node_poll
 label: 'Node: poll'
 type: 'canonical_entities:node'
 pattern: '/anketa/[node:title]'
-selection_criteria:
-  a71d1fac-aac9-4d50-b8e8-eb70d1aaedce:
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: node
-    bundles:
-      poll: poll
+selection_criteria: {  }
 selection_logic: and
 weight: -10
 relationships: {  }
