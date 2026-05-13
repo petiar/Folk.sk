@@ -27,6 +27,101 @@ function folk_migrate_update_10001(): void {
 }
 
 /**
+ * Delete fields field_ucinkujuci, upload, field_profil_kapely.
+ */
+function folk_migrate_update_10003(): void {
+  foreach (['field_ucinkujuci', 'upload', 'field_profil_kapely'] as $field) {
+    $storage = \Drupal\field\Entity\FieldStorageConfig::loadByName('node', $field);
+    if ($storage) {
+      $storage->delete();
+    }
+  }
+}
+
+/**
+ * Change field_datumcas from datetime to daterange, restore dates from D6.
+ */
+function folk_migrate_update_10004(): void {
+  \Drupal::service('module_installer')->install(['datetime_range']);
+
+  $db    = \Drupal::database();
+  $d6_db = \Drupal\Core\Database\Database::getConnection('default', 'migrate');
+
+  // Záloha pred zmazaním
+  $rows = [];
+  if ($db->schema()->tableExists('node__field_datumcas')) {
+    $rows = $db->select('node__field_datumcas', 'f')->fields('f')->execute()->fetchAll();
+  }
+
+  $storage = \Drupal\field\Entity\FieldStorageConfig::loadByName('node', 'field_datumcas');
+  if ($storage) {
+    $storage->delete();
+  }
+
+  \Drupal\field\Entity\FieldStorageConfig::create([
+    'field_name'  => 'field_datumcas',
+    'entity_type' => 'node',
+    'type'        => 'daterange',
+    'settings'    => ['datetime_type' => 'datetime'],
+    'cardinality' => 1,
+  ])->save();
+
+  \Drupal\field\Entity\FieldConfig::create([
+    'field_name'  => 'field_datumcas',
+    'entity_type' => 'node',
+    'bundle'      => 'akcia',
+    'label'       => 'Dátum a čas',
+    'required'    => FALSE,
+  ])->save();
+
+  // Ak máme zálohu (update z existujúceho D11), obnov ju
+  if ($rows) {
+    foreach ($rows as $row) {
+      $val = $row->field_datumcas_value;
+      $data = [
+        'bundle'                   => $row->bundle,
+        'deleted'                  => $row->deleted,
+        'entity_id'                => $row->entity_id,
+        'revision_id'              => $row->revision_id,
+        'langcode'                 => $row->langcode,
+        'delta'                    => $row->delta,
+        'field_datumcas_value'     => $val,
+        'field_datumcas_end_value' => $val,
+      ];
+      $db->insert('node__field_datumcas')->fields($data)->execute();
+      $db->insert('node_revision__field_datumcas')->fields($data)->execute();
+    }
+    return;
+  }
+
+  // Čistá inštalácia — načítaj z D6
+  $d6_rows  = $d6_db->query("SELECT nid, field_datumcas_value FROM content_type_akcia WHERE field_datumcas_value IS NOT NULL")->fetchAllKeyed();
+  $map      = $db->select('migrate_map_d6_node_complete__akcia', 'm')->fields('m', ['sourceid1', 'destid1'])->execute()->fetchAllKeyed();
+  $rev_map  = [];
+  foreach ($db->select('node_field_data', 'n')->fields('n', ['nid', 'vid', 'langcode'])->condition('type', 'akcia')->execute()->fetchAll() as $r) {
+    $rev_map[$r->nid] = ['vid' => $r->vid, 'langcode' => $r->langcode];
+  }
+
+  foreach ($d6_rows as $d6_nid => $d6_value) {
+    $d11_nid = $map[$d6_nid] ?? NULL;
+    if (!$d11_nid || !isset($rev_map[$d11_nid])) continue;
+    $value = str_replace(' ', 'T', $d6_value);
+    $data  = [
+      'bundle'                   => 'akcia',
+      'deleted'                  => 0,
+      'entity_id'                => $d11_nid,
+      'revision_id'              => $rev_map[$d11_nid]['vid'],
+      'langcode'                 => $rev_map[$d11_nid]['langcode'],
+      'delta'                    => 0,
+      'field_datumcas_value'     => $value,
+      'field_datumcas_end_value' => $value,
+    ];
+    $db->insert('node__field_datumcas')->fields($data)->execute();
+    $db->insert('node_revision__field_datumcas')->fields($data)->execute();
+  }
+}
+
+/**
  * Change field_vstupne from decimal to string (text).
  */
 function folk_migrate_update_10002(): void {

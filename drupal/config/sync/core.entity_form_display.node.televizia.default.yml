@@ -10,11 +10,9 @@ dependencies:
     - field.field.node.televizia.field_muzikant
     - field.field.node.televizia.field_suvisiaci_clanok
     - field.field.node.televizia.field_televizia_id
-    - field.field.node.televizia.upload
     - node.type.televizia
   module:
     - comment
-    - file
     - path
     - text
 id: node.televizia.default
@@ -97,6 +95,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 120
@@ -121,13 +124,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  upload:
-    type: file_generic
-    weight: 122
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   promote: true

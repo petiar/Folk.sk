@@ -5,11 +5,9 @@ dependencies:
   config:
     - field.field.node.redakcny_stlpcek.body
     - field.field.node.redakcny_stlpcek.comment
-    - field.field.node.redakcny_stlpcek.upload
     - node.type.redakcny_stlpcek
   module:
     - comment
-    - file
     - path
     - text
 id: node.redakcny_stlpcek.default
@@ -52,6 +50,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 120
@@ -76,13 +79,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  upload:
-    type: file_generic
-    weight: 122
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   promote: true

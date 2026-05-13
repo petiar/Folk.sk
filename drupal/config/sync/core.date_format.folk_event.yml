@@ -1,0 +1,7 @@
+langcode: sk
+status: true
+dependencies: {  }
+id: folk_event
+label: 'Folk event date'
+locked: false
+pattern: 'j.n.Y H:i'

@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.pozvanka.body
     - field.field.node.pozvanka.comment
-    - field.field.node.pozvanka.upload
     - node.type.pozvanka
   module:
     - text
@@ -32,4 +31,3 @@ content:
 hidden:
   comment: true
   langcode: true
-  upload: true

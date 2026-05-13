@@ -1,21 +1,21 @@
-uuid: 3bafd830-68e4-4b40-bd32-179073e7c190
-langcode: en
+uuid: 60d6b097-235a-4a8d-9e8c-b2a810360d23
+langcode: sk
 status: true
 dependencies:
   config:
     - field.storage.node.field_datumcas
     - node.type.akcia
   module:
-    - datetime
+    - datetime_range
 id: node.akcia.field_datumcas
 field_name: field_datumcas
 entity_type: node
 bundle: akcia
-label: 'Dátum, čas'
-description: 'Tuná zadajte čas začiatku akcie alebo festivalu.'
-required: true
+label: 'Dátum a čas'
+description: ''
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: daterange

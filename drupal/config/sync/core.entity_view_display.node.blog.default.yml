@@ -7,11 +7,9 @@ dependencies:
     - field.field.node.blog.body
     - field.field.node.blog.comment
     - field.field.node.blog.field_stitky_pre_oznacenie_blogo
-    - field.field.node.blog.upload
     - node.type.blog
   module:
     - comment
-    - file
     - text
     - user
 id: node.blog.default
@@ -47,14 +45,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  upload:
-    type: file_default
-    label: hidden
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 102
     region: content
 hidden:
   langcode: true

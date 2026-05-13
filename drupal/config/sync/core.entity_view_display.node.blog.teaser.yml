@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.blog.body
     - field.field.node.blog.comment
     - field.field.node.blog.field_stitky_pre_oznacenie_blogo
-    - field.field.node.blog.upload
     - node.type.blog
   module:
     - text
@@ -34,4 +33,3 @@ hidden:
   comment: true
   field_stitky_pre_oznacenie_blogo: true
   langcode: true
-  upload: true

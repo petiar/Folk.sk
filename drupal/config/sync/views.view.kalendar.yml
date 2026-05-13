@@ -3,7 +3,6 @@ langcode: sk
 status: true
 dependencies:
   config:
-    - field.storage.node.field_datumcas
     - field.storage.node.field_mesto
     - field.storage.node.field_miesto
     - node.type.akcia
@@ -39,9 +38,10 @@ display:
           label: ''
           element_label_colon: false
           settings:
-            date_format: custom
-            custom_date_format: 'j. n. Y'
+            format_type: folk_event
             timezone_override: ''
+            from_to: start
+            separator: ' – '
         title:
           id: title
           table: node_field_data
@@ -109,7 +109,7 @@ display:
           field: field_datumcas_value
           entity_type: node
           entity_field: field_datumcas
-          plugin_id: date
+          plugin_id: daterange
           order: DESC
       filters:
         status:
@@ -142,7 +142,7 @@ display:
           field: field_datumcas_value
           entity_type: node
           entity_field: field_datumcas
-          plugin_id: datetime
+          plugin_id: daterange
           operator: between
           group: 1
           exposed: true
@@ -196,7 +196,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_datumcas'
         - 'config:field.storage.node.field_mesto'
         - 'config:field.storage.node.field_miesto'
   page_1:
@@ -219,6 +218,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_datumcas'
         - 'config:field.storage.node.field_mesto'
         - 'config:field.storage.node.field_miesto'

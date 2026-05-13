@@ -12,15 +12,11 @@ dependencies:
     - field.field.node.akcia.field_mesto
     - field.field.node.akcia.field_miesto
     - field.field.node.akcia.field_muzikant
-    - field.field.node.akcia.field_profil_kapely
     - field.field.node.akcia.field_suvisiaci_clanok
     - field.field.node.akcia.field_titulny_obrazok
-    - field.field.node.akcia.field_ucinkujuci
     - field.field.node.akcia.field_vstupne
-    - field.field.node.akcia.upload
     - node.type.akcia
   module:
-    - datetime
     - link
     - text
     - user
@@ -41,29 +37,12 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_datumcas:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: fallback
-    third_party_settings: {  }
-    weight: -1
-    region: content
   field_miesto:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: -3
-    region: content
-  field_profil_kapely:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 8
     region: content
   field_suvisiaci_clanok:
     type: entity_reference_label
@@ -73,14 +52,6 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-  field_ucinkujuci:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -89,10 +60,10 @@ content:
 hidden:
   body: true
   comment: true
+  field_datumcas: true
   field_festival: true
   field_mesto: true
   field_muzikant: true
   field_titulny_obrazok: true
   field_vstupne: true
   langcode: true
-  upload: true
