@@ -35,7 +35,7 @@ jobs:
             vendor/bin/drush -r web updatedb -y
 
             echo "→ drush config:import"
-            vendor/bin/drush -r web config:import -y
+            vendor/bin/drush -r web config:import --source=../config/sync -y
 
             echo "→ drush cache:rebuild"
             vendor/bin/drush -r web cache:rebuild
