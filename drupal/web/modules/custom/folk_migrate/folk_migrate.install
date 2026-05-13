@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+
 /**
  * Delete unused content types and their nodes.
  */
@@ -20,5 +23,71 @@ function folk_migrate_update_10001(): void {
     if ($node_type) {
       $node_type->delete();
     }
+  }
+}
+
+/**
+ * Change field_vstupne from decimal to string (text).
+ */
+function folk_migrate_update_10002(): void {
+  $db = \Drupal::database();
+
+  // Záloha existujúcich hodnôt
+  $rows = $db->select('node__field_vstupne', 'f')
+    ->fields('f', ['entity_id', 'revision_id', 'langcode', 'delta', 'field_vstupne_value'])
+    ->execute()
+    ->fetchAll();
+
+  // Zmazanie starého decimal field storage (kaskádovo zmaže inštancie + tabuľky)
+  $storage = FieldStorageConfig::loadByName('node', 'field_vstupne');
+  if ($storage) {
+    $storage->delete();
+  }
+
+  // Nový string field storage
+  FieldStorageConfig::create([
+    'field_name'  => 'field_vstupne',
+    'entity_type' => 'node',
+    'type'        => 'string',
+    'settings'    => ['max_length' => 255],
+    'cardinality' => 1,
+  ])->save();
+
+  // Nová inštancia na bundle akcia
+  FieldConfig::create([
+    'field_name'  => 'field_vstupne',
+    'entity_type' => 'node',
+    'bundle'      => 'akcia',
+    'label'       => 'Vstupné',
+    'required'    => FALSE,
+  ])->save();
+
+  // Obnova hodnôt ako text
+  foreach ($rows as $row) {
+    $val = trim((string) $row->field_vstupne_value);
+    if (is_numeric($val)) {
+      $val = rtrim(rtrim($val, '0'), '.');
+    }
+    if ($val === '' || $val === '0') {
+      continue;
+    }
+    $db->insert('node__field_vstupne')->fields([
+      'bundle'              => 'akcia',
+      'deleted'             => 0,
+      'entity_id'           => $row->entity_id,
+      'revision_id'         => $row->revision_id,
+      'langcode'            => $row->langcode,
+      'delta'               => $row->delta,
+      'field_vstupne_value' => $val,
+    ])->execute();
+    $db->insert('node_revision__field_vstupne')->fields([
+      'bundle'              => 'akcia',
+      'deleted'             => 0,
+      'entity_id'           => $row->entity_id,
+      'revision_id'         => $row->revision_id,
+      'langcode'            => $row->langcode,
+      'delta'               => $row->delta,
+      'field_vstupne_value' => $val,
+    ])->execute();
   }
 }

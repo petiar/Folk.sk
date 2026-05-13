@@ -1,5 +1,5 @@
-uuid: 57fd1737-9052-440f-9fcb-9a71112ae908
-langcode: en
+uuid: cad29d2f-6ae9-4919-b6d4-1292d609ff5b
+langcode: sk
 status: true
 dependencies:
   module:
@@ -7,10 +7,11 @@ dependencies:
 id: node.field_vstupne
 field_name: field_vstupne
 entity_type: node
-type: decimal
+type: string
 settings:
-  precision: 10
-  scale: 2
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

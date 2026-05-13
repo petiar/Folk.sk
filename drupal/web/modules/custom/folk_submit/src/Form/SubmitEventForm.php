@@ -143,6 +143,13 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
       '#tree'       => TRUE,
       '#attributes' => ['class' => ['col-md-5', 'folk-submit-section']],
       'heading'     => ['#markup' => '<h2 class="folk-submit-section__title">Doplňujúce informácie</h2>'],
+      'field_vstupne' => [
+        '#type'        => 'textfield',
+        '#title'       => $this->t('Vstupné'),
+        '#required'    => FALSE,
+        '#placeholder' => $this->t('napr. 5 €, dobrovoľné, predpredaj 8 € / na mieste 10 €'),
+        '#maxlength'   => 255,
+      ],
       'field_akcia_webstranka' => [
         '#type'        => 'url',
         '#title'       => $this->t('Web akcie'),
@@ -202,6 +209,11 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
     $body = $form_state->getValue(['section_basic', 'body']);
     if (!empty($body['value'])) {
       $node->set('body', ['value' => $body['value'], 'format' => $body['format']]);
+    }
+
+    $vstupne = $form_state->getValue(['sections_row', 'extra', 'field_vstupne']) ?? '';
+    if ($vstupne !== '') {
+      $node->set('field_vstupne', $vstupne);
     }
 
     $web = $form_state->getValue(['sections_row', 'extra', 'field_akcia_webstranka']) ?? '';
