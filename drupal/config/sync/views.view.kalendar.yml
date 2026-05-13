@@ -40,7 +40,7 @@ display:
           settings:
             format_type: folk_event
             timezone_override: ''
-            from_to: start
+            from_to: start_date
             separator: ' – '
         title:
           id: title
