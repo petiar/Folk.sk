@@ -1,0 +1,22 @@
+uuid: 383df158-eec6-4ae5-8fcb-95a3990bf537
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - folksk
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: folksk_secondary_local_tasks
+theme: folksk
+region: highlighted
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Sekundárne karty'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

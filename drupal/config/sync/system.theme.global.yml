@@ -8,7 +8,7 @@ favicon:
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: true
+  favicon: false
   node_user_picture: true
 logo:
   path: ''

@@ -1,0 +1,22 @@
+uuid: f088bbb0-0142-433e-bb8e-959f667a4594
+langcode: sk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - folksk
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: folksk_content
+theme: folksk
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Hlavný obsah stránky'
+  label_display: '0'
+  provider: system
+visibility: {  }

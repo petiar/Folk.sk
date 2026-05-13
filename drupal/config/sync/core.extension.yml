@@ -13,13 +13,17 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  folk_blocks: 0
   folk_migrate: 0
+  folk_muzikant: 0
+  folk_submit: 0
   help: 0
   history: 0
   image: 0
@@ -28,6 +32,8 @@ module:
   locale: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
   migrate: 0
   migrate_drupal: 0
   migrate_plus: 0
@@ -39,20 +45,30 @@ module:
   path: 0
   path_alias: 0
   phpass: 0
+  schema_article: 0
+  schema_event: 0
+  schema_metatag: 0
+  schema_web_page: 0
+  schema_web_site: 0
   search: 0
   shortcut: 0
+  simple_sitemap: 0
   system: 0
   taxonomy: 0
   text: 0
   token: 0
   toolbar: 0
+  tracer: 0
   update: 0
   user: 0
   views_ui: 0
+  webprofiler: 0
   pathauto: 1
   views: 10
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  folksk: 0
+  bootstrap: 0
 profile: standard

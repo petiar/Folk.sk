@@ -1,0 +1,22 @@
+uuid: 10c6249d-75b8-4245-a854-f10622aaad6a
+langcode: sk
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - folksk
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: folksk_powered
+theme: folksk
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Beží na Drupale'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: d7ecc8fb-ae5b-421f-b3ec-31f69ec57079
+langcode: sk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - folksk
+id: folksk_nazovstranky
+theme: folksk
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Názov stránky'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/kalendar\r\n/katalog"

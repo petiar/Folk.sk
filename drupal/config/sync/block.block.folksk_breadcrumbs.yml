@@ -1,0 +1,22 @@
+uuid: 5947f843-5cde-4c50-be3b-50358e5e4fa7
+langcode: sk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - folksk
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: folksk_breadcrumbs
+theme: folksk
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

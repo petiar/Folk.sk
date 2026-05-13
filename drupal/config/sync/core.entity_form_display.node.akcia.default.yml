@@ -13,9 +13,9 @@ dependencies:
     - field.field.node.akcia.field_muzikant
     - field.field.node.akcia.field_profil_kapely
     - field.field.node.akcia.field_suvisiaci_clanok
+    - field.field.node.akcia.field_titulny_obrazok
     - field.field.node.akcia.field_ucinkujuci
     - field.field.node.akcia.field_vstupne
-    - field.field.node.akcia.field_vstupne_nezname
     - field.field.node.akcia.upload
     - node.type.akcia
   module:
@@ -137,13 +137,6 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_vstupne_nezname:
-    type: boolean_checkbox
-    weight: 2
-    region: content
-    settings:
-      display_label: false
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -154,6 +147,11 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -190,5 +188,6 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
 hidden:
+  field_titulny_obrazok: true
   promote: true
   sticky: true

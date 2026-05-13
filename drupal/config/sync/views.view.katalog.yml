@@ -1,0 +1,145 @@
+uuid: 39f46c6b-db5e-4b79-9579-aa3dc3aec1ee
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_booklet
+    - field.storage.node.field_nazov_kapely
+    - image.style.medium
+    - node.type.katalog
+  module:
+    - image
+    - node
+    - user
+id: katalog
+label: 'Katalóg albumov'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Katalóg albumov'
+      fields:
+        field_booklet:
+          id: field_booklet
+          table: node__field_booklet
+          field: field_booklet
+          entity_type: node
+          entity_field: field_booklet
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          settings:
+            image_style: medium
+            image_link: content
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          link_to_entity: true
+        field_nazov_kapely:
+          id: field_nazov_kapely
+          table: node__field_nazov_kapely
+          field: field_nazov_kapely
+          entity_type: node
+          entity_field: field_nazov_kapely
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+      pager:
+        type: none
+        options:
+          offset: 0
+          id: 0
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          plugin_id: bundle
+          operator: in
+          value:
+            katalog: katalog
+          group: 1
+          expose:
+            operator: ''
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      use_more: false
+      rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_booklet'
+        - 'config:field.storage.node.field_nazov_kapely'
+  page_1:
+    id: page_1
+    display_title: Stránka
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: katalog
+      menu:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_booklet'
+        - 'config:field.storage.node.field_nazov_kapely'

@@ -1,0 +1,20 @@
+uuid: caafe401-9fcf-48d3-ad61-33a6cff51ac2
+langcode: sk
+status: true
+dependencies:
+  module:
+    - folk_submit
+  theme:
+    - folksk
+id: folksk_submit_article
+theme: folksk
+region: sidebar
+weight: -6
+provider: null
+plugin: folk_submit_article_block
+settings:
+  id: folk_submit_article_block
+  label: 'Napíšte pre folk.sk'
+  label_display: visible
+  provider: folk_submit
+visibility: {  }

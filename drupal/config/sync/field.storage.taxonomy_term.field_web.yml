@@ -1,0 +1,19 @@
+uuid: ce652a48-e583-4e49-8f4e-e8aad84017c9
+langcode: sk
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_web
+field_name: field_web
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

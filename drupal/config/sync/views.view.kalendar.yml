@@ -1,0 +1,224 @@
+uuid: 64d2e080-ade6-4175-85cd-2fda13be5cec
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datumcas
+    - field.storage.node.field_mesto
+    - field.storage.node.field_miesto
+    - node.type.akcia
+    - taxonomy.vocabulary.mesto
+  module:
+    - datetime
+    - node
+    - taxonomy
+    - user
+id: kalendar
+label: 'Kalendár akcií'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Kalendár akcií'
+      fields:
+        field_datumcas:
+          id: field_datumcas
+          table: node__field_datumcas
+          field: field_datumcas
+          entity_type: node
+          entity_field: field_datumcas
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          settings:
+            date_format: custom
+            custom_date_format: 'j. n. Y'
+            timezone_override: ''
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          link_to_entity: true
+        field_miesto:
+          id: field_miesto
+          table: node__field_miesto
+          field: field_miesto
+          entity_type: node
+          entity_field: field_miesto
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+        field_mesto:
+          id: field_mesto
+          table: node__field_mesto
+          field: field_mesto
+          entity_type: node
+          entity_field: field_mesto
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          settings:
+            link: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: ›
+            previous: ‹
+            first: «
+            last: »
+          expose:
+            items_per_page: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filtrovať
+          reset_button: true
+          reset_button_label: 'Zrušiť filter'
+          exposed_sorts_label: Zoradiť
+          expose_sort_order: true
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        field_datumcas_value:
+          id: field_datumcas_value
+          table: node__field_datumcas
+          field: field_datumcas_value
+          entity_type: node
+          entity_field: field_datumcas
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          plugin_id: bundle
+          operator: in
+          value:
+            akcia: akcia
+          group: 1
+          expose:
+            operator: ''
+        field_datumcas_value:
+          id: field_datumcas_value
+          table: node__field_datumcas
+          field: field_datumcas_value
+          entity_type: node
+          entity_field: field_datumcas
+          plugin_id: datetime
+          operator: between
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_datumcas_value_op
+            label: Rok
+            use_operator: false
+            operator: field_datumcas_value_op
+            identifier: rok
+            required: false
+          granularity: year
+        field_mesto_target_id:
+          id: field_mesto_target_id
+          table: node__field_mesto
+          field: field_mesto_target_id
+          entity_type: node
+          entity_field: field_mesto
+          plugin_id: taxonomy_index_tid
+          operator: or
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_mesto_target_id_op
+            label: Mesto
+            use_operator: false
+            operator: field_mesto_target_id_op
+            identifier: mesto
+            required: false
+            multiple: false
+          vid: mesto
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      use_more: false
+      rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_datumcas'
+        - 'config:field.storage.node.field_mesto'
+        - 'config:field.storage.node.field_miesto'
+  page_1:
+    id: page_1
+    display_title: Stránka
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: kalendar
+      menu:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_datumcas'
+        - 'config:field.storage.node.field_mesto'
+        - 'config:field.storage.node.field_miesto'

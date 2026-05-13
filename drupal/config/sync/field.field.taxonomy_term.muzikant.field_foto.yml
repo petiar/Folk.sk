@@ -1,0 +1,38 @@
+uuid: b9222a72-2f0c-4b72-bbcf-f25f9e08be2d
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_foto
+    - taxonomy.vocabulary.muzikant
+  module:
+    - image
+id: taxonomy_term.muzikant.field_foto
+field_name: field_foto
+entity_type: taxonomy_term
+bundle: muzikant
+label: Fotografia
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -1,0 +1,23 @@
+uuid: 267dadcf-a1d0-43db-9964-fb80f29fa436
+langcode: sk
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - folksk
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: folksk_search_form_narrow
+theme: folksk
+region: sidebar
+weight: -8
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Vyhľadávací formulár (úzky)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

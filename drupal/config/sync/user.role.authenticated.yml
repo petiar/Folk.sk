@@ -2,11 +2,8 @@ uuid: 2c6ddc9b-73ce-4f56-ba2d-27031049c70e
 langcode: sk
 status: true
 dependencies:
-  config:
-    - filter.format.neuplne_html
   module:
     - comment
-    - filter
     - search
     - system
 _core:
@@ -23,4 +20,3 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use advanced search'
-  - 'use text format neuplne_html'

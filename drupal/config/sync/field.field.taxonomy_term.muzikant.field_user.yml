@@ -1,0 +1,21 @@
+uuid: 1f21a6d8-2ae4-484d-8b86-3fd6fa4ece80
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_user
+    - taxonomy.vocabulary.muzikant
+id: taxonomy_term.muzikant.field_user
+field_name: field_user
+entity_type: taxonomy_term
+bundle: muzikant
+label: 'Nárokovaný používateľom'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 0ce1e282-bfa0-47ca-8362-0c1237e51640
+langcode: sk
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - folksk
+id: folksk_search
+theme: folksk
+region: header
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Hľadať
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

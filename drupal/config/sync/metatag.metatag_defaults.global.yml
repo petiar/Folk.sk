@@ -1,0 +1,12 @@
+uuid: ec8b18e5-6034-46f9-97bb-8608febbb55c
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Globálny
+tags:
+  og_site_name: folk.sk
+  og_locale: sk_SK
+  robots: 'index, follow'

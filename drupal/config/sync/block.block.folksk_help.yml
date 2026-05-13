@@ -1,0 +1,22 @@
+uuid: a2873ca6-2071-43e3-91ff-56f51a41be1b
+langcode: sk
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - folksk
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: folksk_help
+theme: folksk
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Pomoc
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,3 +1,15 @@
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
-definitions: {  }
+definitions:
+  folk_submit__form:
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+    weight: 10
+  folk_submit__event_form:
+    enabled: false
+    menu_name: main
+    parent: ''
+    weight: 11
+    expanded: false

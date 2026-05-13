@@ -1,0 +1,23 @@
+uuid: 01e1c580-5c64-4507-9edd-2afc6afcee1e
+langcode: sk
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: 8-d-YwyCsaMm3ejNiJm_5ZrKplfG2umuXc0J1vtmrj4
+id: bootstrap_search_form_narrow
+theme: bootstrap
+region: sidebar_second
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Vyhľadávací formulár (úzky)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

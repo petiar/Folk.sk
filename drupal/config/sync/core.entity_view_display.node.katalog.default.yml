@@ -50,7 +50,7 @@ content:
     region: content
   field_booklet:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -61,7 +61,7 @@ content:
     region: content
   field_cena:
     type: number_integer
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -69,22 +69,22 @@ content:
     weight: 1
     region: content
   field_cena_informacia:
-    type: text_default
-    label: above
+    type: basic_string
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_kontaktne_info:
-    type: text_default
-    label: above
+    type: basic_string
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_kontaktny_web:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -104,7 +104,7 @@ content:
     region: content
   field_rok_vydania:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: fallback
@@ -113,7 +113,7 @@ content:
     region: content
   field_suvisiaci_clanok:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -121,7 +121,7 @@ content:
     region: content
   field_ukazka_piesne:
     type: file_default
-    label: above
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }

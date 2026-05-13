@@ -11,11 +11,12 @@ dependencies:
     - field.field.node.clanok.field_o_com_nam_pisete_
     - field.field.node.clanok.field_suvisiace_v_katalogu
     - field.field.node.clanok.field_suvisiaci_clanok
-    - field.field.node.clanok.upload
+    - field.field.node.clanok.field_titulny_obrazok
+    - image.style.thumbnail
     - node.type.clanok
   module:
     - comment
-    - file
+    - image
     - path
     - text
 id: node.clanok.default
@@ -93,6 +94,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_titulny_obrazok:
+    type: image_image
+    weight: 123
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -130,13 +139,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  upload:
-    type: file_generic
-    weight: 122
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   promote: true

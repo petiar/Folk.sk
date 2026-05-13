@@ -1,0 +1,20 @@
+uuid: 7302456a-8d73-4da9-9f07-06b92c75f996
+langcode: sk
+status: true
+dependencies:
+  module:
+    - folk_blocks
+  theme:
+    - folksk
+id: folksk_related_articles
+theme: folksk
+region: sidebar
+weight: -7
+provider: null
+plugin: folk_related_articles
+settings:
+  id: folk_related_articles
+  label: 'Súvisiace články'
+  label_display: visible
+  provider: folk_blocks
+visibility: {  }

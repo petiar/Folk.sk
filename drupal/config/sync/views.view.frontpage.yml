@@ -26,15 +26,18 @@ display:
       title: 'Úvodná stránka'
       fields: {  }
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 20
           total_pages: null
           id: 0
           tags:
             next: 'Nasledujúca ›'
             previous: '‹ Predchádzajúca'
+            first: «
+            last: »
           expose:
             items_per_page: false
             items_per_page_label: 'Položiek na stránku'
@@ -43,6 +46,7 @@ display:
             items_per_page_options_all_label: '- Všetky -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:

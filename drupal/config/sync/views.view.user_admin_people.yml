@@ -341,7 +341,7 @@ display:
           type: timestamp_ago
           settings:
             future_format: '@interval hence'
-            past_format: '@interval ago'
+            past_format: 'pred @interval'
             granularity: 2
         operations:
           id: operations

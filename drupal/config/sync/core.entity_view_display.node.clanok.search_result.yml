@@ -12,7 +12,7 @@ dependencies:
     - field.field.node.clanok.field_o_com_nam_pisete_
     - field.field.node.clanok.field_suvisiace_v_katalogu
     - field.field.node.clanok.field_suvisiaci_clanok
-    - field.field.node.clanok.upload
+    - field.field.node.clanok.field_titulny_obrazok
     - node.type.clanok
   module:
     - user
@@ -42,5 +42,5 @@ hidden:
   field_muzikant: true
   field_o_com_nam_pisete_: true
   field_suvisiace_v_katalogu: true
+  field_titulny_obrazok: true
   langcode: true
-  upload: true

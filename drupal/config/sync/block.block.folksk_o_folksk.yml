@@ -1,0 +1,23 @@
+uuid: 7afd9d04-4488-4ad8-8bd9-39d8d4ffe7e9
+langcode: sk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:91c63ae3-92e7-4f85-b616-ae186e43041a'
+  module:
+    - block_content
+  theme:
+    - folksk
+id: folksk_o_folksk
+theme: folksk
+region: sidebar
+weight: -5
+provider: null
+plugin: 'block_content:91c63ae3-92e7-4f85-b616-ae186e43041a'
+settings:
+  id: 'block_content:91c63ae3-92e7-4f85-b616-ae186e43041a'
+  label: 'O folk.sk'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

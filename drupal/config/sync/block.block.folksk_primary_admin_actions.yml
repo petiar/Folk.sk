@@ -1,0 +1,20 @@
+uuid: 30dd48df-2ce5-4d0a-bc9b-bfca854d44e5
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - folksk
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: folksk_primary_admin_actions
+theme: folksk
+region: highlighted
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
