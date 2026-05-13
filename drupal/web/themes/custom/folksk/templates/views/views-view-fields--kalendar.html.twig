@@ -1,0 +1,28 @@
+<div class="event-row">
+
+  {# Dátum #}
+  <div class="event-row__date">
+    {{ fields.field_datumcas.content }}
+  </div>
+
+  {# Info #}
+  <div class="event-row__info">
+    <div class="event-row__title">
+      {{ fields.title.content }}
+    </div>
+    <div class="event-row__meta">
+      {% if fields.field_miesto.content|render|trim %}
+        <span class="event-row__place">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          {{ fields.field_miesto.content }}
+        </span>
+      {% endif %}
+      {% if fields.field_mesto.content|render|trim %}
+        <span class="event-row__city">{{ fields.field_mesto.content }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+</div>

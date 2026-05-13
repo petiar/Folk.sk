@@ -1,0 +1,31 @@
+<div{{ attributes.addClass('taxonomy-term', 'vocabulary-muzikant') }}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div class="content">
+    {{ content|without('field_user') }}
+  </div>
+
+  {# Claim / Edit tlačidlá #}
+  {% if claim_url is defined %}
+    <div class="muzikant-claim mt-3">
+      <a href="{{ claim_url }}" class="btn btn-outline-primary btn-sm">
+        Nárokovať tento profil
+      </a>
+      <small class="text-muted ms-2">Ste týmto muzikantom? Prihláste sa a nárokujte si profil.</small>
+    </div>
+  {% endif %}
+
+  {% if edit_url is defined %}
+    <div class="muzikant-edit mt-3">
+      <a href="{{ edit_url }}" class="btn btn-primary btn-sm">
+        ✎ Upraviť môj profil
+      </a>
+    </div>
+  {% endif %}
+
+</div>

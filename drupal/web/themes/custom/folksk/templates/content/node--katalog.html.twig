@@ -1,0 +1,104 @@
+{{ attach_library('bootstrap/node') }}
+
+<article{{ attributes.addClass('node', 'node--type-katalog', 'node--view-mode-full') }}>
+
+  {{ title_prefix }}{{ title_suffix }}
+
+  <div class="album-detail">
+
+    {# Obal + základné info #}
+    <div class="album-detail__top row g-5 mb-5">
+
+      {# Obal albumu #}
+      <div class="col-md-4 text-center">
+        {% if content.field_booklet|render|trim %}
+          <div class="album-detail__cover">
+            {{ content.field_booklet }}
+          </div>
+        {% endif %}
+      </div>
+
+      {# Metadata #}
+      <div class="col-md-8">
+        <h1 class="album-detail__title">{{ label }}</h1>
+
+        {% if content.field_nazov_kapely|render|trim %}
+          <div class="album-detail__artist">{{ content.field_nazov_kapely }}</div>
+        {% endif %}
+
+        <div class="album-detail__meta">
+          {% if content.field_zaner|render|trim %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Žáner</span>
+              <span class="album-detail__meta-value">{{ content.field_zaner }}</span>
+            </div>
+          {% endif %}
+
+          {% if node.field_rok_vydania.value %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Rok vydania</span>
+              <span class="album-detail__meta-value">{{ node.field_rok_vydania.value|date('Y') }}</span>
+            </div>
+          {% endif %}
+
+          {% if content.field_muzikant|render|trim %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Muzikant</span>
+              <span class="album-detail__meta-value">{{ content.field_muzikant }}</span>
+            </div>
+          {% endif %}
+
+          {% if content.field_cena|render|trim %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Cena</span>
+              <span class="album-detail__meta-value album-detail__price">
+                {{ content.field_cena }}
+                {% if content.field_cena_informacia|render|trim %}
+                  <small>— {{ content.field_cena_informacia }}</small>
+                {% endif %}
+              </span>
+            </div>
+          {% endif %}
+
+          {% if content.field_kontaktny_web|render|trim %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Web</span>
+              <span class="album-detail__meta-value">{{ content.field_kontaktny_web }}</span>
+            </div>
+          {% endif %}
+
+          {% if content.field_kontaktne_info|render|trim %}
+            <div class="album-detail__meta-row">
+              <span class="album-detail__meta-label">Kontakt</span>
+              <span class="album-detail__meta-value">{{ content.field_kontaktne_info }}</span>
+            </div>
+          {% endif %}
+        </div>
+
+        {% if content.field_ukazka_piesne|render|trim %}
+          <div class="album-detail__sample mt-3">
+            <strong>Ukážka:</strong>
+            {{ content.field_ukazka_piesne }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {# Popis albumu #}
+    {% if content.body|render|trim %}
+      <div class="album-detail__body">
+        <h2 class="album-detail__section-title">O albume</h2>
+        {{ content.body }}
+      </div>
+    {% endif %}
+
+    {# Komentáre #}
+    {% if content.comment %}
+      <div class="node__comments mt-5" id="comments">
+        {{ content.comment }}
+      </div>
+    {% endif %}
+
+  </div>
+
+</article>

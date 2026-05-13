@@ -1,0 +1,27 @@
+{{ attach_library('folksk/global') }}
+
+<div class="view-kalendar">
+
+  {# Nadpis a popis #}
+  <div class="view-kalendar__header mb-4">
+    <h1 class="view-kalendar__title">Kalendár akcií</h1>
+    <p class="text-muted">Prehľad koncertov, festivalov a podujatí</p>
+  </div>
+
+{# Zoznam udalostí #}
+  {% if rows %}
+    <div class="view-kalendar__list">
+      {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="view-kalendar__empty text-center py-5 text-muted">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {# Pager #}
+  {% if pager %}
+    <div class="mt-4">{{ pager }}</div>
+  {% endif %}
+
+</div>

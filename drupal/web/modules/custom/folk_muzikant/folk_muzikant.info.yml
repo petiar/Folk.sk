@@ -1,0 +1,9 @@
+name: 'Folk Muzikant'
+type: module
+description: 'Nárokovanie a správa profilov muzikantov'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:taxonomy
+  - drupal:user
+  - drupal:field

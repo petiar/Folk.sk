@@ -1,0 +1,11 @@
+<div class="node-edit-form">
+  <div class="layout-region layout-region-node-main">
+    {{ form|without('advanced', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-node-secondary mt-4">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-node-footer mt-3">
+    {{ form.actions }}
+  </div>
+</div>

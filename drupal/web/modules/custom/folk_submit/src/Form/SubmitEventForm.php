@@ -8,10 +8,11 @@ use Drupal\Core\Mail\MailManagerInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\Core\Security\TrustedCallbackInterface;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class SubmitEventForm extends FormBase {
+class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
 
   public function __construct(
     protected EntityTypeManagerInterface $entityTypeManager,
@@ -62,72 +63,110 @@ class SubmitEventForm extends FormBase {
     }
 
     $form['#attributes']['enctype'] = 'multipart/form-data';
+    $form['#attributes']['class'][] = 'folk-submit-form';
 
-    $form['title'] = [
+    // ── Sekcia: Základné info ───────────────────────────────────────────────
+    $form['section_basic'] = [
+      '#type'       => 'container',
+      '#tree'       => TRUE,
+      '#attributes' => ['class' => ['folk-submit-section']],
+    ];
+    $form['section_basic']['heading'] = [
+      '#markup' => '<h2 class="folk-submit-section__title">O akcii</h2>',
+    ];
+    $form['section_basic']['title'] = [
       '#type'        => 'textfield',
       '#title'       => $this->t('Názov akcie'),
       '#required'    => TRUE,
       '#maxlength'   => 255,
-      '#placeholder' => $this->t('Napr. Lodenica 2025 – Komorná scéna'),
+      '#placeholder' => $this->t('Koncert folkovej hviezdy...'),
+      '#attributes'  => ['class' => ['form-control-lg']],
     ];
-
-    $form['field_datumcas'] = [
-      '#type'     => 'datetime',
-      '#title'    => $this->t('Dátum a čas'),
-      '#required' => TRUE,
-      '#date_date_element' => 'date',
-      '#date_time_element' => 'time',
-    ];
-
-    $form['field_miesto'] = [
-      '#type'        => 'textarea',
-      '#title'       => $this->t('Miesto konania'),
-      '#required'    => TRUE,
-      '#rows'        => 2,
-      '#placeholder' => $this->t('Napr. Amfiteáter, Trenčín'),
-    ];
-
-    $form['field_mesto'] = [
-      '#type'         => 'select',
-      '#title'        => $this->t('Mesto'),
-      '#options'      => $this->getTermOptions('mesto'),
-      '#empty_option' => $this->t('- Vyberte mesto -'),
-      '#required'     => TRUE,
-    ];
-
-    $form['body'] = [
-      '#type'     => 'text_format',
-      '#title'    => $this->t('Popis akcie'),
-      '#required' => FALSE,
-      '#format'   => 'basic_html',
+    $form['section_basic']['body'] = [
+      '#type'            => 'text_format',
+      '#title'           => $this->t('Popis akcie'),
+      '#required'        => FALSE,
+      '#format'          => 'basic_html',
       '#allowed_formats' => ['basic_html', 'full_html'],
-      '#rows'     => 10,
+      '#rows'            => 8,
     ];
 
-    $form['field_akcia_webstranka'] = [
-      '#type'        => 'url',
-      '#title'       => $this->t('Web akcie'),
-      '#required'    => FALSE,
-      '#placeholder' => 'https://',
-      '#maxlength'   => 2048,
+    // ── Sekcie: Kedy a kde + Doplňujúce — vedľa seba ──────────────────────
+    $form['sections_row'] = [
+      '#type'       => 'container',
+      '#tree'       => TRUE,
+      '#attributes' => ['class' => ['row', 'g-4']],
     ];
 
-    $form['field_titulny_obrazok'] = [
-      '#type'              => 'managed_file',
-      '#title'             => $this->t('Obrázok'),
-      '#description'       => $this->t('Povolené formáty: jpg, jpeg, png, gif, webp. Max. 10 MB.'),
-      '#upload_location'   => 'public://akcie/' . date('Y/m'),
-      '#upload_validators' => [
-        'FileExtension' => ['extensions' => 'jpg jpeg png gif webp'],
-        'FileSizeLimit' => ['fileLimit' => 10 * 1024 * 1024],
+    // Kedy a kde
+    $form['sections_row']['when'] = [
+      '#type'       => 'container',
+      '#tree'       => TRUE,
+      '#attributes' => ['class' => ['col-md-7', 'folk-submit-section']],
+      'heading'     => ['#markup' => '<h2 class="folk-submit-section__title">Kedy a kde</h2>'],
+      'datetime_row' => [
+        '#type'       => 'container',
+        '#tree'       => TRUE,
+        '#attributes' => ['class' => ['folk-submit-datetime-row']],
+        'datum' => [
+          '#type'     => 'date',
+          '#title'    => $this->t('Dátum'),
+          '#required' => TRUE,
+        ],
+        'cas' => [
+          '#type'       => 'textfield',
+          '#title'      => $this->t('Čas'),
+          '#required'   => FALSE,
+          '#size'       => 8,
+          '#maxlength'  => 5,
+          '#pre_render' => [[static::class, 'setTimeType']],
+        ],
       ],
-      '#multiple'          => FALSE,
+      'field_miesto' => [
+        '#type'        => 'textfield',
+        '#title'       => $this->t('Miesto konania'),
+        '#required'    => TRUE,
+        '#placeholder' => $this->t('Napr. Amfiteáter Trenčín'),
+      ],
+      'field_mesto' => [
+        '#type'         => 'select',
+        '#title'        => $this->t('Mesto'),
+        '#options'      => $this->getTermOptions('mesto'),
+        '#empty_option' => $this->t('- Vyberte mesto -'),
+        '#required'     => TRUE,
+      ],
+    ];
+
+    // Doplňujúce informácie
+    $form['sections_row']['extra'] = [
+      '#type'       => 'container',
+      '#tree'       => TRUE,
+      '#attributes' => ['class' => ['col-md-5', 'folk-submit-section']],
+      'heading'     => ['#markup' => '<h2 class="folk-submit-section__title">Doplňujúce informácie</h2>'],
+      'field_akcia_webstranka' => [
+        '#type'        => 'url',
+        '#title'       => $this->t('Web akcie'),
+        '#required'    => FALSE,
+        '#placeholder' => 'https://',
+        '#maxlength'   => 2048,
+      ],
+      'field_titulny_obrazok' => [
+        '#type'              => 'managed_file',
+        '#title'             => $this->t('Plagát / obrázok akcie'),
+        '#description'       => $this->t('jpg, png, gif, webp — max. 10 MB'),
+        '#upload_location'   => 'public://akcie/' . date('Y/m'),
+        '#upload_validators' => [
+          'FileExtension' => ['extensions' => 'jpg jpeg png gif webp'],
+          'FileSizeLimit' => ['fileLimit' => 10 * 1024 * 1024],
+        ],
+        '#multiple' => FALSE,
+      ],
     ];
 
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = [
       '#type'        => 'submit',
-      '#value'       => $this->t('Odoslať akciu'),
+      '#value'       => $this->t('Odoslať akciu na schválenie'),
       '#button_type' => 'primary',
     ];
 
@@ -135,52 +174,48 @@ class SubmitEventForm extends FormBase {
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state): void {
-    $values = $form_state->getValues();
-
     $node = $this->entityTypeManager->getStorage('node')->create([
       'type'     => 'akcia',
-      'title'    => $values['title'],
+      'title'    => $form_state->getValue(['section_basic', 'title']),
       'uid'      => $this->currentUser->id(),
       'status'   => 0,
       'langcode' => $this->languageManager->getCurrentLanguage()->getId(),
     ]);
 
-    // Dátum a čas
-    if (!empty($values['field_datumcas'])) {
-      $node->set('field_datumcas', $values['field_datumcas']->format('Y-m-d\TH:i:s'));
+    // Dátum + čas — hodnoty sú vnorené v kontajneroch
+    $datum = $form_state->getValue(['sections_row', 'when', 'datetime_row', 'datum']) ?? '';
+    $cas   = $form_state->getValue(['sections_row', 'when', 'datetime_row', 'cas'])   ?? '00:00';
+    if ($datum) {
+      $node->set('field_datumcas', $datum . 'T' . ($cas ?: '00:00') . ':00');
     }
 
-    // Miesto
-    if (!empty($values['field_miesto'])) {
-      $node->set('field_miesto', $values['field_miesto']);
+    $miesto = $form_state->getValue(['sections_row', 'when', 'field_miesto']) ?? '';
+    if ($miesto) {
+      $node->set('field_miesto', $miesto);
     }
 
-    // Mesto (taxonomy)
-    if (!empty($values['field_mesto'])) {
-      $node->set('field_mesto', ['target_id' => $values['field_mesto']]);
+    $mesto = $form_state->getValue(['sections_row', 'when', 'field_mesto']) ?? '';
+    if ($mesto) {
+      $node->set('field_mesto', ['target_id' => $mesto]);
     }
 
-    // Popis
-    if (!empty($values['body']['value'])) {
-      $node->set('body', [
-        'value'  => $values['body']['value'],
-        'format' => $values['body']['format'],
-      ]);
+    $body = $form_state->getValue(['section_basic', 'body']);
+    if (!empty($body['value'])) {
+      $node->set('body', ['value' => $body['value'], 'format' => $body['format']]);
     }
 
-    // Web
-    if (!empty($values['field_akcia_webstranka'])) {
-      $node->set('field_akcia_webstranka', ['uri' => $values['field_akcia_webstranka']]);
+    $web = $form_state->getValue(['sections_row', 'extra', 'field_akcia_webstranka']) ?? '';
+    if ($web) {
+      $node->set('field_akcia_webstranka', ['uri' => $web]);
     }
 
-    // Obrázok
-    $fid = $values['field_titulny_obrazok'] ?? NULL;
+    $fid = $form_state->getValue(['sections_row', 'extra', 'field_titulny_obrazok']) ?? NULL;
     if ($fid) {
       $file = $this->entityTypeManager->getStorage('file')->load(is_array($fid) ? reset($fid) : $fid);
       if ($file) {
         $file->setPermanent();
         $file->save();
-        $node->set('field_titulny_obrazok', ['target_id' => $file->id(), 'alt' => $values['title']]);
+        $node->set('field_titulny_obrazok', ['target_id' => $file->id(), 'alt' => $node->label()]);
       }
     }
 
@@ -189,10 +224,19 @@ class SubmitEventForm extends FormBase {
 
     $this->messenger()->addStatus($this->t(
       'Ďakujeme! Akcia „@title" bola odoslaná a čaká na schválenie.',
-      ['@title' => $values['title']]
+      ['@title' => $node->label()]
     ));
 
     $form_state->setRedirect('<front>');
+  }
+
+  public static function trustedCallbacks(): array {
+    return ['setTimeType'];
+  }
+
+  public static function setTimeType(array $element): array {
+    $element['#attributes']['type'] = 'time';
+    return $element;
   }
 
   private function getTermOptions(string $vocabulary): array {

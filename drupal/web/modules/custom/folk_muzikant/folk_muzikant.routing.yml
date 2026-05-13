@@ -1,0 +1,41 @@
+folk_muzikant.find:
+  path: '/muzikant/najst-profil'
+  defaults:
+    _form: '\Drupal\folk_muzikant\Form\FindMuzikantForm'
+    _title: 'Nájsť môj profil muzikanta'
+  requirements:
+    _role: 'authenticated'
+
+folk_muzikant.create:
+  path: '/muzikant/vytvorit-profil'
+  defaults:
+    _form: '\Drupal\folk_muzikant\Form\CreateMuzikantForm'
+    _title: 'Vytvoriť profil muzikanta'
+  requirements:
+    _role: 'authenticated'
+
+folk_muzikant.claim:
+  path: '/muzikant/{taxonomy_term}/narokovat'
+  defaults:
+    _form: '\Drupal\folk_muzikant\Form\ClaimMuzikantForm'
+    _title: 'Nárokovanie profilu muzikanta'
+  requirements:
+    _role: 'authenticated'
+    taxonomy_term: '\d+'
+  options:
+    parameters:
+      taxonomy_term:
+        type: entity:taxonomy_term
+
+folk_muzikant.edit:
+  path: '/muzikant/{taxonomy_term}/upravit'
+  defaults:
+    _form: '\Drupal\folk_muzikant\Form\EditMuzikantForm'
+    _title: 'Upraviť profil muzikanta'
+  requirements:
+    _custom_access: '\Drupal\folk_muzikant\Access\MuzikantAccess::editAccess'
+    taxonomy_term: '\d+'
+  options:
+    parameters:
+      taxonomy_term:
+        type: entity:taxonomy_term

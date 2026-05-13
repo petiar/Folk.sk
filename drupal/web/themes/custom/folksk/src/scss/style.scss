@@ -120,13 +120,47 @@ a { color: $red; &:hover { color: #8b1a12; } }
 
 .site-nav {
   border-bottom: 1px solid #e8e8e8;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
+  padding: 0;
+
+  .navbar-toggler {
+    border: 1px solid #e8e8e8;
+    border-radius: 0;
+    padding: .4rem .6rem;
+
+    &:focus { box-shadow: none; }
+  }
+
   .nav-link {
+    font-family: 'Inter', sans-serif;
     font-size: .78rem;
     font-weight: 600;
     letter-spacing: .06em;
     text-transform: uppercase;
-    padding: .6rem 1rem;
+    color: #444 !important;
+    padding: .65rem 1rem;
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+
+    &:hover,
+    &.active { color: $red !important; border-bottom-color: $red; }
+  }
+
+  // Na mobile — vertikálne menu s ľavým borderom
+  @include media-breakpoint-down(lg) {
+    .navbar-collapse {
+      padding: .5rem 0;
+    }
+    .nav-link {
+      border-bottom: none;
+      border-left: 2px solid transparent;
+      padding: .5rem 1rem;
+
+      &:hover, &.active {
+        border-left-color: $red;
+        background: #fafafa;
+      }
+    }
   }
 }
 
@@ -229,6 +263,41 @@ main { padding: 2.5rem 0; }
   }
 }
 
+// ─── Súvisiace články ─────────────────────────────────────────────────────────
+
+.related-articles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    padding: .5rem 0;
+    border-bottom: 1px solid #e8e8e8;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  &__link {
+    font-family: 'Playfair Display', serif;
+    font-size: .9rem;
+    font-weight: 700;
+    color: $black;
+    text-decoration: none;
+    display: block;
+    line-height: 1.3;
+
+    &:hover { color: $red; }
+  }
+
+  &__date {
+    font-family: 'Inter', sans-serif;
+    font-size: .72rem;
+    color: #888;
+    display: block;
+    margin-top: .15rem;
+  }
+}
+
 // ─── Sidebar ─────────────────────────────────────────────────────────────────
 
 .site-sidebar {
@@ -264,6 +333,326 @@ main { padding: 2.5rem 0; }
     &:hover { background: $black; color: #fff; border-color: $black; }
   }
   .pager__item.is-active a { background: $black; color: #fff; border-color: $black; }
+}
+
+// ─── Katalóg albumov — grid ──────────────────────────────────────────────────
+
+.view-katalog {
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.album-card {
+  &__cover-link { display: block; text-decoration: none; }
+
+  &__cover {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #f0f0f0;
+    margin-bottom: .75rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+      display: block;
+    }
+
+    &:hover img { transform: scale(1.05); }
+  }
+
+  &__no-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #ccc;
+  }
+
+  &__info { text-align: center; }
+
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: .88rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $black;
+
+    a { color: $black; text-decoration: none; &:hover { color: $red; } }
+  }
+
+  &__artist {
+    font-family: 'Inter', sans-serif;
+    font-size: .75rem;
+    color: #888;
+    margin-top: .2rem;
+  }
+}
+
+// ─── Katalóg — detail albumu ─────────────────────────────────────────────────
+
+.album-detail {
+  &__cover {
+    img {
+      max-width: 100%;
+      box-shadow: 0 8px 30px rgba(0,0,0,.15);
+    }
+  }
+
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: .25rem;
+  }
+
+  &__artist {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: $red;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  &__meta {
+    border-top: 2px solid $black;
+    padding-top: 1rem;
+  }
+
+  &__meta-row {
+    display: flex;
+    gap: 1rem;
+    padding: .4rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    font-size: .88rem;
+    align-items: baseline;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  &__meta-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .72rem;
+    letter-spacing: .05em;
+    color: #888;
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+
+  &__meta-value { color: $black; }
+
+  &__price { font-weight: 700; color: $red; }
+
+  &__section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: $black;
+    border-bottom: 2px solid $black;
+    padding-bottom: .4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 720px;
+  }
+
+  &__sample {
+    font-family: 'Inter', sans-serif;
+    font-size: .88rem;
+  }
+}
+
+// ─── Stránka akcie ───────────────────────────────────────────────────────────
+
+.node--type-akcia.node--view-mode-full {
+  .akcia-hero img {
+    max-width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .akcia-info {
+    border-left: 3px solid $red;
+    padding: 1rem 1.25rem;
+    background: #fafafa;
+    font-family: 'Inter', sans-serif;
+
+    &__row {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      padding: .4rem 0;
+
+      & + & { border-top: 1px solid #eee; }
+    }
+
+    &__icon {
+      color: $red;
+      flex-shrink: 0;
+      padding-top: .15rem;
+    }
+
+    &__value {
+      font-size: .9rem;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    &__city {
+      color: $gray-500;
+    }
+  }
+
+  .akcia-body {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-top: 1.5rem;
+
+    p { margin-bottom: 1.25rem; }
+  }
+}
+
+// ─── Kalendár akcií ──────────────────────────────────────────────────────────
+
+.view-kalendar {
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__filters {
+    border: 1px solid #e8e8e8;
+    border-radius: 0;
+
+    .card-body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+      margin: 0;
+    }
+
+    .form-item {
+      margin: 0;
+      flex: 0 0 auto;
+    }
+
+    label {
+      font-size: .78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #444;
+      display: block;
+      margin-bottom: .25rem;
+    }
+
+    select, input[type="text"] {
+      font-size: .88rem;
+      border: 1px solid #e8e8e8;
+      padding: .35rem .6rem;
+      border-radius: 0;
+      min-width: 140px;
+    }
+
+    .form-actions {
+      flex: 0 0 auto;
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    border-top: 2px solid $black;
+  }
+}
+
+// Riadok udalosti
+.event-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: .9rem 0;
+  border-bottom: 1px solid #e8e8e8;
+
+  &:hover { background: #fafafa; }
+
+  &__date {
+    font-family: 'Inter', sans-serif;
+    font-size: .82rem;
+    font-weight: 700;
+    color: $red;
+    min-width: 90px;
+    flex-shrink: 0;
+    padding-top: .1rem;
+    letter-spacing: .02em;
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: .2rem;
+
+    a { color: $black; text-decoration: none; &:hover { color: $red; } }
+  }
+
+  &__meta {
+    font-family: 'Inter', sans-serif;
+    font-size: .78rem;
+    color: #888;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    color: #666;
+  }
+
+  &__city {
+    color: $red;
+    font-weight: 600;
+  }
 }
 
 // ─── Node full — článok ──────────────────────────────────────────────────────
@@ -305,6 +694,152 @@ main { padding: 2.5rem 0; }
       color: #555;
       font-style: italic;
     }
+  }
+}
+
+// ─── Node edit formulár — jeden stĺpec ───────────────────────────────────────
+
+.layout-region-node-main,
+.layout-region-node-secondary,
+.layout-region-node-footer {
+  float: none !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  box-sizing: border-box;
+}
+
+.layout-region-node-secondary { margin-top: 1.5rem; }
+.layout-region-node-footer    { margin-top: 1rem; }
+
+// ─── Placeholder — bledší vo všetkých formulároch ────────────────────────────
+
+::placeholder { color: #bbb !important; opacity: 1; }
+
+// ─── Drupal messages / alerty ─────────────────────────────────────────────────
+// Bootstrap $success je u nás čierna — alerty treba naštýlovať zvlášť
+
+.messages, .alert {
+  border-radius: 0;
+  border-left-width: 4px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+
+  a { font-weight: 600; }
+}
+
+// Drupal .placeholder vo vnútri alertov — reset Bootstrap skeleton štýlov
+.messages, .alert {
+  .placeholder {
+    background-color: transparent !important;
+    vertical-align: baseline !important;
+    opacity: 1 !important;
+    animation: none !important;
+    font-style: normal;
+    font-weight: 600;
+  }
+}
+
+// Status / Success
+.messages--status,
+.alert-success {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  a { color: #0a3d1a; }
+  .placeholder { color: #155724; }
+}
+
+// Warning
+.messages--warning,
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+  color: #856404;
+  a { color: #533f03; }
+  .placeholder { color: #856404; }
+}
+
+// Error
+.messages--error,
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #{$red};
+  color: #721c24;
+  a { color: #491217; }
+  .placeholder { color: #721c24; }
+}
+
+// Info
+.messages--info,
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #17a2b8;
+  color: #0c5460;
+  a { color: #062c33; }
+  .placeholder { color: #0c5460; }
+}
+
+// Bootstrap dismiss button
+.alert .btn-close { filter: none; }
+
+// ─── Folk Submit formuláre ────────────────────────────────────────────────────
+
+.folk-submit-form {
+  max-width: 760px;
+}
+
+.folk-submit-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+
+  &:last-of-type { border-bottom: none; }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: $red;
+    margin-bottom: 1.25rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid $red;
+    display: inline-block;
+  }
+}
+
+// Dátum + čas vedľa seba
+.folk-submit-datetime-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .form-item {
+    flex: 1;
+    margin: 0;
+
+    &:first-child { flex: 2; } // dátum širší
+  }
+
+  input[type="date"],
+  input[type="time"] {
+    width: 100%;
+    padding: .5rem .75rem;
+    border: 1px solid #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+    color: $black;
+    border-radius: 0;
+    appearance: none;
+
+    &:focus { border-color: $black; box-shadow: none; outline: none; }
   }
 }
 

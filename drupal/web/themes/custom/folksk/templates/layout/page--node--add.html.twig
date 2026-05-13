@@ -1,0 +1,43 @@
+{% if page.header or page.primary_menu %}
+<header class="site-header">
+  <div class="container site-header__top">
+    <div class="site-name">
+      <a href="{{ path('<front>') }}">Folk<span>.</span>sk</a>
+    </div>
+  </div>
+  {% if site_slogan %}
+    <div class="site-slogan">{{ site_slogan }}</div>
+  {% endif %}
+  <nav class="site-nav navbar navbar-expand-lg" aria-label="Hlavná navigácia">
+    <div class="container">
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#folkNavbar"
+              aria-controls="folkNavbar" aria-expanded="false"
+              aria-label="Otvoriť navigáciu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="folkNavbar">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </nav>
+</header>
+{% endif %}
+
+{% if page.highlighted %}
+  <div class="container mt-3">{{ page.highlighted }}</div>
+{% endif %}
+
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      {{ page.content }}
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="mb-0">© {{ "now"|date("Y") }} folk.sk</p>
+  </div>
+</footer>

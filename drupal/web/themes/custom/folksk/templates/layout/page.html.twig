@@ -1,7 +1,7 @@
 {# ── Header ────────────────────────────────────────────────────────────────── #}
 <header class="site-header">
 
-  {# Horný pruh: vyhľadávanie vpravo #}
+  {# Logo + slogan — centrované #}
   <div class="container site-header__top">
     <div class="site-name">
       <a href="{{ path('<front>') }}">Folk<span>.</span>sk</a>
@@ -12,14 +12,28 @@
     <div class="site-slogan">{{ site_slogan }}</div>
   {% endif %}
 
-  {# Navigácia #}
-  {% if page.primary_menu %}
-    <nav class="site-nav">
-      <div class="container d-flex justify-content-center">
+  {# Bootstrap navbar — responzívna navigácia #}
+  <nav class="site-nav navbar navbar-expand-lg" aria-label="Hlavná navigácia">
+    <div class="container">
+
+      {# Hamburger pre mobilné zariadenia #}
+      <button class="navbar-toggler ms-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#folkNavbar"
+              aria-controls="folkNavbar"
+              aria-expanded="false"
+              aria-label="Otvoriť navigáciu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      {# Navigačné položky #}
+      <div class="collapse navbar-collapse justify-content-center" id="folkNavbar">
         {{ page.primary_menu }}
       </div>
-    </nav>
-  {% endif %}
+
+    </div>
+  </nav>
 
 </header>
 

@@ -1,0 +1,18 @@
+<div class="album-card">
+  <a href="{{ fields.title.original_value ? path('entity.node.canonical', {node: row._entity.id()}) : '#' }}"
+     class="album-card__cover-link">
+    <div class="album-card__cover">
+      {% if fields.field_booklet.content|render|trim %}
+        {{ fields.field_booklet.content }}
+      {% else %}
+        <div class="album-card__no-cover">♪</div>
+      {% endif %}
+    </div>
+  </a>
+  <div class="album-card__info">
+    <div class="album-card__title">{{ fields.title.content }}</div>
+    {% if fields.field_nazov_kapely.content|render|trim %}
+      <div class="album-card__artist">{{ fields.field_nazov_kapely.content }}</div>
+    {% endif %}
+  </div>
+</div>

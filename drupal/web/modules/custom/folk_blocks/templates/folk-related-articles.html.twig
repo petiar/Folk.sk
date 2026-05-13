@@ -1,0 +1,8 @@
+<ul class="related-articles">
+  {% for item in items %}
+    <li class="related-articles__item">
+      <a href="{{ item.url }}" class="related-articles__link">{{ item.title }}</a>
+      <span class="related-articles__date">{{ item.date|format_date('short') }}</span>
+    </li>
+  {% endfor %}
+</ul>

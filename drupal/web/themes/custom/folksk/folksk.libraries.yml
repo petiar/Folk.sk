@@ -1,14 +1,12 @@
 global-styling:
   version: VERSION
   js:
-    js/popper.min.js: { weight: -49 }
-    js/bootstrap.min.js: { weight: -48 }
+    js/bootstrap.bundle.min.js: { minified: true, weight: -48 }
     js/base.js: {}
     dist/js/theme.js: {}
   css:
     component:
       dist/css/style.css: {}
   dependencies:
-    - core/jquery
     - core/drupal
     - core/once

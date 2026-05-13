@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file folk_blocks.module
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function folk_blocks_theme(): array {
+  return [
+    'folk_related_articles' => [
+      'variables' => [
+        'items' => [],
+      ],
+    ],
+  ];
+}

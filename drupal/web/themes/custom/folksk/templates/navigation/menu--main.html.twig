@@ -1,0 +1,39 @@
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul class="navbar-nav mx-auto">
+    {% else %}
+      <ul class="dropdown-menu">
+    {% endif %}
+    {% for item in items %}
+      {% set item_classes = ['nav-item'] %}
+      {% if item.below %}
+        {% set item_classes = item_classes|merge(['dropdown']) %}
+      {% endif %}
+      {% if item.in_active_trail %}
+        {% set item_classes = item_classes|merge(['active']) %}
+      {% endif %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {% if item.below %}
+          <a href="{{ item.url }}"
+             class="nav-link dropdown-toggle"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            {{ item.title }}
+          </a>
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% else %}
+          <a href="{{ item.url }}"
+             class="nav-link{{ item.in_active_trail ? ' active' : '' }}">
+            {{ item.title }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file folk_muzikant.module
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+use Drupal\taxonomy\TermInterface;
+
+/**
+ * Implements hook_entity_links_alter() — pridá "Nárokovať" link na muzikant termy.
+ */
+function folk_muzikant_entity_operation(EntityInterface $entity): array {
+  $operations = [];
+
+  if (!($entity instanceof TermInterface) || $entity->bundle() !== 'muzikant') {
+    return $operations;
+  }
+
+  $current_user = \Drupal::currentUser();
+  if (!$current_user->isAuthenticated()) {
+    return $operations;
+  }
+
+  $owner_id = $entity->get('field_user')->target_id;
+
+  // Ak je vlastník — zobraz Edit
+  if ($owner_id && (int) $owner_id === (int) $current_user->id()) {
+    $operations['muzikant_edit'] = [
+      'title'  => t('Upraviť môj profil'),
+      'url'    => Url::fromRoute('folk_muzikant.edit', ['taxonomy_term' => $entity->id()]),
+      'weight' => 10,
+    ];
+  }
+  // Ak nie je nárokovaný — zobraz Claim
+  elseif (!$owner_id) {
+    $operations['muzikant_claim'] = [
+      'title'  => t('Nárokovať profil'),
+      'url'    => Url::fromRoute('folk_muzikant.claim', ['taxonomy_term' => $entity->id()]),
+      'weight' => 10,
+    ];
+  }
+
+  return $operations;
+}
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function folk_muzikant_preprocess_taxonomy_term(&$variables): void {
+  $term = $variables['term'];
+  if ($term->bundle() !== 'muzikant') return;
+
+  $current_user = \Drupal::currentUser();
+  $owner_id     = $term->get('field_user')->target_id;
+
+  // Claim / edit link pre zobrazenie v šablóne
+  if ($current_user->isAuthenticated() && !$owner_id) {
+    $variables['claim_url'] = Url::fromRoute('folk_muzikant.claim',
+      ['taxonomy_term' => $term->id()])->toString();
+  }
+  if ($owner_id && (int) $owner_id === (int) $current_user->id()) {
+    $variables['edit_url'] = Url::fromRoute('folk_muzikant.edit',
+      ['taxonomy_term' => $term->id()])->toString();
+  }
+}

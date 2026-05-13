@@ -1,0 +1,12 @@
+<div class="view-katalog">
+  <div class="view-katalog__header mb-5">
+    <h1 class="view-katalog__title">Katalóg albumov</h1>
+    <p class="text-muted">Slovenská folková a akustická hudba</p>
+  </div>
+
+  {% if rows %}
+    <div class="album-grid">
+      {{ rows }}
+    </div>
+  {% endif %}
+</div>
