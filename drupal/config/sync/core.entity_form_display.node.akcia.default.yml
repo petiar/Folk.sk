@@ -47,6 +47,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_datumcas:
+    type: daterange_default
+    weight: -4
+    region: content
+    settings:
+      format_type: html_datetime
+    third_party_settings: {  }
   field_akcia_webstranka:
     type: link_default
     weight: 6
@@ -143,7 +150,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  field_datumcas: true
   field_titulny_obrazok: true
   field_vstupne: true
   promote: true
