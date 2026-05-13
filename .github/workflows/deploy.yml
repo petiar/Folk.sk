@@ -1,0 +1,43 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy cez SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host:       ${{ secrets.DEPLOY_HOST }}
+          username:   ${{ secrets.DEPLOY_USER }}
+          key:        ${{ secrets.DEPLOY_KEY }}
+          port:       ${{ secrets.DEPLOY_PORT || 22 }}
+          script: |
+            set -e
+            # DEPLOY_PATH = cesta k folk.sk/web (git repo root)
+            # Drupal root  = folk.sk/web/drupal
+            cd ${{ secrets.DEPLOY_PATH }}
+
+            echo "→ git pull"
+            git pull origin main
+
+            echo "→ composer install"
+            cd drupal
+            composer install --no-dev --optimize-autoloader --no-interaction
+
+            echo "→ drush updatedb"
+            drush -r web updatedb -y
+
+            echo "→ drush config:import"
+            drush -r web config:import -y
+
+            echo "→ drush cache:rebuild"
+            drush -r web cache:rebuild
+
+            echo "✓ Deployment hotový"
