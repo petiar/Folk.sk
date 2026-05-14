@@ -125,6 +125,10 @@ AddType image/webp .webp
   # Rewrite install.php during installation to see if mod_rewrite is working
   RewriteRule ^core/install\.php core/install.php?rewrite=ok [QSA,L]
 
+  # Redirect old Drupal 6 ?q= URLs to clean URLs (for Google-indexed links).
+  RewriteCond %{QUERY_STRING} ^q=(.+)$
+  RewriteRule ^$ /%1? [R=301,L]
+
   # Pass all requests not referring directly to files in the filesystem to
   # index.php.
   RewriteCond %{REQUEST_FILENAME} !-f
