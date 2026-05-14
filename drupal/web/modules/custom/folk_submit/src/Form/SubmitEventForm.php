@@ -165,43 +165,24 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
     ];
 
     // ── Sekcia: Účinkujúci ─────────────────────────────────────────────────────
-    $count = $form_state->get('muzikant_count') ?? 1;
     $form['section_muzikanti'] = [
       '#type'       => 'container',
       '#tree'       => TRUE,
       '#attributes' => ['class' => ['folk-submit-section']],
       'heading'     => ['#markup' => '<h2 class="folk-submit-section__title">Účinkujúci</h2>'],
-      'intro'       => ['#markup' => '<p>' . $this->t('Začnite písať meno muzikanta alebo kapely.') . ' <a href="' . Url::fromRoute('folk_muzikant.create')->toString() . '" class="use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:700,&quot;title&quot;:&quot;Pridať profil muzikanta&quot;}">' . $this->t('Nie je v zozname? Pridajte profil →') . '</a></p>'],
-      'items' => [
-        '#type'       => 'container',
-        '#tree'       => TRUE,
-        '#attributes' => ['id' => 'muzikanti-wrapper'],
-      ],
-      'add_more' => [
-        '#type'       => 'submit',
-        '#value'      => $this->t('+ Pridať ďalšieho'),
-        '#submit'     => ['::addMuzikant'],
-        '#ajax'       => [
-          'callback' => '::muzikantiCallback',
-          'wrapper'  => 'muzikanti-wrapper',
-          'effect'   => 'fade',
-        ],
-        '#limit_validation_errors' => [],
-        '#attributes' => ['class' => ['btn-outline-secondary', 'btn-sm', 'mt-1']],
+      'muzikanti'   => [
+        '#type'               => 'entity_autocomplete',
+        '#title'              => $this->t('Muzikanti / kapely'),
+        '#description'        => $this->t('Začnite písať meno — systém navrhne existujúcich muzikantov. Viacerých oddeľte čiarkou. Ak muzikant v zozname ešte nie je, jednoducho napíšte meno a profil sa automaticky vytvorí.'),
+        '#target_type'        => 'taxonomy_term',
+        '#selection_handler'  => 'default:taxonomy_term',
+        '#selection_settings' => ['target_bundles' => ['muzikant'], 'sort' => ['field' => 'name', 'direction' => 'ASC']],
+        '#tags'               => TRUE,
+        '#autocreate'         => ['bundle' => 'muzikant'],
+        '#required'           => FALSE,
+        '#size'               => 60,
       ],
     ];
-    for ($i = 0; $i < $count; $i++) {
-      $form['section_muzikanti']['items'][$i] = [
-        '#type'               => 'entity_autocomplete',
-        '#title'             => $i === 0 ? $this->t('Muzikant / kapela') : $this->t('Ďalší účinkujúci'),
-        '#target_type'       => 'taxonomy_term',
-        '#selection_handler' => 'default:taxonomy_term',
-        '#selection_settings' => ['target_bundles' => ['muzikant'], 'sort' => ['field' => 'name', 'direction' => 'ASC']],
-        '#placeholder'       => $this->t('Začnite písať meno...'),
-        '#required'          => FALSE,
-        '#size'              => 60,
-      ];
-    }
 
     // Doplňujúce informácie
     $form['sections_row']['extra'] = [
@@ -285,9 +266,13 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
     }
 
     $muzikanti = [];
-    foreach ($form_state->getValue(['section_muzikanti', 'items']) ?? [] as $tid) {
-      if (!empty($tid)) {
-        $muzikanti[] = ['target_id' => $tid];
+    foreach ($form_state->getValue(['section_muzikanti', 'muzikanti']) ?? [] as $item) {
+      if (!empty($item['target_id'])) {
+        $muzikanti[] = ['target_id' => $item['target_id']];
+      }
+      elseif (!empty($item['entity'])) {
+        $item['entity']->save();
+        $muzikanti[] = ['target_id' => $item['entity']->id()];
       }
     }
     if ($muzikanti) {
@@ -323,16 +308,6 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
     ));
 
     $form_state->setRedirect('<front>');
-  }
-
-  public function addMuzikant(array &$form, FormStateInterface $form_state): void {
-    $count = $form_state->get('muzikant_count') ?? 1;
-    $form_state->set('muzikant_count', $count + 1);
-    $form_state->setRebuild(TRUE);
-  }
-
-  public function muzikantiCallback(array &$form, FormStateInterface $form_state): array {
-    return $form['section_muzikanti']['items'];
   }
 
   public static function trustedCallbacks(): array {
