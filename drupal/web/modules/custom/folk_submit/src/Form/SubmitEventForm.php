@@ -64,6 +64,7 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
 
     $form['#attributes']['enctype'] = 'multipart/form-data';
     $form['#attributes']['class'][] = 'folk-submit-form';
+    $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
 
     // ── Sekcia: Základné info ───────────────────────────────────────────────
     $form['section_basic'] = [
@@ -170,7 +171,7 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
       '#tree'       => TRUE,
       '#attributes' => ['class' => ['folk-submit-section']],
       'heading'     => ['#markup' => '<h2 class="folk-submit-section__title">Účinkujúci</h2>'],
-      'intro'       => ['#markup' => '<p>' . $this->t('Začnite písať meno muzikanta alebo kapely.') . ' <a href="/muzikant/pridat" target="_blank">' . $this->t('Nie je v zozname? Pridajte profil →') . '</a></p>'],
+      'intro'       => ['#markup' => '<p>' . $this->t('Začnite písať meno muzikanta alebo kapely.') . ' <a href="' . Url::fromRoute('folk_muzikant.create')->toString() . '" class="use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:700,&quot;title&quot;:&quot;Pridať profil muzikanta&quot;}">' . $this->t('Nie je v zozname? Pridajte profil →') . '</a></p>'],
       'items' => [
         '#type'       => 'container',
         '#tree'       => TRUE,
@@ -192,12 +193,13 @@ class SubmitEventForm extends FormBase implements TrustedCallbackInterface {
     for ($i = 0; $i < $count; $i++) {
       $form['section_muzikanti']['items'][$i] = [
         '#type'               => 'entity_autocomplete',
-        '#title'              => $i === 0 ? $this->t('Muzikant / kapela') : $this->t('Ďalší účinkujúci'),
-        '#target_type'        => 'taxonomy_term',
-        '#selection_settings' => ['target_bundles' => ['muzikant']],
-        '#placeholder'        => $this->t('Začnite písať meno...'),
-        '#required'           => FALSE,
-        '#size'               => 60,
+        '#title'             => $i === 0 ? $this->t('Muzikant / kapela') : $this->t('Ďalší účinkujúci'),
+        '#target_type'       => 'taxonomy_term',
+        '#selection_handler' => 'default:taxonomy_term',
+        '#selection_settings' => ['target_bundles' => ['muzikant'], 'sort' => ['field' => 'name', 'direction' => 'ASC']],
+        '#placeholder'       => $this->t('Začnite písať meno...'),
+        '#required'          => FALSE,
+        '#size'              => 60,
       ];
     }
 

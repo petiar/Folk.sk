@@ -2,6 +2,9 @@
 
 namespace Drupal\folk_muzikant\Form;
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\CloseModalDialogCommand;
+use Drupal\Core\Ajax\MessageCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountProxyInterface;
@@ -103,6 +106,11 @@ class CreateMuzikantForm extends FormBase {
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state): void {
+    // Ak sme v AJAX dialógu, vrátime AjaxResponse
+    if ($this->getRequest()->isXmlHttpRequest()) {
+      $form_state->disableRedirect();
+    }
+
     $storage = $this->entityTypeManager->getStorage('taxonomy_term');
 
     // Vytvor nový taxonomy term
@@ -143,6 +151,18 @@ class CreateMuzikantForm extends FormBase {
       'Profil „@name" bol vytvorený. Môžete ho ďalej upravovať.',
       ['@name' => $term->label()]
     ));
+
+    if ($this->getRequest()->isXmlHttpRequest()) {
+      $response = new AjaxResponse();
+      $response->addCommand(new CloseModalDialogCommand());
+      $response->addCommand(new MessageCommand(
+        $this->t('Profil „@name" bol vytvorený. Vyhľadajte ho teraz v poli Účinkujúci.', ['@name' => $term->label()]),
+        NULL,
+        ['type' => 'status']
+      ));
+      $form_state->setResponse($response);
+      return;
+    }
 
     $form_state->setRedirectUrl(
       Url::fromRoute('folk_muzikant.edit', ['taxonomy_term' => $term->id()])
