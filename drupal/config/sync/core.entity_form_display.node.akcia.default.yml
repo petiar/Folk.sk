@@ -47,13 +47,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_datumcas:
-    type: daterange_default
-    weight: -4
-    region: content
-    settings:
-      format_type: html_datetime
-    third_party_settings: {  }
   field_akcia_webstranka:
     type: link_default
     weight: 6
@@ -61,6 +54,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_datumcas:
+    type: daterange_default
+    weight: -4
+    region: content
+    settings:
+      format_type: html_datetime
     third_party_settings: {  }
   field_festival:
     type: entity_reference_autocomplete_tags

@@ -54,6 +54,17 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_datumcas:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: folk_event
+      from_to: start_date
+      separator: ' – '
+    third_party_settings: {  }
+    weight: -5
+    region: content
   field_festival:
     type: entity_reference_label
     label: hidden
@@ -69,17 +80,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 20
-    region: content
-  field_datumcas:
-    type: daterange_default
-    label: hidden
-    settings:
-      format_type: folk_event
-      timezone_override: ''
-      from_to: start_date
-      separator: ' – '
-    third_party_settings: {  }
-    weight: -5
     region: content
   field_miesto:
     type: text_default

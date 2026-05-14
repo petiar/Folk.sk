@@ -4,8 +4,14 @@
 
   {# Nadpis a popis #}
   <div class="view-kalendar__header mb-4">
-    <h1 class="view-kalendar__title">Kalendár akcií</h1>
-    <p class="text-muted">Prehľad koncertov, festivalov a podujatí</p>
+    {% if display_id == 'page_2' %}
+      <a href="/kalendar" class="btn btn-outline-secondary btn-sm mb-3">← Nadchádzajúce akcie</a>
+      <h1 class="view-kalendar__title">Archív akcií</h1>
+      <p class="text-muted">Kde všade sa hralo</p>
+    {% else %}
+      <h1 class="view-kalendar__title">Kalendár akcií</h1>
+      <p class="text-muted">Prehľad koncertov, festivalov a podujatí</p>
+    {% endif %}
   </div>
 
 {# Zoznam udalostí #}
@@ -22,6 +28,13 @@
   {# Pager #}
   {% if pager %}
     <div class="mt-4">{{ pager }}</div>
+  {% endif %}
+
+  {# Odkaz na archív — len na stránke nadchádzajúcich akcií #}
+  {% if display_id == 'page_1' %}
+    <div class="text-center mt-5">
+      <a href="/kalendar/archiv" class="btn btn-outline-secondary">Archív minulých akcií →</a>
+    </div>
   {% endif %}
 
 </div>

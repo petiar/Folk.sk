@@ -3,12 +3,14 @@ langcode: sk
 status: true
 dependencies:
   config:
+    - field.storage.node.field_datumcas
     - field.storage.node.field_mesto
     - field.storage.node.field_miesto
     - node.type.akcia
     - taxonomy.vocabulary.mesto
   module:
     - datetime
+    - datetime_range
     - node
     - taxonomy
     - user
@@ -110,7 +112,7 @@ display:
           entity_type: node
           entity_field: field_datumcas
           plugin_id: daterange
-          order: DESC
+          order: ASC
       filters:
         status:
           id: status
@@ -136,24 +138,22 @@ display:
           group: 1
           expose:
             operator: ''
-        field_datumcas_value:
-          id: field_datumcas_value
+        field_datumcas_upcoming:
+          id: field_datumcas_upcoming
           table: node__field_datumcas
           field: field_datumcas_value
           entity_type: node
           entity_field: field_datumcas
-          plugin_id: daterange
-          operator: between
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
           group: 1
-          exposed: true
-          expose:
-            operator_id: field_datumcas_value_op
-            label: Rok
-            use_operator: false
-            operator: field_datumcas_value_op
-            identifier: rok
-            required: false
-          granularity: year
+          exposed: false
+          granularity: day
         field_mesto_target_id:
           id: field_mesto_target_id
           table: node__field_mesto
@@ -196,6 +196,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_datumcas'
         - 'config:field.storage.node.field_mesto'
         - 'config:field.storage.node.field_miesto'
   page_1:
@@ -218,5 +219,149 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_datumcas'
+        - 'config:field.storage.node.field_mesto'
+        - 'config:field.storage.node.field_miesto'
+  page_2:
+    id: page_2
+    display_title: Archív
+    display_plugin: page
+    position: 2
+    display_options:
+      sorts:
+        field_datumcas_value:
+          id: field_datumcas_value
+          table: node__field_datumcas
+          field: field_datumcas_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: field_datumcas
+          plugin_id: daterange
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          plugin_id: bundle
+          operator: in
+          value:
+            akcia: akcia
+          group: 1
+          expose:
+            operator: ''
+        field_datumcas_upcoming:
+          id: field_datumcas_upcoming
+          table: node__field_datumcas
+          field: field_datumcas_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: field_datumcas
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          granularity: day
+        field_mesto_target_id:
+          id: field_mesto_target_id
+          table: node__field_mesto
+          field: field_mesto_target_id
+          entity_type: node
+          entity_field: field_mesto
+          plugin_id: taxonomy_index_tid
+          operator: or
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_mesto_target_id_op
+            label: Mesto
+            use_operator: false
+            operator: field_mesto_target_id_op
+            identifier: mesto
+            required: false
+            multiple: false
+          vid: mesto
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+      path: kalendar/archiv
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_datumcas'
         - 'config:field.storage.node.field_mesto'
         - 'config:field.storage.node.field_miesto'
