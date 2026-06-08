@@ -28,6 +28,7 @@ use Drupal\migrate\Plugin\RequirementsInterface;
 use Drupal\migrate_tools\DrushLogMigrateMessage;
 use Drupal\migrate_tools\EventSubscriber\MigrationDrushCommandProgress;
 use Drupal\migrate_tools\IdMapFilter;
+use Drupal\migrate_tools\MigrateBatchExecutable;
 use Drupal\migrate_tools\MigrateExecutable;
 use Drupal\migrate_tools\MigrateTools;
 use Drush\Commands\DrushCommands;
@@ -118,7 +119,7 @@ class MigrateToolsCommands extends DrushCommands {
       unset($migrations_to_process[$migration->id()]);
 
       // Add its dependencies to the graph and to the list.
-      $migration_dependencies = $migration->getMigrationDependencies();
+      $migration_dependencies = $migration->getMigrationDependencies(TRUE);
 
       $dependency_graph[$migration->id()]['edges'] = [];
       if (isset($migration_dependencies['required'])) {
@@ -377,6 +378,8 @@ class MigrateToolsCommands extends DrushCommands {
    * @option group A comma-separated list of migration groups to import
    * @option tag Name of the migration tag to import
    * @option limit Limit on the number of items to process in each migration
+   * @option batch-size Optionally use batch iterations, with a limit on the
+   *   number of items to process in each batch iteration.
    * @option feedback Frequency of progress messages, in items processed
    * @option idlist Comma-separated list of IDs to import
    * @option idlist-delimiter The delimiter for records
@@ -423,6 +426,7 @@ class MigrateToolsCommands extends DrushCommands {
   #[Option(name: 'group', description: 'A comma-separated list of migration groups to import')]
   #[Option(name: 'tag', description: 'A comma-separated list of migration tags to import')]
   #[Option(name: 'limit', description: 'Limit on the number of items to process in each migration')]
+  #[Option(name: 'batch-size', description: 'Optionally use batch iterations, with a limit on the number of items to process in each batch iteration.')]
   #[Option(name: 'feedback', description: 'Frequency of progress messages, in items processed')]
   #[Option(name: 'idlist', description: 'Comma-separated list of IDs to import.')]
   #[Option(name: 'idlist-delimiter', description: 'The delimiter for records')]
@@ -451,6 +455,7 @@ class MigrateToolsCommands extends DrushCommands {
       'group' => self::REQ,
       'tag' => self::REQ,
       'limit' => self::REQ,
+      'batch-size' => self::REQ,
       'feedback' => self::REQ,
       'idlist' => self::REQ,
       'idlist-delimiter' => MigrateTools::DEFAULT_ID_LIST_DELIMITER,
@@ -1075,6 +1080,11 @@ class MigrateToolsCommands extends DrushCommands {
       }
     }
 
+    foreach ($matched_migrations as $migration) {
+      $migration->set('migration_dependencies', $migration->getMigrationDependencies());
+    }
+    $matched_migrations = $manager->buildDependencyMigration($matched_migrations, []);
+
     // Sort the matched migrations by group.
     if (!empty($matched_migrations)) {
       foreach ($matched_migrations as $id => $migration) {
@@ -1152,16 +1162,37 @@ class MigrateToolsCommands extends DrushCommands {
       $options
     );
 
-    $executable = new MigrateExecutable(
-      $migration,
-      $this->getMigrateMessage(),
-      $this->keyValue,
-      $this->time,
-      $this->translation,
-      $options,
-    );
-    // \drush_op() provides --simulate support.
-    $result = \drush_op([$executable, 'import']);
+    if (empty($options['batch-size'])) {
+      $executable = new MigrateExecutable(
+        $migration,
+        $this->getMigrateMessage(),
+        $this->keyValue,
+        $this->time,
+        $this->translation,
+        $options,
+      );
+      // drush_op() provides --simulate support.
+      $result = drush_op([$executable, 'import']);
+    }
+    else {
+      // Integer cast required because MigrateBatchExecutable requires the
+      // `update` and `force` options to strictly be integers.
+      $options['update'] = (int) $options['update'];
+      $options['force'] = (int) $options['force'];
+      $executable = new MigrateBatchExecutable(
+        $migration,
+        $this->getMigrateMessage(),
+        $this->keyValue,
+        $this->time,
+        $this->translation,
+        $this->migrationPluginManager,
+        $options,
+      );
+      $executable->batchImport();
+      // drush_op() provides --simulate support.
+      $result = drush_op('drush_backend_batch_process');
+    }
+
     $executed_migrations += [$migration_id => $migration_id];
     if ($count = $executable->getFailedCount()) {
       $error_message = \dt(

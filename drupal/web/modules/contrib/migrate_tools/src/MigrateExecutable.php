@@ -314,7 +314,7 @@ class MigrateExecutable extends MigrateExecutableBase {
   public function onPostImport(MigrateImportEvent $event) {
     $migrate_last_imported_store = $this->keyValue->get('migrate_last_imported');
     $migrate_last_imported_store->set($event->getMigration()->id(), round($this->time->getCurrentMicroTime() * 1000));
-    $this->progressMessage();
+    $this->progressMessageEmit();
     $this->removeListeners();
 
     $keys = array_keys($this->getSource()->getIds());
@@ -388,14 +388,15 @@ class MigrateExecutable extends MigrateExecutableBase {
   }
 
   /**
-   * Emit information on what we've done.
-   *
-   * Either since the last feedback or the beginning of this migration.
+   * Generate a progress message.
    *
    * @param bool $done
-   *   TRUE if this is the last items to process. Otherwise FALSE.
+   *   Whether the import has fully finished.
+   *
+   * @return \Drupal\Component\Render\MarkupInterface
+   *   The progress message to show to the end user.
    */
-  protected function progressMessage($done = TRUE) {
+  public function progressMessage($done = TRUE) {
     $processed = $this->getProcessedCount();
     if ($done) {
       $singular_message = "Processed 1 item (@created created, @updated updated, @failures failed, @ignored ignored) - done with '@name'";
@@ -405,17 +406,29 @@ class MigrateExecutable extends MigrateExecutableBase {
       $singular_message = "Processed 1 item (@created created, @updated updated, @failures failed, @ignored ignored) - continuing with '@name'";
       $plural_message = "Processed @numItems items (@created created, @updated updated, @failures failed, @ignored ignored) - continuing with '@name'";
     }
-    $this->message->display($this->translation->formatPlural($processed,
+    return $this->translation->formatPlural($processed,
       $singular_message, $plural_message,
-        [
-          '@numItems' => $processed,
-          '@created' => $this->getCreatedCount(),
-          '@updated' => $this->getUpdatedCount(),
-          '@failures' => $this->getFailedCount(),
-          '@ignored' => $this->getIgnoredCount(),
-          '@name' => $this->migration->id(),
-        ]
-    ));
+      [
+        '@numItems' => $processed,
+        '@created' => $this->getCreatedCount(),
+        '@updated' => $this->getUpdatedCount(),
+        '@failures' => $this->getFailedCount(),
+        '@ignored' => $this->getIgnoredCount(),
+        '@name' => $this->migration->id(),
+      ]
+    );
+  }
+
+  /**
+   * Emit information on what we've done.
+   *
+   * Either since the last feedback or the beginning of this migration.
+   *
+   * @param bool $done
+   *   TRUE if this is the last items to process. Otherwise FALSE.
+   */
+  protected function progressMessageEmit($done = TRUE) {
+    $this->message->display($this->progressMessage($done));
   }
 
   /**
@@ -492,7 +505,7 @@ class MigrateExecutable extends MigrateExecutableBase {
    */
   public function onPostRowDelete(MigrateRowDeleteEvent $event) {
     if ($this->feedback && ($this->deleteCounter) && $this->deleteCounter % $this->feedback == 0) {
-      $this->rollbackMessage(FALSE);
+      $this->progressMessageEmit(FALSE);
       $this->resetCounters();
     }
   }
@@ -507,7 +520,7 @@ class MigrateExecutable extends MigrateExecutableBase {
    */
   public function onPrepareRow(MigratePrepareRowEvent $event) {
     if ($this->feedback && $this->counter && $this->counter % $this->feedback == 0) {
-      $this->progressMessage(FALSE);
+      $this->progressMessageEmit(FALSE);
       $this->resetCounters();
     }
     $this->counter++;

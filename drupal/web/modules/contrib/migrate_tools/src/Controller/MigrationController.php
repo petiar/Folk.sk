@@ -102,7 +102,7 @@ class MigrationController extends ControllerBase implements ContainerInjectionIn
       '#markup' => Xss::filterAdmin($migration->label()),
       '#type' => 'item',
     ];
-    $migration_dependencies = $this->getMigrationPlugin($migration)->getMigrationDependencies();
+    $migration_dependencies = $this->getMigrationPlugin($migration)->getMigrationDependencies(TRUE);
     if (!empty($migration_dependencies['required'])) {
       $build['overview']['dependencies'] = [
         '#title' => $this->t('Migration Dependencies') ,

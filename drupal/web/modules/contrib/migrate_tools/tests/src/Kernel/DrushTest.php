@@ -42,6 +42,7 @@ namespace Drupal\Tests\migrate_tools\Kernel {
       'group' => NULL,
       'tag' => NULL,
       'limit' => NULL,
+      'batch-size' => FALSE,
       'feedback' => NULL,
       'idlist' => NULL,
       'idlist-delimiter' => MigrateTools::DEFAULT_ID_LIST_DELIMITER,
@@ -299,6 +300,17 @@ namespace Drupal\Tests\migrate_tools\Kernel {
       $this->expectException(\Exception::class);
       $this->expectExceptionMessage('Migration does_not_exist does not exist');
       $this->commands->fieldsSource('does_not_exist');
+    }
+
+    /**
+     * Tests that optional dependencies are respected in migration ordering.
+     */
+    public function testOptionalDependencyOrdering(): void {
+      $result = $this->commands->status('order_beta,order_gamma,order_alpha', ['names-only' => TRUE]);
+      $rows = $result->getArrayCopy();
+      $this->assertSame('order_gamma', $rows[0]['id']);
+      $this->assertSame('order_beta', $rows[1]['id']);
+      $this->assertSame('order_alpha', $rows[2]['id']);
     }
 
   }
